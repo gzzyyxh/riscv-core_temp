@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Github/OpenRSIC-V/ori_1/sim
+vinst_fetch
+Z0 !s110 1648534977
+!i10b 1
+!s100 kC5?e@iL;Q_PKBUWiJA1R3
+I@SjJ3TDYF5RR34:lTVn[c3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Github/OpenRSIC-V/fetch/sim
+w1399108813
+8D:/Github/OpenRSIC-V/fetch/sim/inst_fetch.v
+FD:/Github/OpenRSIC-V/fetch/sim/inst_fetch.v
+L0 2
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1648534977.000000
+!s107 D:/Github/OpenRSIC-V/fetch/sim/inst_fetch.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/fetch/sim/inst_fetch.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vinst_fetch_tb
+R0
+!i10b 1
+!s100 @Mf>I2DijVf]D;N_JaSd[3
+IU=]EK3_W6bW^jg9Qmn9o_2
+R1
+R2
+w1398866144
+8D:/Github/OpenRSIC-V/fetch/sim/inst_fetch_tb.v
+FD:/Github/OpenRSIC-V/fetch/sim/inst_fetch_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Github/OpenRSIC-V/fetch/sim/inst_fetch_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/fetch/sim/inst_fetch_tb.v|
+!i113 1
+R5
+R6
+vpc_reg
+R0
+!i10b 1
+!s100 gV<>iJ6jaYSNXMzN:aVfB2
+Im;J=WLkmX7bMX]HOkJWdZ3
+R1
+R2
+w1399108826
+8D:/Github/OpenRSIC-V/fetch/sim/pc_reg.v
+FD:/Github/OpenRSIC-V/fetch/sim/pc_reg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Github/OpenRSIC-V/fetch/sim/pc_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/fetch/sim/pc_reg.v|
+!i113 1
+R5
+R6
+vrom
+R0
+!i10b 1
+!s100 hRPW^_^W@dnN]DbNJV]6K3
+IQ`cU^JKXD_IeP;CEOm<1d2
+R1
+R2
+w1399108804
+8D:/Github/OpenRSIC-V/fetch/sim/rom.v
+FD:/Github/OpenRSIC-V/fetch/sim/rom.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Github/OpenRSIC-V/fetch/sim/rom.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/fetch/sim/rom.v|
+!i113 1
+R5
+R6

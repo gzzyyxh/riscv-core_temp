@@ -1,0 +1,283 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+vex
+Z0 !s110 1648728557
+!i10b 1
+!s100 R=zQK10?IF<F;BkinHDM72
+Ib^X;4VS_S^gGWCbZSU6B@3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Github/OpenRSIC-V/logic_movebit_nop/sim
+w1648727636
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/ex.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/ex.v
+Z3 L0 35
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1648728557.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/ex.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vex_mem
+R0
+!i10b 1
+!s100 BkSADUPLSl9cR8Q8SSj`71
+IlCAE3@O8mlYMPZhZWzNGm2
+R1
+R2
+w1648720243
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/ex_mem.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/ex_mem.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/ex_mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/ex_mem.v|
+!i113 1
+R6
+R7
+vid
+R0
+!i10b 1
+!s100 0a3G5`_HZY@bT4<QS?ffM3
+I@aZT@ONm6^BnHok?EB5:m2
+R1
+R2
+w1648726967
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/id.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/id.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/id.v|
+!i113 1
+R6
+R7
+vid_ex
+Z8 !s110 1648728558
+!i10b 1
+!s100 hhb[BXk`HX5XGFcm]UElf3
+I_OIgIF2:T0L>7jgJ><^kZ0
+R1
+R2
+w1648720230
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/id_ex.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/id_ex.v
+R3
+R4
+r1
+!s85 0
+31
+Z9 !s108 1648728558.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/id_ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/id_ex.v|
+!i113 1
+R6
+R7
+vif_id
+R8
+!i10b 1
+!s100 >W3QG;Y7lkI5dUR23Am?C1
+IB4T1o23b;`OT;mRnC@XUl2
+R1
+R2
+w1648720223
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/if_id.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/if_id.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/if_id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/if_id.v|
+!i113 1
+R6
+R7
+vinst_rom
+R8
+!i10b 1
+!s100 B61BV1PoH1U4hb[eIacoJ1
+IhXenK5@BLU4ea[@G:U<lU2
+R1
+R2
+w1648720215
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/inst_rom.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/inst_rom.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/inst_rom.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/inst_rom.v|
+!i113 1
+R6
+R7
+vmem
+R8
+!i10b 1
+!s100 dKIEgC3]56a5Q^7[b9K7`1
+IKJSAD4A5B:Ca5cRCM0>>d1
+R1
+R2
+w1648720207
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/mem.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/mem.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/mem.v|
+!i113 1
+R6
+R7
+vmem_wb
+R8
+!i10b 1
+!s100 K>NV]WiWM_j?U9dl5]KVi1
+IAW_151F[jfe>1IF7HR08H3
+R1
+R2
+w1648720200
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/mem_wb.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/mem_wb.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/mem_wb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/mem_wb.v|
+!i113 1
+R6
+R7
+vopenmips
+R8
+!i10b 1
+!s100 z2Q9MzgQ3gHIak0d7[N=e2
+IB8noH`gUdhB4Vf?nKl:zC1
+R1
+R2
+w1648720192
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips.v|
+!i113 1
+R6
+R7
+vopenmips_min_sopc
+R8
+!i10b 1
+!s100 NZ0TKzzdYPg:k;R^KbWIX2
+I8d@eU@L03R:HU4:82AY2^0
+R1
+R2
+w1648720185
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips_min_sopc.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips_min_sopc.v
+L0 40
+R4
+r1
+!s85 0
+31
+R9
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips_min_sopc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips_min_sopc.v|
+!i113 1
+R6
+R7
+vopenmips_min_sopc_tb
+R8
+!i10b 1
+!s100 BLj^i[S4LQiWZW>gToWQU0
+IoHk0okdZdZ_MLjnE6[R8a2
+R1
+R2
+w1648720178
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips_min_sopc_tb.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips_min_sopc_tb.v
+L0 36
+R4
+r1
+!s85 0
+31
+R9
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips_min_sopc_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/openmips_min_sopc_tb.v|
+!i113 1
+R6
+R7
+vpc_reg
+R8
+!i10b 1
+!s100 WXjmNNI4=HbG<_SjMELX`0
+I7>9E<1[Z<8Kc`^R>R0hbS0
+R1
+R2
+w1648720166
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/pc_reg.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/pc_reg.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/pc_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/pc_reg.v|
+!i113 1
+R6
+R7
+vregfile
+!s110 1648728559
+!i10b 1
+!s100 1EhAjhmmdzi<zQL05>l@Y2
+I?Sj2_i>j0?Ni3?65_NT9S3
+R1
+R2
+w1648720012
+8D:/Github/OpenRSIC-V/logic_movebit_nop/sim/regfile.v
+FD:/Github/OpenRSIC-V/logic_movebit_nop/sim/regfile.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 defines.v|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/regfile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/logic_movebit_nop/sim/regfile.v|
+!i113 1
+R6
+R7
