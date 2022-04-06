@@ -67,6 +67,7 @@
 `define EXE_B_INST 7'b1100011
 `define EXE_L_INST 7'b0000011
 `define EXE_S_INST 7'b0100011
+`define EXE_AUIPC_INST 7'b0010111
 
 `define EXE_NOP 7'b0000000
 

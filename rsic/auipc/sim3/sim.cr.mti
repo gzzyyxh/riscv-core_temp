@@ -1,9 +1,19 @@
-D:/Github/OpenRSIC-V/rsic/auipc/sim3/ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/ex.v
+D:/Github/OpenRSIC-V/rsic/auipc/sim3/id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/id.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module id
+
+Top level modules:
+	id
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/ex.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module ex
 
 Top level modules:
 	ex
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/defines.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/regfile.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/regfile.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -11,9 +21,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 
 Top level modules:
 	regfile
-
-} {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/defines.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/openmips_min_sopc_tb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/openmips_min_sopc_tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018

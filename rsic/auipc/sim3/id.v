@@ -48,8 +48,8 @@ module id(
   wire[2:0] op2 = inst_i[14:12];
   wire[6:0] op3 = inst_i[31:25];
   wire[5:0] op3_i = inst_i[31:26];
-  reg[31:0] offset;
   reg[`RegBus]	imm;
+  reg[1:0] get_current_pc;
   reg instvalid;
   wire reg1_lt_reg2;
   wire[`RegBus] temp_sum;
@@ -95,7 +95,6 @@ module id(
 			link_addr_o <= `ZeroWord;
 			branch_target_address_o <= `ZeroWord;
 			branch_flag_o <= `NotBranch;
-			offset <= `ZeroWord;
 //			reg1_lt_reg2 <= 1'b0;
 //			temp_sum <= 32'b0;
 	  end else begin
@@ -112,7 +111,6 @@ module id(
 			link_addr_o <= `ZeroWord;
 			branch_target_address_o <= `ZeroWord;
 			branch_flag_o <= `NotBranch;
-			offset <= `ZeroWord;
 //			reg1_lt_reg2 <= 1'b0;
 //			temp_sum <= 32'b0;
 		  case (op)
@@ -407,7 +405,7 @@ module id(
 							instvalid <= `InstValid;	
 							if(reg1_o == reg2_o) begin
 //								offset <= {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]};
-								branch_target_address_o <= pc_i + {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1;
+								branch_target_address_o <= pc_i + ({{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1);
 								branch_flag_o <= `Branch;
 							end
 						end
@@ -420,7 +418,7 @@ module id(
 							instvalid <= `InstValid;	
 							if(reg1_o != reg2_o) begin
 //								offset <= {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]};
-								branch_target_address_o <= pc_i + {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1;
+								branch_target_address_o <= pc_i + ({{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1);
 								branch_flag_o <= `Branch;
 							end
 						end
@@ -436,8 +434,7 @@ module id(
 //														(!reg1_o[31] && !reg2_o[31] && temp_sum[31])||
 //																(reg1_o[31] && reg2_o[31] && temp_sum[31]));
 							if(reg1_lt_reg2 == 1'b1) begin
-//								offset <= {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]};
-								branch_target_address_o <= pc_i + {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1;
+								branch_target_address_o <= pc_i + ({{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1);
 								branch_flag_o <= `Branch;
 							end
 						end
@@ -450,7 +447,7 @@ module id(
 							instvalid <= `InstValid;	
 							if(reg1_o < reg2_o) begin
 //								offset <= {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]};
-								branch_target_address_o <= pc_i + {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1;
+								branch_target_address_o <= pc_i + ({{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1);
 								branch_flag_o <= `Branch;
 							end
 						end
@@ -467,7 +464,7 @@ module id(
 //																(reg1_o[31] && reg2_o[31] && temp_sum[31]));
 							if(reg1_lt_reg2 == 1'b0) begin
 //								offset <= {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]};
-								branch_target_address_o <= pc_i + {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1;
+								branch_target_address_o <= pc_i + ({{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1);
 								branch_flag_o <= `Branch;
 							end
 						end
@@ -479,8 +476,8 @@ module id(
 							reg2_read_o <= 1'b1;
 							instvalid <= `InstValid;	
 							if((reg1_o > reg2_o) || (reg1_o == reg2_o)) begin
-//								offset <= {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]};
-								branch_target_address_o <= pc_i + {{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1;
+								branch_target_address_o <= pc_i + ({{21{inst_i[31]}}, inst_i[7], inst_i[30:25], inst_i[11:8]} << 1);
+//								branch_target_address_o <= 32'h0000003c;
 								branch_flag_o <= `Branch;
 							end
 						end
@@ -605,6 +602,17 @@ module id(
 					wd_o <= inst_i[11:7];  	
 					instvalid <= `InstValid;	
 				end
+				`EXE_AUIPC_INST:		begin				//AUIPC
+					wreg_o <= `WriteEnable;
+					aluop_o <= `EXE_ADDI_OP;
+					alusel_o <= `EXE_RES_ARITHMETIC;
+					reg1_read_o <= 1'b0;
+					reg2_read_o <= 1'b0;
+					get_current_pc <= 2'b01;
+					imm <= ({{12{inst_i[31]}}, inst_i[31:12]} << 12);
+					wd_o <= inst_i[11:7];		  	
+					instvalid <= `InstValid;
+				end
 				`EXE_JAL:		begin					//JAL
 					 wreg_o <= `WriteEnable;
 					 aluop_o <= `EXE_JAL_OP;
@@ -645,11 +653,14 @@ module id(
 		stallreq_for_reg1_loadrelate <= `NoStop;
 		if(rst == `RstEnable) begin
 			reg1_o <= `ZeroWord;
+			get_current_pc <= 1'b0;
 		end else if(pre_inst_is_load == 1'b1 && ex_wd_i == reg1_addr_o 
 								&& reg1_read_o == 1'b1 ) begin
 		  stallreq_for_reg1_loadrelate <= `Stop;
-		end else if(reg1_read_o == 1'b0) begin
-			reg1_o <= imm;			
+		end else if(reg1_read_o == 1'b0 && get_current_pc != 2'b01) begin
+			reg1_o <= imm;
+		end else if(get_current_pc == 2'b01) begin
+			reg1_o <= pc_i;
 		end else if(reg1_read_o == 1'b1) begin
 			if((ex_wreg_i == 1'b1) && (ex_wd_i == reg1_addr_o)) begin
 				reg1_o <= ex_wdata_i;
@@ -668,11 +679,14 @@ module id(
 		stallreq_for_reg2_loadrelate <= `NoStop;
 		if(rst == `RstEnable) begin
 			reg2_o <= `ZeroWord;
+			get_current_pc <= 1'b0;
 		end else if(pre_inst_is_load == 1'b1 && ex_wd_i == reg2_addr_o 
 								&& reg2_read_o == 1'b1 ) begin
 		  stallreq_for_reg2_loadrelate <= `Stop;
-		end else if(reg2_read_o == 1'b0) begin
-			reg2_o <= imm;			
+		end else if(reg2_read_o == 1'b0 && get_current_pc != 2'b10) begin
+			reg2_o <= imm;
+		end else if(get_current_pc == 2'b10) begin
+			reg2_o <= pc_i;
 		end else if(reg2_read_o == 1'b1) begin
 			if((ex_wreg_i == 1'b1) && (ex_wd_i == reg2_addr_o)) begin
 				reg2_o <= ex_wdata_i;
