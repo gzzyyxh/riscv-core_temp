@@ -1,0 +1,3 @@
+a = 0x40
+b = 0x50
+print(hex(b*a))

@@ -1,0 +1,830 @@
+Analysis & Synthesis report for add
+Tue Apr 05 14:32:58 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |openmips_min_sopc|openmips:openmips0|div:div0|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "openmips:openmips0|div:div0"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Apr 05 14:32:58 2022           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; add                                             ;
+; Top-level Entity Name              ; openmips_min_sopc                               ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 2                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                            ; openmips_min_sopc  ; add                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
+; regfile.v                        ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/regfile.v           ;         ;
+; pc_reg.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/pc_reg.v            ;         ;
+; openmips_min_sopc.v              ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips_min_sopc.v ;         ;
+; openmips.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v          ;         ;
+; mem_wb.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/mem_wb.v            ;         ;
+; mem.v                            ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/mem.v               ;         ;
+; inst_rom.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/inst_rom.v          ;         ;
+; if_id.v                          ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/if_id.v             ;         ;
+; id_ex.v                          ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/id_ex.v             ;         ;
+; id.v                             ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/id.v                ;         ;
+; ex_mem.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex_mem.v            ;         ;
+; ex.v                             ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v                ;         ;
+; defines.v                        ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/defines.v           ;         ;
+; ctrl.v                           ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/ctrl.v              ;         ;
+; div.v                            ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/div.v               ;         ;
+; inst_rom.data                    ; yes             ; Auto-Found Unspecified File  ; D:/Github/OpenRSIC-V/rsic/add_sub_mul/inst_rom.data       ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; rst   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------------+--------------+
+; |openmips_min_sopc         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |openmips_min_sopc  ; openmips_min_sopc ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |openmips_min_sopc|openmips:openmips0|div:div0|state ;
++----------+----------+----------+----------+--------------------------+
+; Name     ; state.11 ; state.10 ; state.01 ; state.00                 ;
++----------+----------+----------+----------+--------------------------+
+; state.00 ; 0        ; 0        ; 0        ; 0                        ;
+; state.01 ; 0        ; 0        ; 1        ; 1                        ;
+; state.10 ; 0        ; 1        ; 0        ; 1                        ;
+; state.11 ; 1        ; 0        ; 0        ; 1                        ;
++----------+----------+----------+----------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                         ;
++-------------------------------------------------------------------+----------------------------------------+
+; Register name                                                     ; Reason for Removal                     ;
++-------------------------------------------------------------------+----------------------------------------+
+; openmips:openmips0|if_id:if_id0|id_inst[2,3,6,10,11,18,19,28..31] ; Stuck at GND due to stuck port data_in ;
+; openmips:openmips0|id_ex:id_ex0|ex_wd[3,4]                        ; Stuck at GND due to stuck port data_in ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wd[3,4]                     ; Stuck at GND due to stuck port data_in ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wd[3,4]                      ; Stuck at GND due to stuck port data_in ;
+; openmips:openmips0|div:div0|state~6                               ; Lost fanout                            ;
+; openmips:openmips0|div:div0|state~7                               ; Lost fanout                            ;
+; openmips:openmips0|div:div0|cnt[0..5]                             ; Lost fanout                            ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[0..7]                    ; Lost fanout                            ;
+; openmips:openmips0|div:div0|ready_o                               ; Lost fanout                            ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg2[0..31]                    ; Lost fanout                            ;
+; openmips:openmips0|if_id:if_id0|id_inst[0,1,4,5,12..14,25..27]    ; Lost fanout                            ;
+; openmips:openmips0|id_ex:id_ex0|ex_wd[0..2]                       ; Lost fanout                            ;
+; openmips:openmips0|if_id:if_id0|id_inst[20..24]                   ; Lost fanout                            ;
+; openmips:openmips0|id_ex:id_ex0|ex_wreg                           ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wd[0..2]                     ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wreg                         ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wd[0..2]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wreg                        ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[31]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[31]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[30]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[30]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[29]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[29]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[28]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[28]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[27]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[27]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[26]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[26]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[25]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[25]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[24]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[24]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[23]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[23]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[22]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[22]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[21]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[21]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[20]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[20]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[19]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[19]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[18]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[18]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[17]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[17]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[16]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[16]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[15]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[15]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[14]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[14]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[13]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[13]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[12]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[12]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[11]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[11]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[10]                   ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[10]                    ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[9]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[9]                     ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[8]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[8]                     ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[7]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[7]                     ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[6]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[6]                     ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[5]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[5]                     ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[4]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[4]                     ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[3]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[3]                     ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[2]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[2]                     ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[1]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[1]                     ; Lost fanout                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[0]                    ; Lost fanout                            ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[0]                     ; Lost fanout                            ;
+; openmips:openmips0|pc_reg:pc_reg0|pc[3..18]                       ; Lost fanout                            ;
+; openmips:openmips0|pc_reg:pc_reg0|ce                              ; Lost fanout                            ;
+; openmips:openmips0|pc_reg:pc_reg0|pc[2]                           ; Lost fanout                            ;
+; openmips:openmips0|if_id:if_id0|id_inst[7..9]                     ; Lost fanout                            ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg1[0..31]                    ; Lost fanout                            ;
+; openmips:openmips0|id_ex:id_ex0|ex_alusel[0..2]                   ; Lost fanout                            ;
+; openmips:openmips0|div:div0|result_o[31,63]                       ; Lost fanout                            ;
+; openmips:openmips0|if_id:if_id0|id_inst[15..17]                   ; Lost fanout                            ;
+; openmips:openmips0|div:div0|result_o[0..30,32..62]                ; Lost fanout                            ;
+; openmips:openmips0|pc_reg:pc_reg0|pc[19..31]                      ; Lost fanout                            ;
+; openmips:openmips0|div:div0|dividend[0..31,33..64]                ; Lost fanout                            ;
+; openmips:openmips0|div:div0|divisor[0..31]                        ; Lost fanout                            ;
+; openmips:openmips0|div:div0|dividend[32]                          ; Lost fanout                            ;
+; openmips:openmips0|div:div0|state.00                              ; Lost fanout                            ;
+; openmips:openmips0|div:div0|state.01                              ; Lost fanout                            ;
+; openmips:openmips0|div:div0|state.10                              ; Lost fanout                            ;
+; openmips:openmips0|div:div0|state.11                              ; Lost fanout                            ;
+; Total Number of Removed Registers = 394                           ;                                        ;
++-------------------------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
++---------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                               ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++---------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; openmips:openmips0|if_id:if_id0|id_inst[6]  ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_aluop[0],                                        ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|id_ex:id_ex0|ex_aluop[4],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_aluop[5],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_wd[2], openmips:openmips0|id_ex:id_ex0|ex_wd[1], ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_wd[0],                                           ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[2],                                         ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[1],                                         ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[0],                                         ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wreg,                                          ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[2],                                        ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[1],                                        ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[0],                                        ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[7],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[6],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[5],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[5],                                      ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[4],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[4],                                      ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[3],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[3],                                      ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[2],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[2],                                      ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[1],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[1],                                      ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[0],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[0],                                      ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[9],                                         ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[8],                                         ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[7],                                         ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[16],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[17],                                        ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[39], openmips:openmips0|div:div0|result_o[38], ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[37], openmips:openmips0|div:div0|result_o[36], ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[35], openmips:openmips0|div:div0|result_o[34], ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[33], openmips:openmips0|div:div0|result_o[32], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[40], openmips:openmips0|div:div0|dividend[39], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[38], openmips:openmips0|div:div0|dividend[37], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[36], openmips:openmips0|div:div0|dividend[35], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[34], openmips:openmips0|div:div0|dividend[33], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[32]                                            ;
+; openmips:openmips0|if_id:if_id0|id_inst[31] ; Stuck at GND              ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[31],                                    ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[27],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[26],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[25],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[24],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[23],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[22],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[21],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[20],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[19],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[18],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[17],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[16],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[15],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[14],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[13],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[12],                                    ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[11],                                    ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg1[31],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_alusel[1],                                       ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_alusel[2],                                       ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[59], openmips:openmips0|div:div0|result_o[58], ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[57], openmips:openmips0|div:div0|result_o[56], ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[47], openmips:openmips0|div:div0|result_o[46], ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[45], openmips:openmips0|div:div0|result_o[44], ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[43], openmips:openmips0|div:div0|dividend[60], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[59], openmips:openmips0|div:div0|dividend[58], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[57], openmips:openmips0|div:div0|dividend[48], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[47], openmips:openmips0|div:div0|dividend[46], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[45], openmips:openmips0|div:div0|dividend[44]  ;
+; openmips:openmips0|if_id:if_id0|id_inst[28] ; Stuck at GND              ; openmips:openmips0|div:div0|ready_o, openmips:openmips0|if_id:if_id0|id_inst[4],    ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|if_id:if_id0|id_inst[5],                                         ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[0],                                         ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[1],                                         ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[14],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[13],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[12],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[25],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[26],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[27],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[24],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[23],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[22],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[21],                                        ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_inst[20],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_wreg,                                            ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[28],                                    ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[28],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[8],                                     ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|pc[3], openmips:openmips0|pc_reg:pc_reg0|pc[4],   ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|pc[5], openmips:openmips0|pc_reg:pc_reg0|pc[6],   ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|pc[7], openmips:openmips0|pc_reg:pc_reg0|pc[8],   ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|pc[9], openmips:openmips0|pc_reg:pc_reg0|pc[10],  ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|pc[11], openmips:openmips0|pc_reg:pc_reg0|pc[12], ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|ce, openmips:openmips0|pc_reg:pc_reg0|pc[2],      ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[28], openmips:openmips0|div:div0|result_o[40], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[28], openmips:openmips0|div:div0|dividend[41]  ;
+; openmips:openmips0|if_id:if_id0|id_inst[11] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_wd[4],                                           ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|id_ex:id_ex0|ex_aluop[1],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_aluop[2],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_aluop[3],                                        ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wreg,                                         ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[31],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[27],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[26],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[25],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[24],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[23],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[22],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[21],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[20],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[19],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[18],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[17],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[16],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[15],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[14],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[13],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[12],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[11],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[10],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[9],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[8],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[7]                                       ;
+; openmips:openmips0|div:div0|state~6         ; Lost Fanouts              ; openmips:openmips0|div:div0|cnt[0], openmips:openmips0|div:div0|cnt[1],             ;
+;                                             ;                           ; openmips:openmips0|div:div0|cnt[2], openmips:openmips0|div:div0|cnt[3],             ;
+;                                             ;                           ; openmips:openmips0|div:div0|cnt[4], openmips:openmips0|div:div0|cnt[5],             ;
+;                                             ;                           ; openmips:openmips0|div:div0|state.00, openmips:openmips0|div:div0|state.01,         ;
+;                                             ;                           ; openmips:openmips0|div:div0|state.11                                                ;
+; openmips:openmips0|if_id:if_id0|id_inst[29] ; Stuck at GND              ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[29],                                    ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[29],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[9],                                     ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_alusel[0],                                       ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[29], openmips:openmips0|div:div0|result_o[41], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[29], openmips:openmips0|div:div0|dividend[42]  ;
+; openmips:openmips0|div:div0|result_o[63]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[64], openmips:openmips0|div:div0|divisor[31],  ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[30], openmips:openmips0|div:div0|divisor[29],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[28], openmips:openmips0|div:div0|divisor[27]    ;
+; openmips:openmips0|if_id:if_id0|id_inst[30] ; Stuck at GND              ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[30],                                    ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[30],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[10],                                    ;
+;                                             ;                           ; openmips:openmips0|div:div0|result_o[42], openmips:openmips0|div:div0|dividend[43]  ;
+; openmips:openmips0|if_id:if_id0|id_inst[10] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_wd[3],                                           ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[3],                                        ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[3]                                          ;
+; openmips:openmips0|if_id:if_id0|id_inst[19] ; Stuck at GND              ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[6],                                      ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|if_id:if_id0|id_inst[15]                                         ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg2[28] ; Lost Fanouts              ; openmips:openmips0|div:div0|result_o[60], openmips:openmips0|div:div0|dividend[61]  ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg2[29] ; Lost Fanouts              ; openmips:openmips0|div:div0|result_o[61], openmips:openmips0|div:div0|dividend[62]  ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wd[4] ; Stuck at GND              ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[4]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|div:div0|state~7         ; Lost Fanouts              ; openmips:openmips0|div:div0|state.10                                                ;
+; openmips:openmips0|div:div0|result_o[31]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[31]                                            ;
+; openmips:openmips0|div:div0|result_o[30]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[30]                                            ;
+; openmips:openmips0|div:div0|result_o[62]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[63]                                            ;
+; openmips:openmips0|div:div0|result_o[27]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[27]                                            ;
+; openmips:openmips0|div:div0|result_o[26]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[26]                                            ;
+; openmips:openmips0|div:div0|result_o[25]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[25]                                            ;
+; openmips:openmips0|div:div0|result_o[24]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[24]                                            ;
+; openmips:openmips0|div:div0|result_o[23]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[23]                                            ;
+; openmips:openmips0|div:div0|result_o[55]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[56]                                            ;
+; openmips:openmips0|div:div0|result_o[22]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[22]                                            ;
+; openmips:openmips0|div:div0|result_o[54]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[55]                                            ;
+; openmips:openmips0|div:div0|result_o[21]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[21]                                            ;
+; openmips:openmips0|div:div0|result_o[53]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[54]                                            ;
+; openmips:openmips0|div:div0|result_o[20]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[20]                                            ;
+; openmips:openmips0|div:div0|result_o[52]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[53]                                            ;
+; openmips:openmips0|div:div0|result_o[19]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[19]                                            ;
+; openmips:openmips0|div:div0|result_o[51]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[52]                                            ;
+; openmips:openmips0|div:div0|result_o[18]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[18]                                            ;
+; openmips:openmips0|div:div0|result_o[50]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[51]                                            ;
+; openmips:openmips0|div:div0|result_o[17]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[17]                                            ;
+; openmips:openmips0|div:div0|result_o[49]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[50]                                            ;
+; openmips:openmips0|div:div0|result_o[16]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[16]                                            ;
+; openmips:openmips0|div:div0|result_o[48]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[49]                                            ;
+; openmips:openmips0|div:div0|result_o[15]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[15]                                            ;
+; openmips:openmips0|div:div0|result_o[14]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[14]                                            ;
+; openmips:openmips0|div:div0|result_o[13]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[13]                                            ;
+; openmips:openmips0|div:div0|result_o[12]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[12]                                            ;
+; openmips:openmips0|div:div0|result_o[11]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[11]                                            ;
+; openmips:openmips0|div:div0|result_o[10]    ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[10]                                            ;
+; openmips:openmips0|div:div0|result_o[9]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[9]                                             ;
+; openmips:openmips0|div:div0|result_o[8]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[8]                                             ;
+; openmips:openmips0|div:div0|result_o[7]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[7]                                             ;
+; openmips:openmips0|div:div0|result_o[6]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[6]                                             ;
+; openmips:openmips0|div:div0|result_o[5]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[5]                                             ;
+; openmips:openmips0|div:div0|result_o[4]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[4]                                             ;
+; openmips:openmips0|div:div0|result_o[3]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[3]                                             ;
+; openmips:openmips0|div:div0|result_o[2]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[2]                                             ;
+; openmips:openmips0|div:div0|result_o[1]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[1]                                             ;
+; openmips:openmips0|div:div0|result_o[0]     ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[0]                                             ;
++---------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0|id_inst[0]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_wd[2]    ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|pc_reg:pc_reg0|pc[19]    ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0|id_inst[22] ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0|id_inst[25] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|div:div0|cnt[0]          ;
+; 6:1                ; 64 bits   ; 256 LEs       ; 64 LEs               ; 192 LEs                ; Yes        ; |openmips_min_sopc|openmips:openmips0|div:div0|result_o[33]    ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|div:div0|dividend[9]     ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|div:div0|dividend[43]    ;
+; 12:1               ; 24 bits   ; 192 LEs       ; 72 LEs               ; 120 LEs                ; Yes        ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_reg2[28] ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_reg2[4]  ;
+; 12:1               ; 24 bits   ; 192 LEs       ; 72 LEs               ; 120 LEs                ; Yes        ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_reg1[19] ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_reg1[2]  ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 12 LEs               ; 20 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_aluop[2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|Mux1              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftLeft1        ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftLeft1        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0|id_inst     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|imm[6]            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0       ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|imm[4]            ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0       ;
+; 251:1              ; 32 bits   ; 5344 LEs      ; 128 LEs              ; 5216 LEs               ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Selector42        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|div:div0|state           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|div:div0|state           ;
+; 271:1              ; 16 bits   ; 2880 LEs      ; 144 LEs              ; 2736 LEs               ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Mux8              ;
+; 272:1              ; 8 bits    ; 1448 LEs      ; 88 LEs               ; 1360 LEs               ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Mux20             ;
+; 273:1              ; 4 bits    ; 728 LEs       ; 44 LEs               ; 684 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Mux25             ;
+; 274:1              ; 2 bits    ; 364 LEs       ; 24 LEs               ; 340 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Mux28             ;
+; 275:1              ; 2 bits    ; 366 LEs       ; 26 LEs               ; 340 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Mux31             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "openmips:openmips0|div:div0" ;
++---------+-------+----------+----------------------------+
+; Port    ; Type  ; Severity ; Details                    ;
++---------+-------+----------+----------------------------+
+; annul_i ; Input ; Info     ; Stuck at GND               ;
++---------+-------+----------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:10     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Tue Apr 05 14:18:13 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off add -c add
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
+    Info (12023): Found entity 1: regfile File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/regfile.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file pc_reg.v
+    Info (12023): Found entity 1: pc_reg File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/pc_reg.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file openmips_min_sopc_tb.v
+    Info (12023): Found entity 1: openmips_min_sopc_tb File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips_min_sopc_tb.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file openmips_min_sopc.v
+    Info (12023): Found entity 1: openmips_min_sopc File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips_min_sopc.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file openmips.v
+    Info (12023): Found entity 1: openmips File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mem_wb.v
+    Info (12023): Found entity 1: mem_wb File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/mem_wb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mem.v
+    Info (12023): Found entity 1: mem File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/mem.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file inst_rom.v
+    Info (12023): Found entity 1: inst_rom File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/inst_rom.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file if_id.v
+    Info (12023): Found entity 1: if_id File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/if_id.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file id_ex.v
+    Info (12023): Found entity 1: id_ex File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/id_ex.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file id.v
+    Info (12023): Found entity 1: id File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/id.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ex_mem.v
+    Info (12023): Found entity 1: ex_mem File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex_mem.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ex.v
+    Info (12023): Found entity 1: ex File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file defines.v
+Info (12021): Found 1 design units, including 1 entities, in source file ctrl.v
+    Info (12023): Found entity 1: ctrl File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ctrl.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file div.v
+    Info (12023): Found entity 1: div File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/div.v Line: 3
+Info (12127): Elaborating entity "openmips_min_sopc" for the top level hierarchy
+Info (12128): Elaborating entity "openmips" for hierarchy "openmips:openmips0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips_min_sopc.v Line: 24
+Info (12128): Elaborating entity "pc_reg" for hierarchy "openmips:openmips0|pc_reg:pc_reg0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 83
+Info (12128): Elaborating entity "if_id" for hierarchy "openmips:openmips0|if_id:if_id0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 96
+Info (12128): Elaborating entity "id" for hierarchy "openmips:openmips0|id:id0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 134
+Warning (10036): Verilog HDL or VHDL warning at id.v(44): object "instvalid" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/id.v Line: 44
+Info (12128): Elaborating entity "regfile" for hierarchy "openmips:openmips0|regfile:regfile1" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 149
+Info (12128): Elaborating entity "id_ex" for hierarchy "openmips:openmips0|id_ex:id_ex0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 173
+Info (12128): Elaborating entity "ex" for hierarchy "openmips:openmips0|ex:ex0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 202
+Warning (10036): Verilog HDL or VHDL warning at ex.v(38): object "reg1_i_not" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 38
+Warning (10036): Verilog HDL or VHDL warning at ex.v(40): object "ov_sum" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 40
+Warning (10240): Verilog HDL Always Construct warning at ex.v(75): inferring latch(es) for variable "logicout", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Warning (10240): Verilog HDL Always Construct warning at ex.v(75): inferring latch(es) for variable "arithmeticres", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Warning (10270): Verilog HDL Case Statement warning at ex.v(219): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 219
+Warning (10270): Verilog HDL Case Statement warning at ex.v(229): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 229
+Warning (10240): Verilog HDL Always Construct warning at ex.v(206): inferring latch(es) for variable "wdata_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[0]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[1]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[2]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[3]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[4]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[5]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[6]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[7]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[8]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[9]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[10]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[11]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[12]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[13]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[14]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[15]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[16]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[17]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[18]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[19]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[20]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[21]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[22]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[23]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[24]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[25]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[26]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[27]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[28]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[29]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[30]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "wdata_o[31]" at ex.v(206) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 206
+Info (10041): Inferred latch for "arithmeticres[0]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[1]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[2]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[3]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[4]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[5]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[6]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[7]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[8]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[9]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[10]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[11]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[12]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[13]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[14]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[15]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[16]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[17]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[18]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[19]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[20]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[21]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[22]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[23]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[24]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[25]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[26]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[27]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[28]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[29]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[30]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "arithmeticres[31]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[0]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[1]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[2]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[3]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[4]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[5]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[6]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[7]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[8]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[9]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[10]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[11]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[12]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[13]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[14]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[15]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[16]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[17]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[18]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[19]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[20]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[21]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[22]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[23]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[24]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[25]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[26]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[27]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[28]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[29]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[30]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (10041): Inferred latch for "logicout[31]" at ex.v(75) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/ex.v Line: 75
+Info (12128): Elaborating entity "ex_mem" for hierarchy "openmips:openmips0|ex_mem:ex_mem0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 222
+Info (12128): Elaborating entity "mem" for hierarchy "openmips:openmips0|mem:mem0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 237
+Info (12128): Elaborating entity "mem_wb" for hierarchy "openmips:openmips0|mem_wb:mem_wb0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 255
+Info (12128): Elaborating entity "ctrl" for hierarchy "openmips:openmips0|ctrl:ctrl0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 266
+Info (12128): Elaborating entity "div" for hierarchy "openmips:openmips0|div:div0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips.v Line: 280
+Warning (10230): Verilog HDL assignment warning at div.v(73): truncated value with size 32 to match size of target (6) File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/div.v Line: 73
+Info (12128): Elaborating entity "inst_rom" for hierarchy "inst_rom:inst_rom0" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips_min_sopc.v Line: 30
+Warning (10850): Verilog HDL warning at inst_rom.v(14): number of words (14) in memory file does not match the number of elements in the address range [0:131070] File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/inst_rom.v Line: 14
+Warning (10030): Net "inst_mem.data_a" at inst_rom.v(12) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/inst_rom.v Line: 12
+Warning (10030): Net "inst_mem.waddr_a" at inst_rom.v(12) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/inst_rom.v Line: 12
+Warning (10030): Net "inst_mem.we_a" at inst_rom.v(12) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/inst_rom.v Line: 12
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "openmips:openmips0|regfile:regfile1|regs" is uninferred due to asynchronous read logic File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/regfile.v Line: 25
+Critical Warning (127005): Memory depth (131072) in the design file differs from memory depth (131071) in the Memory Initialization File "D:/Github/OpenRSIC-V/rsic/add_sub_mul/db/add.ram0_inst_rom_ca4a952.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/Github/OpenRSIC-V/rsic/add_sub_mul/db/add.ram0_inst_rom_ca4a952.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (17049): 377 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/Github/OpenRSIC-V/rsic/add_sub_mul/output_files/add.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rst" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips_min_sopc.v Line: 8
+    Warning (15610): No output dependent on input pin "clk" File: D:/Github/OpenRSIC-V/rsic/add_sub_mul/openmips_min_sopc.v Line: 5
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 5365 megabytes
+    Info: Processing ended: Tue Apr 05 14:32:58 2022
+    Info: Elapsed time: 00:14:45
+    Info: Total CPU time (on all processors): 00:14:55
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Github/OpenRSIC-V/rsic/add_sub_mul/output_files/add.map.smsg.
+
+

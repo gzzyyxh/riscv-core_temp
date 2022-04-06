@@ -1,0 +1,1001 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/sim.mpf
+# Loading project sim
+vsim work.openmips_min_sopc_tb
+# vsim work.openmips_min_sopc_tb 
+# Start time: 17:43:28 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+# ** Warning: (vsim-3015) D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips.v(78): [PCDPC] - Port size (32) does not match connection size (1) for port 'branch_target_address_i'. The port definition is at: D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/pc_reg.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0 File: D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/pc_reg.v
+# ** Warning: (vsim-3015) D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips.v(103): [PCDPC] - Port size (32) does not match connection size (1) for port 'branch_target_address_o'. The port definition is at: D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/id.v(39).
+#    Time: 0 ps  Iteration: 0  Instance: /openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0 File: D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/id.v
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/stallreq \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of id.v was successful.
+# Compile of openmips.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 17:52:28 on Apr 05,2022, Elapsed time: 0:09:00
+# Errors: 0, Warnings: 2
+# vsim work.openmips_min_sopc_tb 
+# Start time: 17:52:28 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/stallreq \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# WARNING: No extended dataflow license exists
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i
+restart
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 18:03:09 on Apr 05,2022, Elapsed time: 0:10:41
+# Errors: 0, Warnings: 1
+# vsim work.openmips_min_sopc_tb 
+# Start time: 18:03:09 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+# WARNING: No extended dataflow license exists
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/stallreq \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 18:10:26 on Apr 05,2022, Elapsed time: 0:07:17
+# Errors: 0, Warnings: 1
+# vsim work.openmips_min_sopc_tb 
+# Start time: 18:10:26 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+# WARNING: No extended dataflow license exists
+vsim work.openmips_min_sopc_tb
+# End time: 18:10:45 on Apr 05,2022, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 1
+# vsim work.openmips_min_sopc_tb 
+# Start time: 18:10:45 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[5]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/re1 \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/raddr1 \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/rdata1
+restart
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/offset
+restart
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 18:49:19 on Apr 05,2022, Elapsed time: 0:38:34
+# Errors: 0, Warnings: 0
+# vsim work.openmips_min_sopc_tb 
+# Start time: 18:49:19 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 18:51:55 on Apr 05,2022, Elapsed time: 0:02:36
+# Errors: 0, Warnings: 0
+# vsim work.openmips_min_sopc_tb 
+# Start time: 18:51:55 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/offset
+run
+restart
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 18:57:42 on Apr 05,2022, Elapsed time: 0:05:47
+# Errors: 0, Warnings: 0
+# vsim work.openmips_min_sopc_tb 
+# Start time: 18:57:42 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/offset
+restart
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 19:17:53 on Apr 05,2022, Elapsed time: 0:20:11
+# Errors: 0, Warnings: 0
+# vsim work.openmips_min_sopc_tb 
+# Start time: 19:17:53 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v failed with 1 errors.
+# 16 compiles, 1 failed with 1 error.
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 19:23:59 on Apr 05,2022, Elapsed time: 0:06:06
+# Errors: 0, Warnings: 0
+# vsim work.openmips_min_sopc_tb 
+# Start time: 19:23:59 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/*
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/test
+restart
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 19:28:30 on Apr 05,2022, Elapsed time: 0:04:31
+# Errors: 0, Warnings: 0
+# vsim work.openmips_min_sopc_tb 
+# Start time: 19:28:30 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/test
+restart
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 19:31:23 on Apr 05,2022, Elapsed time: 0:02:53
+# Errors: 0, Warnings: 0
+# vsim work.openmips_min_sopc_tb 
+# Start time: 19:31:23 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/test
+restart
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# Compile of id.v was successful.
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of div.v was successful.
+# Compile of ex.v was successful.
+# Compile of ex_mem.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of inst_rom.v was successful.
+# Compile of mem.v was successful.
+# Compile of mem_wb.v was successful.
+# Compile of openmips_min_sopc.v was successful.
+# Compile of openmips_min_sopc_tb.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of regfile.v was successful.
+# Compile of openmips.v was successful.
+# Compile of id.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.openmips_min_sopc_tb
+# End time: 19:34:37 on Apr 05,2022, Elapsed time: 0:03:14
+# Errors: 0, Warnings: 0
+# vsim work.openmips_min_sopc_tb 
+# Start time: 19:34:37 on Apr 05,2022
+# Loading work.openmips_min_sopc_tb
+# Loading work.openmips_min_sopc
+# Loading work.openmips
+# Loading work.pc_reg
+# Loading work.if_id
+# Loading work.id
+# Loading work.regfile
+# Loading work.id_ex
+# Loading work.ex
+# Loading work.ex_mem
+# Loading work.mem
+# Loading work.mem_wb
+# Loading work.ctrl
+# Loading work.div
+# Loading work.inst_rom
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_link_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_flag_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/branch_target_address_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc_reg0/pc
+add wave  \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/pc_i \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/aluop_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/alusel_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg1_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/reg2_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wd_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/wreg_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_flag_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/branch_target_address_o \
+sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id0/link_addr_o
+add wave  \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[0]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[1]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[2]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[3]} \
+{sim:/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/regs[4]}
+run -all
+# ** Note: $stop    : D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v(18)
+#    Time: 1195 ns  Iteration: 0  Instance: /openmips_min_sopc_tb
+# Break in Module openmips_min_sopc_tb at D:/Github/OpenRSIC-V/rsic/jal_jalr/sim/openmips_min_sopc_tb.v line 18
+# End time: 12:26:02 on Apr 06,2022, Elapsed time: 16:51:25
+# Errors: 0, Warnings: 0

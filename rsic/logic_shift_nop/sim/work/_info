@@ -1,0 +1,283 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim
+vex
+Z1 !s110 1649057728
+!i10b 1
+!s100 jh`LAYL>5OSgA;5[;<oIc2
+I7camV<S:<lb`MhS8o6Dlc2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1649046917
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/ex.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/ex.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1649057728.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/ex.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vex_mem
+Z7 !s110 1649057727
+!i10b 1
+!s100 D2f_;=:;:CaF4mcQ_44XX1
+IOm0If<GPddjSaId<AC;R]1
+R2
+R0
+w1648970347
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/ex_mem.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/ex_mem.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z8 !s108 1649057727.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/ex_mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/ex_mem.v|
+!i113 1
+R5
+R6
+vid
+R1
+!i10b 1
+!s100 HSB6<6I79Y1<ak[AAWaBI3
+IC4cK<_:m8`I3h5eV03Bkz3
+R2
+R0
+w1649057710
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/id.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/id.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/id.v|
+!i113 1
+R5
+R6
+vid_ex
+R7
+!i10b 1
+!s100 M8H83<lG3JEi[F=]TO[323
+I78zTf4@P4E?BdNjB2_cG:0
+R2
+R0
+w1648970188
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/id_ex.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/id_ex.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/id_ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/id_ex.v|
+!i113 1
+R5
+R6
+vif_id
+R7
+!i10b 1
+!s100 QBSZ=caNS<^8jnZ?c>i@e2
+IPomC?I7f8;k2n1?=V]3m32
+R2
+R0
+w1648970875
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/if_id.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/if_id.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/if_id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/if_id.v|
+!i113 1
+R5
+R6
+vinst_rom
+R7
+!i10b 1
+!s100 :6LHc2LnREAPP7kJgo@:X3
+Ie9TBTYHnEAIaWH[Mz`^HF2
+R2
+R0
+w1648970460
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/inst_rom.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/inst_rom.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/inst_rom.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/inst_rom.v|
+!i113 1
+R5
+R6
+vmem
+R7
+!i10b 1
+!s100 ;=MZ[IG^9h<XOQKgP;Rci1
+IVoTn566oM=EE[9n]@IDCU1
+R2
+R0
+w1648970379
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/mem.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/mem.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/mem.v|
+!i113 1
+R5
+R6
+vmem_wb
+R7
+!i10b 1
+!s100 n_MhF68=Q?11b<dX?YRBV1
+IYWDYz;V4>A49ozJ1olzai0
+R2
+R0
+w1648970394
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/mem_wb.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/mem_wb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/mem_wb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/mem_wb.v|
+!i113 1
+R5
+R6
+vopenmips
+R7
+!i10b 1
+!s100 LhG1TShD^E_G]4>PiGm1D0
+Ibl6M9P]jI=TU;F<4bgH^W3
+R2
+R0
+w1648989827
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips.v|
+!i113 1
+R5
+R6
+vopenmips_min_sopc
+R7
+!i10b 1
+!s100 H=eBgzO[L?k>fEE:inNLm1
+IoUdSTU0@f2[o9d[<TN=kN2
+R2
+R0
+w1648970734
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips_min_sopc.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips_min_sopc.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips_min_sopc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips_min_sopc.v|
+!i113 1
+R5
+R6
+vopenmips_min_sopc_tb
+R1
+!i10b 1
+!s100 bm7FYEFJ:G<RCoBMCMnJK2
+I01j@NGZ7]zUV0oa][Xj4f1
+R2
+R0
+w1648970743
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips_min_sopc_tb.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips_min_sopc_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips_min_sopc_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/openmips_min_sopc_tb.v|
+!i113 1
+R5
+R6
+vpc_reg
+R1
+!i10b 1
+!s100 WNQoB7082bE35mFGdaJzT0
+IQkK]lDSYGN_^ibAfM57L72
+R2
+R0
+w1648968727
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/pc_reg.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/pc_reg.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/pc_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/pc_reg.v|
+!i113 1
+R5
+R6
+vregfile
+R1
+!i10b 1
+!s100 Fm963[JO:4>7703MiZ^I_2
+I>JdzOZWzBX0]3AM]BNG:_0
+R2
+R0
+w1648988500
+8D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/regfile.v
+FD:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/regfile.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/regfile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/logic_shift_nop/sim/regfile.v|
+!i113 1
+R5
+R6
