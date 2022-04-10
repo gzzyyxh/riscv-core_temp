@@ -92,12 +92,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	openmips_min_sopc
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/openmips.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/openmips.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/if_id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/if_id.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module openmips
+-- Compiling module if_id
 
 Top level modules:
-	openmips
+	if_id
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/ex_mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/ex_mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -106,11 +106,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	ex_mem
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/if_id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/if_id.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/auipc/sim3/openmips.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/auipc/sim3/openmips.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module if_id
+-- Compiling module openmips
 
 Top level modules:
-	if_id
+	openmips
 
 } {} {}}

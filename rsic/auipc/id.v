@@ -97,6 +97,7 @@ module id(
 			branch_flag_o <= `NotBranch;
 //			reg1_lt_reg2 <= 1'b0;
 //			temp_sum <= 32'b0;
+			get_current_pc <= 2'b00;
 	  end else begin
 			aluop_o <= `EXE_NOP_OP;
 			alusel_o <= `EXE_RES_NOP;
@@ -113,6 +114,7 @@ module id(
 			branch_flag_o <= `NotBranch;
 //			reg1_lt_reg2 <= 1'b0;
 //			temp_sum <= 32'b0;
+			get_current_pc <= 2'b00;
 		  case (op)
 			 `EXE_I_INST:	begin
 					case(op2) 
@@ -655,17 +657,18 @@ module id(
 		end else if(pre_inst_is_load == 1'b1 && ex_wd_i == reg1_addr_o 
 								&& reg1_read_o == 1'b1 ) begin
 		  stallreq_for_reg1_loadrelate <= `Stop;
-		end else if(reg1_read_o == 1'b0 && get_current_pc != 2'b01) begin
-			reg1_o <= imm;
-		end else if(get_current_pc == 2'b01) begin
-			reg1_o <= pc_i;
+		end else if(reg1_read_o == 1'b0) begin
+			if(get_current_pc != 2'b01) begin
+					reg1_o <= imm;
+			end else if(get_current_pc == 2'b01) begin
+				reg1_o <= pc_i;
+			end
 		end else if(reg1_read_o == 1'b1) begin
 			if((ex_wreg_i == 1'b1) && (ex_wd_i == reg1_addr_o)) begin
 				reg1_o <= ex_wdata_i;
 			end else if((mem_wreg_i == 1'b1)&& (mem_wd_i == reg1_addr_o)) begin
 				reg1_o <= mem_wdata_i;
-			end
-			else begin
+			end else begin
 				reg1_o <= reg1_data_i;
 			end
 		end else begin
@@ -679,10 +682,12 @@ module id(
 		end else if(pre_inst_is_load == 1'b1 && ex_wd_i == reg2_addr_o 
 								&& reg2_read_o == 1'b1 ) begin
 		  stallreq_for_reg2_loadrelate <= `Stop;
-		end else if(reg2_read_o == 1'b0 && get_current_pc != 2'b10) begin
-			reg2_o <= imm;
-		end else if(get_current_pc == 2'b10) begin
-			reg2_o <= pc_i;
+		end else if(reg2_read_o == 1'b0) begin
+			if(get_current_pc != 2'b10) begin
+					reg2_o <= imm;
+			end else if(get_current_pc == 2'b10) begin
+				reg2_o <= pc_i;
+			end
 		end else if(reg2_read_o == 1'b1) begin
 			if((ex_wreg_i == 1'b1) && (ex_wd_i == reg2_addr_o)) begin
 				reg2_o <= ex_wdata_i;
