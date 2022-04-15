@@ -1,0 +1,211 @@
+D:/Github/OpenRSIC-V/rsic/csr/sim/id_ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/id_ex.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module id_ex
+
+Top level modules:
+	id_ex
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/data_ram.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/data_ram.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module data_ram
+
+Top level modules:
+	data_ram
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/openmips_min_sopc.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/openmips_min_sopc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module openmips_min_sopc
+
+Top level modules:
+	openmips_min_sopc
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/inst_rom.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/inst_rom.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module inst_rom
+
+Top level modules:
+	inst_rom
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/if_id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/if_id.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module if_id
+
+Top level modules:
+	if_id
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/ctrl.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/ctrl.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/defines.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/regfile.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/regfile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/mem_wb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/mem_wb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mem_wb
+
+Top level modules:
+	mem_wb
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/mem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module mem
+
+Top level modules:
+	mem
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/pc_reg.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/pc_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module pc_reg
+
+Top level modules:
+	pc_reg
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/div.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/div.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module div
+
+Top level modules:
+	div
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/ex_mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/ex_mem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ex_mem
+
+Top level modules:
+	ex_mem
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/openmips.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/openmips.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module openmips
+
+Top level modules:
+	openmips
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/ex.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ex
+
+Top level modules:
+	ex
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/id.v {1 {vlog -work work -stats=none {D:\Github\OpenRSIC-V\rsic\csr\sim\id.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module id
+
+Top level modules:
+	id
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/openmips_min_sopc_tb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/openmips_min_sopc_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module openmips_min_sopc_tb
+
+Top level modules:
+	openmips_min_sopc_tb
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v {2 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module csr
+** Warning: ** while parsing macro expansion: 'CSR_REG_FFLAGS' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(85)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(85): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_FRM' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(88)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(88): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_FCSR' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(91)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(91): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MSTATUS' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(94)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(94): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MISA' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(97)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(97): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MTVEC' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(103)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(103): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MSCRATCH' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(106)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(106): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MEPC' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(109)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(109): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MCAUSE' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(112)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(112): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MTVAL' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(115)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(115): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MIP' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(118)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(118): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MCYCLE' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(121)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(121): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MCYCLEH' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(124)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(124): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MINSTRET' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(127)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(127): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MINSTRETH' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(130)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(130): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MVENDORID' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(133)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(133): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MARCHID' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(136)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(136): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MIMPID' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(139)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(139): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MHARTID' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(142)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(142): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MTINME' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(145)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(145): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MTIMECMP' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(148)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(148): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MSIP' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(151)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(151): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_FFLAGS' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(166)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(166): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_FRM' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(169)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(169): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_FCSR' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(172)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(172): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MSTATUS' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(175)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(175): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MISA' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(178)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(178): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MTVEC' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(184)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(184): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MSCRATCH' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(187)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(187): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MEPC' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(190)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(190): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MCAUSE' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(193)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(193): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MTVAL' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(196)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(196): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MIP' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(199)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(199): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MCYCLE' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(202)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(202): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MCYCLEH' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(205)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(205): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MINSTRET' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(208)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(208): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MINSTRETH' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(211)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(211): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MVENDORID' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(214)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(214): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MARCHID' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(217)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(217): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MIMPID' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(220)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(220): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MHARTID' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(223)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(223): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MTINME' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(226)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(226): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MTIMECMP' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(229)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(229): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing macro expansion: 'CSR_REG_MSIP' starting at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(232)
+** at D:/Github/OpenRSIC-V/rsic/csr/sim/csr.v(232): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	csr
+
+} {} {}}

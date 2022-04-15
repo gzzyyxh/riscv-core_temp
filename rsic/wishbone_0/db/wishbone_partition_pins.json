@@ -1,0 +1,217 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "uart_out",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[8]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[9]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[10]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[11]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[12]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[13]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[14]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[15]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[16]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[17]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[18]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[19]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[20]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[21]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[22]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[23]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[24]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[25]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[26]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[27]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[28]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[29]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[30]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_o[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[9]",
+					"strict" : false
+				},
+				{
+					"name" : "uart_in",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[8]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[4]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[12]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[11]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[2]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[10]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[15]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[7]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[14]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[13]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[6]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[5]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

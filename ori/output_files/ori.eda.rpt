@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ori
-Tue Mar 29 14:07:30 2022
+Fri Apr 15 16:47:30 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Mar 29 14:07:30 2022 ;
+; EDA Netlist Writer Status ; Successful - Fri Apr 15 16:47:30 2022 ;
 ; Revision Name             ; ori                                   ;
 ; Top-level Entity Name     ; openmips_min_sopc                     ;
 ; Family                    ; Cyclone IV E                          ;
@@ -66,20 +66,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Simulation Generated Files                                                  ;
-+-----------------------------------------------------------------------------+
-; Generated Files                                                             ;
-+-----------------------------------------------------------------------------+
-; D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/ori_8_1200mv_85c_slow.vo     ;
-; D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/ori_8_1200mv_0c_slow.vo      ;
-; D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/ori_min_1200mv_0c_fast.vo    ;
-; D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/ori.vo                       ;
-; D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/ori_8_1200mv_85c_v_slow.sdo  ;
-; D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/ori_8_1200mv_0c_v_slow.sdo   ;
-; D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/ori_min_1200mv_0c_v_fast.sdo ;
-; D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/ori_v.sdo                    ;
-+-----------------------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Simulation Generated Files                                                ;
++---------------------------------------------------------------------------+
+; Generated Files                                                           ;
++---------------------------------------------------------------------------+
+; D:/Github/OpenRSIC-V/ori/simulation/modelsim/ori_8_1200mv_85c_slow.vo     ;
+; D:/Github/OpenRSIC-V/ori/simulation/modelsim/ori_8_1200mv_0c_slow.vo      ;
+; D:/Github/OpenRSIC-V/ori/simulation/modelsim/ori_min_1200mv_0c_fast.vo    ;
+; D:/Github/OpenRSIC-V/ori/simulation/modelsim/ori.vo                       ;
+; D:/Github/OpenRSIC-V/ori/simulation/modelsim/ori_8_1200mv_85c_v_slow.sdo  ;
+; D:/Github/OpenRSIC-V/ori/simulation/modelsim/ori_8_1200mv_0c_v_slow.sdo   ;
+; D:/Github/OpenRSIC-V/ori/simulation/modelsim/ori_min_1200mv_0c_v_fast.sdo ;
+; D:/Github/OpenRSIC-V/ori/simulation/modelsim/ori_v.sdo                    ;
++---------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue Mar 29 14:07:28 2022
+    Info: Processing started: Fri Apr 15 16:47:28 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ori -c ori
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file ori_8_1200mv_85c_slow.vo in folder "D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ori_8_1200mv_0c_slow.vo in folder "D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ori_min_1200mv_0c_fast.vo in folder "D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ori.vo in folder "D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ori_8_1200mv_85c_v_slow.sdo in folder "D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ori_8_1200mv_0c_v_slow.sdo in folder "D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ori_min_1200mv_0c_v_fast.sdo in folder "D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file ori_v.sdo in folder "D:/Github/OpenRSIC-V/ori_1/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ori_8_1200mv_85c_slow.vo in folder "D:/Github/OpenRSIC-V/ori/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ori_8_1200mv_0c_slow.vo in folder "D:/Github/OpenRSIC-V/ori/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ori_min_1200mv_0c_fast.vo in folder "D:/Github/OpenRSIC-V/ori/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ori.vo in folder "D:/Github/OpenRSIC-V/ori/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ori_8_1200mv_85c_v_slow.sdo in folder "D:/Github/OpenRSIC-V/ori/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ori_8_1200mv_0c_v_slow.sdo in folder "D:/Github/OpenRSIC-V/ori/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ori_min_1200mv_0c_v_fast.sdo in folder "D:/Github/OpenRSIC-V/ori/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ori_v.sdo in folder "D:/Github/OpenRSIC-V/ori/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4629 megabytes
-    Info: Processing ended: Tue Mar 29 14:07:30 2022
+    Info: Peak virtual memory: 4635 megabytes
+    Info: Processing ended: Fri Apr 15 16:47:30 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

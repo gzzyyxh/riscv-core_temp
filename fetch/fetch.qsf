@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6F17C8
-set_global_assignment -name TOP_LEVEL_ENTITY fetch
+set_global_assignment -name TOP_LEVEL_ENTITY inst_fetch
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:20:23  MARCH 29, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Standard Edition"
@@ -55,3 +55,55 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_E1 -to clk
+set_location_assignment PIN_E10 -to inst_o[31]
+set_location_assignment PIN_F9 -to inst_o[30]
+set_location_assignment PIN_C9 -to inst_o[29]
+set_location_assignment PIN_D9 -to inst_o[28]
+set_location_assignment PIN_B1 -to inst_o[27]
+set_location_assignment PIN_B3 -to inst_o[26]
+set_location_assignment PIN_B4 -to inst_o[25]
+set_location_assignment PIN_B5 -to inst_o[24]
+set_location_assignment PIN_B6 -to inst_o[23]
+set_location_assignment PIN_B7 -to inst_o[22]
+set_location_assignment PIN_B8 -to inst_o[21]
+set_location_assignment PIN_B9 -to inst_o[20]
+set_location_assignment PIN_B10 -to inst_o[19]
+set_location_assignment PIN_B11 -to inst_o[18]
+set_location_assignment PIN_B12 -to inst_o[17]
+set_location_assignment PIN_B13 -to inst_o[16]
+set_location_assignment PIN_D5 -to inst_o[15]
+set_location_assignment PIN_C6 -to inst_o[14]
+set_location_assignment PIN_F8 -to inst_o[13]
+set_location_assignment PIN_D8 -to inst_o[12]
+set_location_assignment PIN_E9 -to inst_o[11]
+set_location_assignment PIN_T14 -to inst_o[10]
+set_location_assignment PIN_T13 -to inst_o[9]
+set_location_assignment PIN_T12 -to inst_o[8]
+set_location_assignment PIN_T11 -to inst_o[7]
+set_location_assignment PIN_T10 -to inst_o[6]
+set_location_assignment PIN_T9 -to inst_o[5]
+set_location_assignment PIN_T8 -to inst_o[4]
+set_location_assignment PIN_T7 -to inst_o[3]
+set_location_assignment PIN_T6 -to inst_o[2]
+set_location_assignment PIN_T5 -to inst_o[1]
+set_location_assignment PIN_T4 -to inst_o[0]
+set_location_assignment PIN_N13 -to rst
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA0_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DCLK_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

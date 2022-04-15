@@ -1,0 +1,173 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'openmips:openmips0|id_ex:id_ex0|ex_alusel[0]'
+Slack : -9.356
+TNS   : -259.370
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -8.541
+TNS   : -1343.606
+
+Type  : Slow 1200mV 85C Model Setup 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -6.209
+TNS   : -305.201
+
+Type  : Slow 1200mV 85C Model Setup 'rst'
+Slack : -2.706
+TNS   : -23.584
+
+Type  : Slow 1200mV 85C Model Hold 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -1.165
+TNS   : -10.738
+
+Type  : Slow 1200mV 85C Model Hold 'openmips:openmips0|id_ex:id_ex0|ex_alusel[0]'
+Slack : -0.590
+TNS   : -0.995
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.517
+TNS   : -1.360
+
+Type  : Slow 1200mV 85C Model Hold 'rst'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -2.869
+TNS   : -144.194
+
+Type  : Slow 1200mV 85C Model Removal 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -1.968
+TNS   : -8.783
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -4.000
+TNS   : -554.461
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'openmips:openmips0|id_ex:id_ex0|ex_alusel[0]'
+Slack : 0.226
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'openmips:openmips0|id_ex:id_ex0|ex_alusel[0]'
+Slack : -8.708
+TNS   : -247.614
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -8.232
+TNS   : -1276.813
+
+Type  : Slow 1200mV 0C Model Setup 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -5.675
+TNS   : -282.449
+
+Type  : Slow 1200mV 0C Model Setup 'rst'
+Slack : -2.764
+TNS   : -23.822
+
+Type  : Slow 1200mV 0C Model Hold 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -0.959
+TNS   : -11.232
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.475
+TNS   : -1.248
+
+Type  : Slow 1200mV 0C Model Hold 'openmips:openmips0|id_ex:id_ex0|ex_alusel[0]'
+Slack : -0.434
+TNS   : -0.771
+
+Type  : Slow 1200mV 0C Model Hold 'rst'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -2.811
+TNS   : -143.109
+
+Type  : Slow 1200mV 0C Model Removal 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -1.833
+TNS   : -8.240
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -4.000
+TNS   : -553.243
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|id_ex:id_ex0|ex_alusel[0]'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : 0.349
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -3.778
+TNS   : -525.227
+
+Type  : Fast 1200mV 0C Model Setup 'openmips:openmips0|id_ex:id_ex0|ex_alusel[0]'
+Slack : -3.456
+TNS   : -94.497
+
+Type  : Fast 1200mV 0C Model Setup 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -2.309
+TNS   : -105.439
+
+Type  : Fast 1200mV 0C Model Setup 'rst'
+Slack : -0.435
+TNS   : -3.662
+
+Type  : Fast 1200mV 0C Model Hold 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -0.603
+TNS   : -5.853
+
+Type  : Fast 1200mV 0C Model Hold 'openmips:openmips0|id_ex:id_ex0|ex_alusel[0]'
+Slack : -0.405
+TNS   : -1.951
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.212
+TNS   : -0.547
+
+Type  : Fast 1200mV 0C Model Hold 'rst'
+Slack : -0.076
+TNS   : -0.112
+
+Type  : Fast 1200mV 0C Model Recovery 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -1.262
+TNS   : -63.703
+
+Type  : Fast 1200mV 0C Model Removal 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : -0.801
+TNS   : -3.460
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -322.414
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|id_ex:id_ex0|ex_aluop[2]'
+Slack : 0.274
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|id_ex:id_ex0|ex_alusel[0]'
+Slack : 0.427
+TNS   : 0.000
+
+------------------------------------------------------------

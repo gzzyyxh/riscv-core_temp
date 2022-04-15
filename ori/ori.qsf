@@ -71,4 +71,38 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_E1 -to clk
+set_location_assignment PIN_N13 -to rst
+set_location_assignment PIN_D9 -to result[3]
+set_location_assignment PIN_C9 -to result[2]
+set_location_assignment PIN_F9 -to result[1]
+set_location_assignment PIN_E10 -to result[0]
+set_location_assignment PIN_T4 -to result[31]
+set_location_assignment PIN_T5 -to result[30]
+set_location_assignment PIN_T6 -to result[29]
+set_location_assignment PIN_T7 -to result[28]
+set_location_assignment PIN_T8 -to result[27]
+set_location_assignment PIN_T9 -to result[26]
+set_location_assignment PIN_T10 -to result[25]
+set_location_assignment PIN_T11 -to result[24]
+set_location_assignment PIN_T12 -to result[23]
+set_location_assignment PIN_T13 -to result[22]
+set_location_assignment PIN_T14 -to result[21]
+set_location_assignment PIN_E9 -to result[20]
+set_location_assignment PIN_D8 -to result[19]
+set_location_assignment PIN_F8 -to result[18]
+set_location_assignment PIN_C6 -to result[17]
+set_location_assignment PIN_D5 -to result[16]
+set_location_assignment PIN_B13 -to result[15]
+set_location_assignment PIN_B12 -to result[14]
+set_location_assignment PIN_B11 -to result[13]
+set_location_assignment PIN_B10 -to result[12]
+set_location_assignment PIN_B9 -to result[11]
+set_location_assignment PIN_B8 -to result[10]
+set_location_assignment PIN_B7 -to result[9]
+set_location_assignment PIN_B6 -to result[8]
+set_location_assignment PIN_B5 -to result[7]
+set_location_assignment PIN_B4 -to result[6]
+set_location_assignment PIN_B3 -to result[5]
+set_location_assignment PIN_B1 -to result[4]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

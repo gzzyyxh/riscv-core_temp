@@ -1,0 +1,1020 @@
+Analysis & Synthesis report for csr
+Fri Apr 15 17:13:25 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |openmips_min_sopc|openmips:openmips0|div:div0|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "openmips:openmips0|div:div0"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Apr 15 17:13:25 2022           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; csr                                             ;
+; Top-level Entity Name              ; openmips_min_sopc                               ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 34                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                            ; openmips_min_sopc  ; csr                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
+; regfile.v                        ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/regfile.v           ;         ;
+; pc_reg.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/pc_reg.v            ;         ;
+; openmips_min_sopc.v              ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v ;         ;
+; openmips.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v          ;         ;
+; mem_wb.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/mem_wb.v            ;         ;
+; mem.v                            ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/mem.v               ;         ;
+; inst_rom.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/inst_rom.v          ;         ;
+; if_id.v                          ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/if_id.v             ;         ;
+; id_ex.v                          ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/id_ex.v             ;         ;
+; id.v                             ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/id.v                ;         ;
+; ex_mem.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/ex_mem.v            ;         ;
+; ex.v                             ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/ex.v                ;         ;
+; div.v                            ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/div.v               ;         ;
+; defines.v                        ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/defines.v           ;         ;
+; data_ram.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/data_ram.v          ;         ;
+; ctrl.v                           ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/ctrl.v              ;         ;
+; csr.v                            ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/8_csr/csr.v               ;         ;
+; inst_rom.data                    ; yes             ; Auto-Found Unspecified File  ; D:/Github/OpenRSIC-V/rsic/8_csr/inst_rom.data       ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+;                                             ;                  ;
+; Total combinational functions               ; 0                ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 0                ;
+;     -- 3 input functions                    ; 0                ;
+;     -- <=2 input functions                  ; 0                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 0                ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 0                ;
+;     -- Dedicated logic registers            ; 0                ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 34               ;
+;                                             ;                  ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; result[0]~output ;
+; Maximum fan-out                             ; 1                ;
+; Total fan-out                               ; 34               ;
+; Average fan-out                             ; 0.50             ;
++---------------------------------------------+------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------------+--------------+
+; |openmips_min_sopc         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |openmips_min_sopc  ; openmips_min_sopc ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |openmips_min_sopc|openmips:openmips0|div:div0|state ;
++----------+----------+----------+----------+--------------------------+
+; Name     ; state.11 ; state.10 ; state.01 ; state.00                 ;
++----------+----------+----------+----------+--------------------------+
+; state.00 ; 0        ; 0        ; 0        ; 0                        ;
+; state.01 ; 0        ; 0        ; 1        ; 1                        ;
+; state.10 ; 0        ; 1        ; 0        ; 1                        ;
+; state.11 ; 1        ; 0        ; 0        ; 1                        ;
++----------+----------+----------+----------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                           ;
++-----------------------------------------------------------------+------------------------------------------------------------+
+; Register name                                                   ; Reason for Removal                                         ;
++-----------------------------------------------------------------+------------------------------------------------------------+
+; openmips:openmips0|pc_reg:pc_reg0|ce                            ; Lost fanout                                                ;
+; openmips:openmips0|pc_reg:pc_reg0|pc[0..31]                     ; Lost fanout                                                ;
+; openmips:openmips0|if_id:if_id0|id_inst[0..31]                  ; Stuck at GND due to stuck port data_in                     ;
+; openmips:openmips0|if_id:if_id0|id_pc[0..31]                    ; Stuck at GND due to stuck port data_in                     ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[1]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[1]                  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[2]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[2]                  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[3]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[3]                  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[4]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[4]                  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[5]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[5]                  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[6]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[6]                  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[7]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[7]                  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[8]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[8]                  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[9]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[9]                  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[10]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[10]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[11]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[11]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[12]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[12]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[13]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[13]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[14]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[14]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[15]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[15]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[16]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[16]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[17]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[17]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[18]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[18]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[19]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[19]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[20]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[20]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[21]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[21]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[22]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[22]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[23]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[23]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[24]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[24]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[25]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[25]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[26]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[26]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[27]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[27]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[28]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[28]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[29]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[29]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[30]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[30]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[31]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[31]                 ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wreg                       ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wd[0..4]                   ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[0]                   ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[0]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wd[0..4]                  ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wreg                      ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mhartid_o[0..3]                     ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mtime_o[0..31]                      ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mtimecmp_o[0..31]                   ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|msip_o[0..31]                       ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mhartid_o[4..31]                    ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mimpid_o[0..31]                     ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|marchid_o[0..31]                    ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mvendorid_o[0..31]                  ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|minstreth_o[0..31]                  ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|minstret_o[0..31]                   ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mcycleh_o[0..31]                    ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mcycle_o[0..31]                     ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mip_o[0..31]                        ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mtval_o[0..31]                      ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mcause_o[0..31]                     ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mepc_o[0..31]                       ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mscratch_o[0..31]                   ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mtvec_o[0..31]                      ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mie_o[0..31]                        ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|misa_o[0..31]                       ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|mstatus_o[0..31]                    ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|fcsr_o[0..31]                       ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|frm_o[0..31]                        ; Lost fanout                                                ;
+; openmips:openmips0|csr:csr0|fflags_o[0..31]                     ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|dividend[0..16]                     ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|divisor[0..31]                      ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|dividend[17..64]                    ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|result_o[0..63]                     ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[0..31]        ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_write_addr[0..11]  ; Lost fanout                                                ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_we                 ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_csr_reg_data[0..31]       ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_csr_reg_write_addr[0..11] ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_csr_reg_we                ; Lost fanout                                                ;
+; openmips:openmips0|id_ex:id_ex0|ex_link_address[0..31]          ; Lost fanout                                                ;
+; openmips:openmips0|id_ex:id_ex0|ex_wreg                         ; Lost fanout                                                ;
+; openmips:openmips0|id_ex:id_ex0|ex_wd[0..4]                     ; Lost fanout                                                ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg1[19..31]                 ; Lost fanout                                                ;
+; openmips:openmips0|id_ex:id_ex0|ex_alusel[0..2]                 ; Lost fanout                                                ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[1..7]               ; Merged with openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0] ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[0..31]               ; Merged with openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0] ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[1..7]                  ; Merged with openmips:openmips0|id_ex:id_ex0|ex_aluop[0]    ;
+; openmips:openmips0|id_ex:id_ex0|ex_inst[0..11,20..31]           ; Merged with openmips:openmips0|id_ex:id_ex0|ex_aluop[0]    ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg1[0..18]                  ; Merged with openmips:openmips0|id_ex:id_ex0|ex_aluop[0]    ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg2[0..31]                  ; Merged with openmips:openmips0|id_ex:id_ex0|ex_aluop[0]    ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[0]                     ; Stuck at GND due to stuck port data_in                     ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]                  ; Stuck at GND due to stuck port data_in                     ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[0..18]           ; Stuck at GND due to stuck port data_in                     ;
+; openmips:openmips0|div:div0|ready_o                             ; Stuck at GND due to stuck port data_in                     ;
+; openmips:openmips0|div:div0|state.01                            ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|state~6                             ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|state~7                             ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|cnt[0..5]                           ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|state.00                            ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|state.10                            ; Lost fanout                                                ;
+; openmips:openmips0|div:div0|state.11                            ; Lost fanout                                                ;
+; Total Number of Removed Registers = 1369                        ;                                                            ;
++-----------------------------------------------------------------+------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                      ;
++------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                                  ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; openmips:openmips0|if_id:if_id0|id_inst[12]    ; Stuck at GND              ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[1],                                      ;
+;                                                ; due to stuck port data_in ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[2],                                      ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[3],                                      ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[4],                                      ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[5],                                      ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[6],                                      ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[7],                                      ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[8],                                      ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[9],                                      ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[10],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[11],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[12],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[13],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[14],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[15],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[16],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[17],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[18],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[19],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[20],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[21],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[22],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[23],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[24],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[25],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[26],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[27],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[28],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[29],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[30],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[31],                                     ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wreg,                                          ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[2],                                         ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[3],                                         ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[4],                                         ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[0],                                      ;
+;                                                ;                           ; openmips:openmips0|id_ex:id_ex0|ex_wd[3]                                            ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[0]    ; Stuck at GND              ; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0],                                     ;
+;                                                ; due to stuck port data_in ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[0],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[1],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[2],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[3],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[4],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[5],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[6],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[7],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[8],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[9],                                  ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[10],                                 ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[11],                                 ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[12],                                 ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[13],                                 ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[14],                                 ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[15],                                 ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[16],                                 ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[17],                                 ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_mem_addr[18]                                  ;
+; openmips:openmips0|div:div0|dividend[16]       ; Lost Fanouts              ; openmips:openmips0|div:div0|dividend[15], openmips:openmips0|div:div0|dividend[14], ;
+;                                                ;                           ; openmips:openmips0|div:div0|dividend[13], openmips:openmips0|div:div0|dividend[12], ;
+;                                                ;                           ; openmips:openmips0|div:div0|dividend[11], openmips:openmips0|div:div0|dividend[10], ;
+;                                                ;                           ; openmips:openmips0|div:div0|dividend[9], openmips:openmips0|div:div0|dividend[8],   ;
+;                                                ;                           ; openmips:openmips0|div:div0|dividend[7], openmips:openmips0|div:div0|dividend[6],   ;
+;                                                ;                           ; openmips:openmips0|div:div0|dividend[5], openmips:openmips0|div:div0|dividend[4],   ;
+;                                                ;                           ; openmips:openmips0|div:div0|dividend[3], openmips:openmips0|div:div0|dividend[2],   ;
+;                                                ;                           ; openmips:openmips0|div:div0|dividend[1], openmips:openmips0|div:div0|cnt[3],        ;
+;                                                ;                           ; openmips:openmips0|div:div0|cnt[4], openmips:openmips0|div:div0|cnt[5]              ;
+; openmips:openmips0|if_id:if_id0|id_inst[15]    ; Stuck at GND              ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[0],                                         ;
+;                                                ; due to stuck port data_in ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[1],                                         ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[4],                                        ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[3],                                        ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[2],                                        ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[1],                                        ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[0]                                         ;
+; openmips:openmips0|div:div0|state~6            ; Lost Fanouts              ; openmips:openmips0|div:div0|cnt[0], openmips:openmips0|div:div0|cnt[1],             ;
+;                                                ;                           ; openmips:openmips0|div:div0|cnt[2], openmips:openmips0|div:div0|state.10            ;
+; openmips:openmips0|if_id:if_id0|id_inst[20]    ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_wd[0], openmips:openmips0|id_ex:id_ex0|ex_wd[1], ;
+;                                                ; due to stuck port data_in ; openmips:openmips0|id_ex:id_ex0|ex_wd[2]                                            ;
+; openmips:openmips0|csr:csr0|mhartid_o[0]       ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[0],                               ;
+;                                                ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_csr_reg_data[0]                               ;
+; openmips:openmips0|if_id:if_id0|id_inst[0]     ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_wreg, openmips:openmips0|id_ex:id_ex0|ex_wd[4]   ;
+;                                                ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|csr:csr0|mhartid_o[3]       ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[3],                               ;
+;                                                ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_we                                     ;
+; openmips:openmips0|if_id:if_id0|id_pc[0]       ; Stuck at GND              ; openmips:openmips0|ex_mem:ex_mem0|mem_wreg                                          ;
+;                                                ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wdata[1] ; Lost Fanouts              ; openmips:openmips0|id_ex:id_ex0|ex_alusel[2]                                        ;
+; openmips:openmips0|csr:csr0|mhartid_o[2]       ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[2]                                ;
+; openmips:openmips0|csr:csr0|mhartid_o[1]       ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[1]                                ;
+; openmips:openmips0|csr:csr0|mtime_o[31]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[31]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[30]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[30]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[29]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[29]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[28]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[28]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[27]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[27]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[26]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[26]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[25]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[25]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[24]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[24]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[20]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[20]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[19]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[19]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[18]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[18]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[17]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[17]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[16]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[16]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[15]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[15]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[14]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[14]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[13]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[13]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[12]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[12]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[11]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[11]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[10]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[10]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[9]         ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[9]                                ;
+; openmips:openmips0|csr:csr0|mtime_o[8]         ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[8]                                ;
+; openmips:openmips0|csr:csr0|mtime_o[7]         ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[7]                                ;
+; openmips:openmips0|csr:csr0|mtime_o[6]         ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[6]                                ;
+; openmips:openmips0|csr:csr0|mtime_o[5]         ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[5]                                ;
+; openmips:openmips0|csr:csr0|mtime_o[4]         ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[4]                                ;
+; openmips:openmips0|csr:csr0|mtime_o[22]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[22]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[23]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[23]                               ;
+; openmips:openmips0|csr:csr0|mtime_o[21]        ; Lost Fanouts              ; openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[21]                               ;
++------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |openmips_min_sopc|openmips:openmips0|div:div0|cnt[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "openmips:openmips0|div:div0" ;
++---------+-------+----------+----------------------------+
+; Port    ; Type  ; Severity ; Details                    ;
++---------+-------+----------+----------------------------+
+; annul_i ; Input ; Info     ; Stuck at GND               ;
++---------+-------+----------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 34                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Fri Apr 15 17:13:12 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off csr -c csr
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
+    Info (12023): Found entity 1: regfile File: D:/Github/OpenRSIC-V/rsic/8_csr/regfile.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file pc_reg.v
+    Info (12023): Found entity 1: pc_reg File: D:/Github/OpenRSIC-V/rsic/8_csr/pc_reg.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file openmips_min_sopc_tb.v
+    Info (12023): Found entity 1: openmips_min_sopc_tb File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc_tb.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file openmips_min_sopc.v
+    Info (12023): Found entity 1: openmips_min_sopc File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file openmips.v
+    Info (12023): Found entity 1: openmips File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mem_wb.v
+    Info (12023): Found entity 1: mem_wb File: D:/Github/OpenRSIC-V/rsic/8_csr/mem_wb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mem.v
+    Info (12023): Found entity 1: mem File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file inst_rom.v
+    Info (12023): Found entity 1: inst_rom File: D:/Github/OpenRSIC-V/rsic/8_csr/inst_rom.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file if_id.v
+    Info (12023): Found entity 1: if_id File: D:/Github/OpenRSIC-V/rsic/8_csr/if_id.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file id_ex.v
+    Info (12023): Found entity 1: id_ex File: D:/Github/OpenRSIC-V/rsic/8_csr/id_ex.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file id.v
+    Info (12023): Found entity 1: id File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ex_mem.v
+    Info (12023): Found entity 1: ex_mem File: D:/Github/OpenRSIC-V/rsic/8_csr/ex_mem.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ex.v
+    Info (12023): Found entity 1: ex File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file div.v
+    Info (12023): Found entity 1: div File: D:/Github/OpenRSIC-V/rsic/8_csr/div.v Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file defines.v
+Info (12021): Found 1 design units, including 1 entities, in source file data_ram.v
+    Info (12023): Found entity 1: data_ram File: D:/Github/OpenRSIC-V/rsic/8_csr/data_ram.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ctrl.v
+    Info (12023): Found entity 1: ctrl File: D:/Github/OpenRSIC-V/rsic/8_csr/ctrl.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file csr.v
+    Info (12023): Found entity 1: csr File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 3
+Info (12127): Elaborating entity "openmips_min_sopc" for the top level hierarchy
+Info (12128): Elaborating entity "openmips" for hierarchy "openmips:openmips0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 40
+Info (12128): Elaborating entity "pc_reg" for hierarchy "openmips:openmips0|pc_reg:pc_reg0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 124
+Info (12128): Elaborating entity "if_id" for hierarchy "openmips:openmips0|if_id:if_id0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 137
+Info (12128): Elaborating entity "id" for hierarchy "openmips:openmips0|id:id0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 181
+Warning (10036): Verilog HDL or VHDL warning at id.v(53): object "instvalid" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 53
+Warning (10270): Verilog HDL Case Statement warning at id.v(400): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 400
+Warning (10270): Verilog HDL Case Statement warning at id.v(489): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 489
+Warning (10270): Verilog HDL Case Statement warning at id.v(556): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 556
+Warning (10270): Verilog HDL Case Statement warning at id.v(646): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 646
+Warning (10240): Verilog HDL Always Construct warning at id.v(716): inferring latch(es) for variable "reg1_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Warning (10240): Verilog HDL Always Construct warning at id.v(716): inferring latch(es) for variable "stallreq_for_reg1_loadrelate", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Warning (10240): Verilog HDL Always Construct warning at id.v(741): inferring latch(es) for variable "reg2_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Warning (10240): Verilog HDL Always Construct warning at id.v(741): inferring latch(es) for variable "stallreq_for_reg2_loadrelate", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "stallreq_for_reg2_loadrelate" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[0]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[1]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[2]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[3]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[4]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[5]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[6]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[7]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[8]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[9]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[10]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[11]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[12]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[13]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[14]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[15]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[16]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[17]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[18]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[19]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[20]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[21]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[22]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[23]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[24]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[25]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[26]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[27]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[28]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[29]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[30]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "reg2_o[31]" at id.v(741) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 741
+Info (10041): Inferred latch for "stallreq_for_reg1_loadrelate" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[0]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[1]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[2]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[3]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[4]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[5]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[6]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[7]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[8]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[9]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[10]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[11]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[12]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[13]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[14]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[15]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[16]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[17]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[18]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[19]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[20]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[21]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[22]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[23]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[24]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[25]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[26]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[27]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[28]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[29]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[30]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (10041): Inferred latch for "reg1_o[31]" at id.v(716) File: D:/Github/OpenRSIC-V/rsic/8_csr/id.v Line: 716
+Info (12128): Elaborating entity "regfile" for hierarchy "openmips:openmips0|regfile:regfile1" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 196
+Info (12128): Elaborating entity "id_ex" for hierarchy "openmips:openmips0|id_ex:id_ex0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 224
+Info (12128): Elaborating entity "ex" for hierarchy "openmips:openmips0|ex:ex0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 278
+Warning (10036): Verilog HDL or VHDL warning at ex.v(62): object "reg1_i_not" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 62
+Warning (10036): Verilog HDL or VHDL warning at ex.v(64): object "ov_sum" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 64
+Warning (10240): Verilog HDL Always Construct warning at ex.v(107): inferring latch(es) for variable "logicout", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Warning (10240): Verilog HDL Always Construct warning at ex.v(107): inferring latch(es) for variable "arithmeticres", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Warning (10270): Verilog HDL Case Statement warning at ex.v(247): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 247
+Warning (10240): Verilog HDL Always Construct warning at ex.v(238): inferring latch(es) for variable "moveres", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Warning (10240): Verilog HDL Always Construct warning at ex.v(238): inferring latch(es) for variable "csr_reg_data_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Warning (10240): Verilog HDL Always Construct warning at ex.v(238): inferring latch(es) for variable "csr_reg_read_addr_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Warning (10270): Verilog HDL Case Statement warning at ex.v(297): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 297
+Warning (10270): Verilog HDL Case Statement warning at ex.v(313): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 313
+Warning (10270): Verilog HDL Case Statement warning at ex.v(323): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 323
+Warning (10240): Verilog HDL Always Construct warning at ex.v(293): inferring latch(es) for variable "wdata_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[0]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[1]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[2]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[3]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[4]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[5]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[6]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[7]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[8]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[9]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[10]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[11]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[12]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[13]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[14]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[15]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[16]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[17]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[18]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[19]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[20]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[21]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[22]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[23]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[24]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[25]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[26]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[27]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[28]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[29]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[30]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "wdata_o[31]" at ex.v(293) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 293
+Info (10041): Inferred latch for "csr_reg_read_addr_o[0]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[1]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[2]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[3]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[4]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[5]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[6]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[7]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[8]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[9]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[10]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_read_addr_o[11]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[0]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[1]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[2]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[3]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[4]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[5]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[6]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[7]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[8]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[9]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[10]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[11]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[12]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[13]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[14]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[15]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[16]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[17]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[18]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[19]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[20]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[21]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[22]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[23]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[24]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[25]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[26]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[27]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[28]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[29]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[30]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "csr_reg_data_o[31]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[0]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[1]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[2]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[3]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[4]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[5]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[6]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[7]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[8]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[9]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[10]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[11]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[12]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[13]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[14]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[15]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[16]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[17]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[18]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[19]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[20]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[21]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[22]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[23]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[24]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[25]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[26]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[27]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[28]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[29]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[30]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "moveres[31]" at ex.v(238) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 238
+Info (10041): Inferred latch for "arithmeticres[0]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[1]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[2]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[3]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[4]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[5]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[6]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[7]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[8]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[9]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[10]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[11]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[12]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[13]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[14]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[15]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[16]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[17]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[18]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[19]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[20]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[21]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[22]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[23]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[24]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[25]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[26]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[27]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[28]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[29]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[30]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "arithmeticres[31]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[0]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[1]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[2]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[3]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[4]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[5]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[6]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[7]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[8]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[9]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[10]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[11]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[12]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[13]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[14]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[15]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[16]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[17]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[18]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[19]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[20]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[21]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[22]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[23]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[24]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[25]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[26]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[27]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[28]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[29]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[30]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (10041): Inferred latch for "logicout[31]" at ex.v(107) File: D:/Github/OpenRSIC-V/rsic/8_csr/ex.v Line: 107
+Info (12128): Elaborating entity "ex_mem" for hierarchy "openmips:openmips0|ex_mem:ex_mem0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 312
+Info (12128): Elaborating entity "mem" for hierarchy "openmips:openmips0|mem:mem0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 349
+Warning (10036): Verilog HDL or VHDL warning at mem.v(39): object "zero32" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 39
+Warning (10270): Verilog HDL Case Statement warning at mem.v(73): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 73
+Warning (10240): Verilog HDL Always Construct warning at mem.v(47): inferring latch(es) for variable "mem_data_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[0]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[1]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[2]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[3]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[4]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[5]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[6]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[7]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[8]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[9]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[10]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[11]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[12]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[13]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[14]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[15]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[16]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[17]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[18]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[19]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[20]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[21]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[22]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[23]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[24]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[25]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[26]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[27]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[28]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[29]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[30]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (10041): Inferred latch for "mem_data_o[31]" at mem.v(47) File: D:/Github/OpenRSIC-V/rsic/8_csr/mem.v Line: 47
+Info (12128): Elaborating entity "mem_wb" for hierarchy "openmips:openmips0|mem_wb:mem_wb0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 375
+Info (12128): Elaborating entity "ctrl" for hierarchy "openmips:openmips0|ctrl:ctrl0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 386
+Info (12128): Elaborating entity "div" for hierarchy "openmips:openmips0|div:div0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 400
+Warning (10230): Verilog HDL assignment warning at div.v(73): truncated value with size 32 to match size of target (6) File: D:/Github/OpenRSIC-V/rsic/8_csr/div.v Line: 73
+Info (12128): Elaborating entity "csr" for hierarchy "openmips:openmips0|csr:csr0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips.v Line: 420
+Warning (10272): Verilog HDL Case Statement warning at csr.v(148): case item expression covers a value already covered by a previous case item File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 148
+Warning (10272): Verilog HDL Case Statement warning at csr.v(151): case item expression covers a value already covered by a previous case item File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 151
+Warning (10272): Verilog HDL Case Statement warning at csr.v(229): case item expression covers a value already covered by a previous case item File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 229
+Warning (10272): Verilog HDL Case Statement warning at csr.v(232): case item expression covers a value already covered by a previous case item File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 232
+Warning (10240): Verilog HDL Always Construct warning at csr.v(162): inferring latch(es) for variable "data_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[0]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[1]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[2]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[3]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[4]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[5]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[6]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[7]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[8]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[9]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[10]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[11]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[12]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[13]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[14]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[15]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[16]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[17]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[18]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[19]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[20]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[21]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[22]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[23]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[24]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[25]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[26]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[27]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[28]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[29]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[30]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (10041): Inferred latch for "data_o[31]" at csr.v(162) File: D:/Github/OpenRSIC-V/rsic/8_csr/csr.v Line: 162
+Info (12128): Elaborating entity "inst_rom" for hierarchy "inst_rom:inst_rom0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 46
+Warning (10850): Verilog HDL warning at inst_rom.v(16): number of words (3) in memory file does not match the number of elements in the address range [0:131070] File: D:/Github/OpenRSIC-V/rsic/8_csr/inst_rom.v Line: 16
+Warning (10030): Net "inst_mem.data_a" at inst_rom.v(14) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/8_csr/inst_rom.v Line: 14
+Warning (10030): Net "inst_mem.waddr_a" at inst_rom.v(14) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/8_csr/inst_rom.v Line: 14
+Warning (10030): Net "inst_mem.we_a" at inst_rom.v(14) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/8_csr/inst_rom.v Line: 14
+Info (12128): Elaborating entity "data_ram" for hierarchy "data_ram:data_ram0" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 56
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "result[0]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[1]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[2]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[3]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[4]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[5]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[6]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[7]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[8]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[9]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[10]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[11]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[12]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[13]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[14]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[15]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[16]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[17]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[18]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[19]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[20]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[21]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[22]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[23]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[24]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[25]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[26]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[27]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[28]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[29]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[30]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+    Warning (13410): Pin "result[31]" is stuck at GND File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 9
+Info (17049): 1162 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/Github/OpenRSIC-V/rsic/8_csr/output_files/csr.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rst" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 6
+    Warning (15610): No output dependent on input pin "clk" File: D:/Github/OpenRSIC-V/rsic/8_csr/openmips_min_sopc.v Line: 5
+Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 32 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Peak virtual memory: 4745 megabytes
+    Info: Processing ended: Fri Apr 15 17:13:25 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Github/OpenRSIC-V/rsic/8_csr/output_files/csr.map.smsg.
+
+

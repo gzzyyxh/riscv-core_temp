@@ -40,9 +40,12 @@ module openmips(
  
 	input wire[`RegBus]           rom_data_i,
 	output wire[`RegBus]           rom_addr_o,
-	output wire                    rom_ce_o
+	output wire                    rom_ce_o,
+	output wire[`RegBus]				result
 	
 );
+
+assign result = ex_wdata_o;
 
 	wire[`InstAddrBus] pc;
 	wire[`InstAddrBus] id_pc_i;

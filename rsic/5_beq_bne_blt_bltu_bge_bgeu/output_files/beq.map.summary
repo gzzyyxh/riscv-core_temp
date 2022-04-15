@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Apr 15 17:39:37 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : beq
+Top-level Entity Name : openmips_min_sopc
+Family : Cyclone IV E
+Total logic elements : 1,508
+    Total combinational functions : 1,472
+    Dedicated logic registers : 258
+Total registers : 258
+Total pins : 34
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 8
+Total PLLs : 0

@@ -1,0 +1,9 @@
+Warning (10273): Verilog HDL warning at sdrc_xfr_ctl.v(739): extended using "x" or "z" File: D:/Github/OpenRSIC-V/rsic/10_wishbone/sdrc_xfr_ctl.v Line: 739
+Warning (10273): Verilog HDL warning at sdrc_xfr_ctl.v(740): extended using "x" or "z" File: D:/Github/OpenRSIC-V/rsic/10_wishbone/sdrc_xfr_ctl.v Line: 740
+Warning (10273): Verilog HDL warning at sdrc_xfr_ctl.v(754): extended using "x" or "z" File: D:/Github/OpenRSIC-V/rsic/10_wishbone/sdrc_xfr_ctl.v Line: 754
+Warning (10273): Verilog HDL warning at sdrc_xfr_ctl.v(755): extended using "x" or "z" File: D:/Github/OpenRSIC-V/rsic/10_wishbone/sdrc_xfr_ctl.v Line: 755
+Warning (10273): Verilog HDL warning at sdrc_bank_fsm.v(269): extended using "x" or "z" File: D:/Github/OpenRSIC-V/rsic/10_wishbone/sdrc_bank_fsm.v Line: 269
+Warning (10273): Verilog HDL warning at sdrc_bank_fsm.v(271): extended using "x" or "z" File: D:/Github/OpenRSIC-V/rsic/10_wishbone/sdrc_bank_fsm.v Line: 271
+Warning (10273): Verilog HDL warning at sdrc_bank_fsm.v(295): extended using "x" or "z" File: D:/Github/OpenRSIC-V/rsic/10_wishbone/sdrc_bank_fsm.v Line: 295
+Warning (10273): Verilog HDL warning at sdrc_bank_fsm.v(297): extended using "x" or "z" File: D:/Github/OpenRSIC-V/rsic/10_wishbone/sdrc_bank_fsm.v Line: 297
+Warning (10268): Verilog HDL information at div.v(28): always construct contains both blocking and non-blocking assignments File: D:/Github/OpenRSIC-V/rsic/10_wishbone/div.v Line: 28

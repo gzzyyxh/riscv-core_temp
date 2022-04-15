@@ -1,0 +1,367 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Github/OpenRSIC-V/rsic/csr/sim
+vcsr
+Z0 !s110 1649612984
+!i10b 1
+!s100 8kI@k_74T6V=Qe79mVJ7;3
+IW^f[EYENaf[o2]7^[Ygnm0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Github/OpenRSIC-V/rsic/except/sim
+w1649611376
+8D:/Github/OpenRSIC-V/rsic/except/sim/csr.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/csr.v
+L0 3
+Z3 OV;L;10.6d;65
+r1
+!s85 0
+31
+Z4 !s108 1649612984.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/csr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/csr.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vctrl
+R0
+!i10b 1
+!s100 IjGKI4gRISQUjVHLFhLQm1
+IkLX;gamQiC>e0i=H^6eCG1
+R1
+R2
+w1649612776
+8D:/Github/OpenRSIC-V/rsic/except/sim/ctrl.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/ctrl.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/ctrl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/ctrl.v|
+!i113 1
+R5
+R6
+vdata_ram
+Z7 !s110 1649612983
+!i10b 1
+!s100 kcWd7@99bVGzTHGl@WI_]3
+I]EVLXgnQMFi@BI2[ik0[b3
+R1
+R2
+w1649215257
+8D:/Github/OpenRSIC-V/rsic/except/sim/data_ram.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/data_ram.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z8 !s108 1649612983.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/data_ram.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/data_ram.v|
+!i113 1
+R5
+R6
+vdiv
+R7
+!i10b 1
+!s100 7lEk5a@S_=Y72ji9PhF2^3
+Ic:GhOYb?h7FM82djHX2i@1
+R1
+R2
+w1649127578
+8D:/Github/OpenRSIC-V/rsic/except/sim/div.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/div.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/div.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/div.v|
+!i113 1
+R5
+R6
+vex
+R0
+!i10b 1
+!s100 7agN>Bn_^E;^^9IW=?7oF0
+I9^ZHNHkYU10T]9J_6UdR30
+R1
+R2
+w1649605919
+8D:/Github/OpenRSIC-V/rsic/except/sim/ex.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/ex.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/ex.v|
+!i113 1
+R5
+R6
+vex_mem
+R7
+!i10b 1
+!s100 jeRb4G]HmZ?U5noHN1KSi1
+I4Iijk;<Tol7X:=e<m5LUV0
+R1
+R2
+w1649597712
+8D:/Github/OpenRSIC-V/rsic/except/sim/ex_mem.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/ex_mem.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/ex_mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/ex_mem.v|
+!i113 1
+R5
+R6
+vid
+R0
+!i10b 1
+!s100 dkdGG5bg4HO;:o^B@GGa21
+I3XWU@38Pk1FiMza1<M__;1
+R1
+R2
+w1649612966
+8D:/Github/OpenRSIC-V/rsic/except/sim/id.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/id.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/id.v|
+!i113 1
+R5
+R6
+vid_ex
+R7
+!i10b 1
+!s100 cSNO9PgIH0Umom?[>L=e<3
+Ih9RkSih35iX71IQ0Z9UVg2
+R1
+R2
+w1649583268
+8D:/Github/OpenRSIC-V/rsic/except/sim/id_ex.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/id_ex.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/id_ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/id_ex.v|
+!i113 1
+R5
+R6
+vif_id
+R7
+!i10b 1
+!s100 0DO4dZ1TI7og@L4HiIbh42
+I=^KEZ7>RBSYAVloEF@dI^1
+R1
+R2
+w1649581637
+8D:/Github/OpenRSIC-V/rsic/except/sim/if_id.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/if_id.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/if_id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/if_id.v|
+!i113 1
+R5
+R6
+vinst_rom
+R7
+!i10b 1
+!s100 JnScI>2LR3e<8f9_KQDDQ3
+IhW6Z7A;L9`B@P=L?2IN:c1
+R1
+R2
+w1649217542
+8D:/Github/OpenRSIC-V/rsic/except/sim/inst_rom.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/inst_rom.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/inst_rom.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/inst_rom.v|
+!i113 1
+R5
+R6
+vmem
+R7
+!i10b 1
+!s100 09<C[55ZRBg[UeFdM`Y4G0
+IRe0_iRdkC0_i8TlPL59U01
+R1
+R2
+w1649593831
+8D:/Github/OpenRSIC-V/rsic/except/sim/mem.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/mem.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/mem.v|
+!i113 1
+R5
+R6
+vmem_wb
+R7
+!i10b 1
+!s100 zh]S6amMok7_el6O?fLnN2
+I]L_F^3no0][zOS4_bS5FB1
+R1
+R2
+w1649591022
+8D:/Github/OpenRSIC-V/rsic/except/sim/mem_wb.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/mem_wb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/mem_wb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/mem_wb.v|
+!i113 1
+R5
+R6
+vopenmips
+R0
+!i10b 1
+!s100 :5A0[<:[oA;`JmOO44APa1
+IHkbZZL<>8N1[V:Vkh]1K43
+R1
+R2
+w1649605769
+8D:/Github/OpenRSIC-V/rsic/except/sim/openmips.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/openmips.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/openmips.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/openmips.v|
+!i113 1
+R5
+R6
+vopenmips_min_sopc
+R7
+!i10b 1
+!s100 KmQk0Hi2kFTKTM<D7QI2k1
+IC72E?G_C=2WzSB_4el5F@1
+R1
+R2
+w1649596352
+8D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc.v|
+!i113 1
+R5
+R6
+vopenmips_min_sopc_tb
+R7
+!i10b 1
+!s100 bm7FYEFJ:G<RCoBMCMnJK2
+IZ?h2M]1PD>0M8dAU>gCLo2
+R1
+R2
+w1648970743
+8D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc_tb.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc_tb.v|
+!i113 1
+R5
+R6
+vpc_reg
+R0
+!i10b 1
+!s100 hS^P<Jb37^TCWTz9>YAP62
+IbRCcBHRSAVULfo<VVaE>R2
+R1
+R2
+w1649581551
+8D:/Github/OpenRSIC-V/rsic/except/sim/pc_reg.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/pc_reg.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/pc_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/pc_reg.v|
+!i113 1
+R5
+R6
+vregfile
+R0
+!i10b 1
+!s100 Fm963[JO:4>7703MiZ^I_2
+IX2dWbn`czQPB;Q2AjWf^O0
+R1
+R2
+w1648988500
+8D:/Github/OpenRSIC-V/rsic/except/sim/regfile.v
+FD:/Github/OpenRSIC-V/rsic/except/sim/regfile.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/except/sim/regfile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/except/sim/regfile.v|
+!i113 1
+R5
+R6

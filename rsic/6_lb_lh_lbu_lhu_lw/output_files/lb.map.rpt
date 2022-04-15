@@ -1,0 +1,1400 @@
+Analysis & Synthesis report for lb
+Fri Apr 15 18:47:43 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |openmips_min_sopc|openmips:openmips0|div:div0|state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for Inferred Entity Instance: openmips:openmips0|ex:ex0|lpm_mult:Mult0
+ 15. lpm_mult Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "openmips:openmips0|div:div0"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Apr 15 18:47:43 2022           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; lb                                              ;
+; Top-level Entity Name              ; openmips_min_sopc                               ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 229                                             ;
+;     Total combinational functions  ; 218                                             ;
+;     Dedicated logic registers      ; 97                                              ;
+; Total registers                    ; 97                                              ;
+; Total pins                         ; 34                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                            ; openmips_min_sopc  ; lb                 ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; regfile.v                        ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/regfile.v            ;         ;
+; pc_reg.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/pc_reg.v             ;         ;
+; openmips_min_sopc.v              ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips_min_sopc.v  ;         ;
+; openmips.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v           ;         ;
+; mem_wb.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem_wb.v             ;         ;
+; mem.v                            ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v                ;         ;
+; inst_rom.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/inst_rom.v           ;         ;
+; if_id.v                          ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/if_id.v              ;         ;
+; id_ex.v                          ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v              ;         ;
+; id.v                             ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v                 ;         ;
+; ex_mem.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex_mem.v             ;         ;
+; ex.v                             ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v                 ;         ;
+; div.v                            ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/div.v                ;         ;
+; defines.v                        ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/defines.v            ;         ;
+; ctrl.v                           ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ctrl.v               ;         ;
+; data_ram.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/data_ram.v           ;         ;
+; inst_rom.data                    ; yes             ; Auto-Found Unspecified File  ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/inst_rom.data        ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc  ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/multcore.inc    ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/bypassff.inc    ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altshift.inc    ;         ;
+; db/mult_kbt.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/db/mult_kbt.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 229       ;
+;                                             ;           ;
+; Total combinational functions               ; 218       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 116       ;
+;     -- 3 input functions                    ; 47        ;
+;     -- <=2 input functions                  ; 55        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 202       ;
+;     -- arithmetic mode                      ; 16        ;
+;                                             ;           ;
+; Total registers                             ; 97        ;
+;     -- Dedicated logic registers            ; 97        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 34        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 97        ;
+; Total fan-out                               ; 990       ;
+; Average fan-out                             ; 2.58      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+-------------------+--------------+
+; |openmips_min_sopc         ; 218 (0)             ; 97 (0)                    ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |openmips_min_sopc                                   ; openmips_min_sopc ; work         ;
+;    |openmips:openmips0|    ; 218 (0)             ; 97 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0                ; openmips          ; work         ;
+;       |ex:ex0|             ; 98 (98)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex:ex0         ; ex                ; work         ;
+;       |ex_mem:ex_mem0|     ; 34 (34)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex_mem:ex_mem0 ; ex_mem            ; work         ;
+;       |id:id0|             ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|id:id0         ; id                ; work         ;
+;       |id_ex:id_ex0|       ; 49 (49)             ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0   ; id_ex             ; work         ;
+;       |if_id:if_id0|       ; 6 (6)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0   ; if_id             ; work         ;
+;       |pc_reg:pc_reg0|     ; 18 (18)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|pc_reg:pc_reg0 ; pc_reg            ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |openmips_min_sopc|openmips:openmips0|div:div0|state ;
++----------+----------+----------+----------+--------------------------+
+; Name     ; state.11 ; state.10 ; state.01 ; state.00                 ;
++----------+----------+----------+----------+--------------------------+
+; state.00 ; 0        ; 0        ; 0        ; 0                        ;
+; state.01 ; 0        ; 0        ; 1        ; 1                        ;
+; state.10 ; 0        ; 1        ; 0        ; 1                        ;
+; state.11 ; 1        ; 0        ; 0        ; 1                        ;
++----------+----------+----------+----------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++------------------------------------------------------+-----------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal               ; Free of Timing Hazards ;
++------------------------------------------------------+-----------------------------------+------------------------+
+; openmips:openmips0|ex:ex0|wdata_o[0]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[1]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[2]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[3]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[4]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[5]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[6]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[7]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[8]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[9]                 ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[10]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[11]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[12]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[13]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[14]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[15]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[16]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[17]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[18]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[19]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[20]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[21]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[22]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[23]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[24]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[25]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[26]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[27]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[28]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[29]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[30]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|wdata_o[31]                ; openmips:openmips0|ex:ex0|Mux7    ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[0]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[0]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[1]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[1]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[2]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[2]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[3]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[3]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[4]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[4]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[5]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[5]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[6]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[6]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[7]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[7]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[8]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[8]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[9]                ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[9]           ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[10]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[10]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[11]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[11]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[12]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[12]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[13]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[13]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[14]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[14]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[15]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[15]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[16]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[16]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[17]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[17]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[18]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[18]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[19]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[19]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[20]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[20]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[21]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[21]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[22]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[22]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[23]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[23]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[24]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[24]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[25]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[25]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[26]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[26]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[27]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[27]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[28]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[28]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[29]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[29]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[30]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[30]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|ex:ex0|logicout[31]               ; openmips:openmips0|ex:ex0|WideOr1 ; yes                    ;
+; openmips:openmips0|ex:ex0|arithmeticres[31]          ; openmips:openmips0|ex:ex0|WideOr5 ; yes                    ;
+; openmips:openmips0|id:id0|reg1_o[0]                  ; VCC                               ; yes                    ;
+; openmips:openmips0|id:id0|reg2_o[1]                  ; VCC                               ; yes                    ;
+; openmips:openmips0|id:id0|reg1_o[1]                  ; VCC                               ; yes                    ;
+; openmips:openmips0|id:id0|reg2_o[2]                  ; VCC                               ; yes                    ;
+; Number of user-specified and inferred latches = 134  ;                                   ;                        ;
++------------------------------------------------------+-----------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                ;
++-------------------------------------------------------------------------+---------------------------------------------------------+
+; Register name                                                           ; Reason for Removal                                      ;
++-------------------------------------------------------------------------+---------------------------------------------------------+
+; openmips:openmips0|if_id:if_id0|id_inst[2,3,5,6,9..12,15..20,24,28..31] ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|id_ex:id_ex0|ex_inst[2,3,5,6,9..11,20,24,28..31]     ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|if_id:if_id0|id_pc[0..31]                            ; Lost fanout                                             ;
+; openmips:openmips0|pc_reg:pc_reg0|pc[0,1]                               ; Lost fanout                                             ;
+; openmips:openmips0|id_ex:id_ex0|ex_inst[0,1,4,7,8]                      ; Lost fanout                                             ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[1..31]                       ; Lost fanout                                             ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wreg                               ; Lost fanout                                             ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wd[0..4]                           ; Lost fanout                                             ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[0]                           ; Lost fanout                                             ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg2[0,4,8..31]                      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|id_ex:id_ex0|ex_link_address[0..31]                  ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|id_ex:id_ex0|ex_wd[2..4]                             ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wd[2..4]                          ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|divisor[0,4,8..31]                          ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[0,4,8..31]                   ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|state~6                                     ; Lost fanout                                             ;
+; openmips:openmips0|div:div0|state~7                                     ; Lost fanout                                             ;
+; openmips:openmips0|id_ex:id_ex0|ex_alusel[1]                            ; Merged with openmips:openmips0|id_ex:id_ex0|ex_aluop[7] ;
+; openmips:openmips0|id_ex:id_ex0|ex_wd[1]                                ; Merged with openmips:openmips0|id_ex:id_ex0|ex_wd[0]    ;
+; openmips:openmips0|if_id:if_id0|id_inst[1,4,7,8,13,14,21..23,25..27]    ; Merged with openmips:openmips0|if_id:if_id0|id_inst[0]  ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wd[1]                             ; Merged with openmips:openmips0|ex_mem:ex_mem0|mem_wd[0] ;
+; openmips:openmips0|id_ex:id_ex0|ex_inst[22,23,25..27]                   ; Merged with openmips:openmips0|id_ex:id_ex0|ex_inst[21] ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[3,4]                           ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[3,4]                        ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|divisor[1..3,5..7]                          ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|result_o[0..63]                             ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|state.01                                    ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[1,7]                           ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|ready_o                                     ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|state.10                                    ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|dividend[33..64]                            ; Stuck at GND due to stuck port sclear                   ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[1,7]                        ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|cnt[0..5]                                   ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|div:div0|dividend[1..31]                             ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|div:div0|dividend[0]                                 ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|state.11                                    ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|dividend[32]                                ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|div:div0|state.00                                    ; Lost fanout                                             ;
+; openmips:openmips0|id_ex:id_ex0|ex_inst[21]                             ; Lost fanout                                             ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0,2,5,6]                    ; Lost fanout                                             ;
+; openmips:openmips0|pc_reg:pc_reg0|pc[19..31]                            ; Lost fanout                                             ;
+; openmips:openmips0|id_ex:id_ex0|ex_alusel[2]                            ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[6]                             ; Stuck at GND due to stuck port data_in                  ;
+; Total Number of Removed Registers = 421                                 ;                                                         ;
++-------------------------------------------------------------------------+---------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
++---------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                               ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++---------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; openmips:openmips0|if_id:if_id0|id_inst[2]  ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[2],                                         ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|if_id:if_id0|id_pc[0], openmips:openmips0|if_id:if_id0|id_pc[1], ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_pc[31],                                          ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_pc[30],                                          ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_pc[29],                                          ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_pc[28],                                          ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_pc[27],                                          ;
+;                                             ;                           ; openmips:openmips0|if_id:if_id0|id_pc[26], openmips:openmips0|pc_reg:pc_reg0|pc[0], ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|pc[1],                                            ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[1],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[2],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[3],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[4],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[5],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[6],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[7],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[8],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[9],                                      ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[10],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[11],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[12],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[13],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[14],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[15],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[16],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[17],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[18],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[19],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[20],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[21],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[22],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[23],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[24],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[25],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[26],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[27],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[28],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[29],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[30],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[31],                                     ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wreg,                                          ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[0],                                         ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[1],                                         ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[2],                                         ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[3],                                         ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[4],                                         ;
+;                                             ;                           ; openmips:openmips0|mem_wb:mem_wb0|wb_wdata[0],                                      ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[28],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[27],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[26],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[25],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[24],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[23],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[22],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[21],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[20],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[19],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[18],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[17],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[16],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[15],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[14],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[13],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[12],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[11],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[10],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[9],                                         ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[8],                                         ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[4],                                         ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_reg2[0],                                         ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[0],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[1],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[2],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[3],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[4],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[5],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[6],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[7],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[8],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[9],                                 ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[10],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[11],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[12],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[13],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[14],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[15],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[16],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[17],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[18],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[19],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[20],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[21],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[22],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[23],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[24],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[25],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[26],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[27],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[28],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[29],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[30],                                ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_link_address[31],                                ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[0],                                      ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[8],                                      ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[24],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[9],                                      ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[25],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[10],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[26],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[11],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[27],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[4],                                      ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[12],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[28],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[13],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[14],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[15],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[16],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[17],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[18],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[19],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[20],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[21],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[22],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[23],                                     ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_aluop[4],                                        ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_aluop[3],                                        ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[3],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[4],                                     ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_aluop[7],                                        ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[33], openmips:openmips0|div:div0|dividend[34], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[35], openmips:openmips0|div:div0|dividend[36], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[37], openmips:openmips0|div:div0|dividend[38], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[39], openmips:openmips0|div:div0|dividend[40], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[41], openmips:openmips0|div:div0|dividend[42], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[43], openmips:openmips0|div:div0|dividend[44], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[45], openmips:openmips0|div:div0|dividend[46], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[47], openmips:openmips0|div:div0|dividend[48], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[49], openmips:openmips0|div:div0|dividend[50], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[51], openmips:openmips0|div:div0|dividend[52], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[53], openmips:openmips0|div:div0|dividend[54], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[55], openmips:openmips0|div:div0|dividend[56], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[57], openmips:openmips0|div:div0|dividend[58], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[59], openmips:openmips0|div:div0|dividend[60], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[61], openmips:openmips0|div:div0|dividend[62], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[63],                                           ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[7],                                     ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[1], openmips:openmips0|div:div0|dividend[2],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[3], openmips:openmips0|div:div0|dividend[4],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[5], openmips:openmips0|div:div0|dividend[6],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[7], openmips:openmips0|div:div0|dividend[8],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[9], openmips:openmips0|div:div0|dividend[10],  ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[11], openmips:openmips0|div:div0|dividend[12], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[13], openmips:openmips0|div:div0|dividend[14], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[15], openmips:openmips0|div:div0|dividend[16], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[17], openmips:openmips0|div:div0|dividend[18], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[19], openmips:openmips0|div:div0|dividend[20], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[21], openmips:openmips0|div:div0|dividend[22], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[23], openmips:openmips0|div:div0|dividend[24], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[25], openmips:openmips0|div:div0|dividend[26], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[27], openmips:openmips0|div:div0|dividend[28], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[29], openmips:openmips0|div:div0|dividend[30], ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[0], openmips:openmips0|div:div0|dividend[32],  ;
+;                                             ;                           ; openmips:openmips0|div:div0|state.00,                                               ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[2],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[5],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[6],                                     ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|pc[26], openmips:openmips0|pc_reg:pc_reg0|pc[27], ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|pc[28], openmips:openmips0|pc_reg:pc_reg0|pc[29], ;
+;                                             ;                           ; openmips:openmips0|pc_reg:pc_reg0|pc[30], openmips:openmips0|pc_reg:pc_reg0|pc[31], ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_alusel[2],                                       ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_aluop[6]                                         ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg2[31] ; Stuck at GND              ; openmips:openmips0|div:div0|divisor[31], openmips:openmips0|div:div0|divisor[30],   ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|div:div0|divisor[29], openmips:openmips0|div:div0|divisor[28],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[27], openmips:openmips0|div:div0|divisor[26],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[25], openmips:openmips0|div:div0|divisor[24],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[23], openmips:openmips0|div:div0|divisor[22],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[21], openmips:openmips0|div:div0|divisor[20],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[19], openmips:openmips0|div:div0|divisor[18],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[17], openmips:openmips0|div:div0|divisor[16],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[15], openmips:openmips0|div:div0|divisor[14],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[13], openmips:openmips0|div:div0|divisor[12],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[11], openmips:openmips0|div:div0|divisor[10],   ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[9], openmips:openmips0|div:div0|divisor[8],     ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[4], openmips:openmips0|div:div0|divisor[0],     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[31],                                     ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[7], openmips:openmips0|div:div0|divisor[6],     ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[5], openmips:openmips0|div:div0|divisor[3],     ;
+;                                             ;                           ; openmips:openmips0|div:div0|divisor[2], openmips:openmips0|div:div0|divisor[1],     ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[64], openmips:openmips0|div:div0|cnt[1],       ;
+;                                             ;                           ; openmips:openmips0|div:div0|cnt[2], openmips:openmips0|div:div0|cnt[3],             ;
+;                                             ;                           ; openmips:openmips0|div:div0|cnt[4], openmips:openmips0|div:div0|cnt[5],             ;
+;                                             ;                           ; openmips:openmips0|div:div0|dividend[31]                                            ;
+; openmips:openmips0|if_id:if_id0|id_inst[20] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[20],                                        ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|id_ex:id_ex0|ex_inst[7],                                         ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_inst[8],                                         ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_inst[0],                                         ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_inst[1],                                         ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_inst[4],                                         ;
+;                                             ;                           ; openmips:openmips0|id_ex:id_ex0|ex_inst[21]                                         ;
+; openmips:openmips0|if_id:if_id0|id_inst[12] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_aluop[1],                                        ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[1],                                     ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]                                      ;
+; openmips:openmips0|if_id:if_id0|id_inst[11] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[11],                                        ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|id_ex:id_ex0|ex_wd[4],                                           ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[4]                                         ;
+; openmips:openmips0|if_id:if_id0|id_inst[10] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[10],                                        ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|id_ex:id_ex0|ex_wd[3],                                           ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[3]                                         ;
+; openmips:openmips0|if_id:if_id0|id_inst[9]  ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[9],                                         ;
+;                                             ; due to stuck port data_in ; openmips:openmips0|id_ex:id_ex0|ex_wd[2],                                           ;
+;                                             ;                           ; openmips:openmips0|ex_mem:ex_mem0|mem_wd[2]                                         ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg2[30] ; Stuck at GND              ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[30], openmips:openmips0|div:div0|cnt[0]  ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|if_id:if_id0|id_inst[3]  ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[3]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|if_id:if_id0|id_inst[5]  ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[5]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|if_id:if_id0|id_inst[6]  ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[6]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|if_id:if_id0|id_inst[28] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[28]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|if_id:if_id0|id_inst[29] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[29]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|if_id:if_id0|id_inst[30] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[30]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|if_id:if_id0|id_inst[31] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[31]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|if_id:if_id0|id_inst[24] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_inst[24]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|if_id:if_id0|id_pc[25]   ; Lost Fanouts              ; openmips:openmips0|pc_reg:pc_reg0|pc[25]                                            ;
+; openmips:openmips0|if_id:if_id0|id_pc[24]   ; Lost Fanouts              ; openmips:openmips0|pc_reg:pc_reg0|pc[24]                                            ;
+; openmips:openmips0|if_id:if_id0|id_pc[23]   ; Lost Fanouts              ; openmips:openmips0|pc_reg:pc_reg0|pc[23]                                            ;
+; openmips:openmips0|if_id:if_id0|id_pc[22]   ; Lost Fanouts              ; openmips:openmips0|pc_reg:pc_reg0|pc[22]                                            ;
+; openmips:openmips0|if_id:if_id0|id_pc[21]   ; Lost Fanouts              ; openmips:openmips0|pc_reg:pc_reg0|pc[21]                                            ;
+; openmips:openmips0|if_id:if_id0|id_pc[20]   ; Lost Fanouts              ; openmips:openmips0|pc_reg:pc_reg0|pc[20]                                            ;
+; openmips:openmips0|if_id:if_id0|id_pc[19]   ; Lost Fanouts              ; openmips:openmips0|pc_reg:pc_reg0|pc[19]                                            ;
+; openmips:openmips0|id_ex:id_ex0|ex_reg2[29] ; Stuck at GND              ; openmips:openmips0|ex_mem:ex_mem0|mem_reg2[29]                                      ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|div:div0|state.01        ; Stuck at GND              ; openmips:openmips0|div:div0|ready_o                                                 ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
+; openmips:openmips0|div:div0|state.10        ; Stuck at GND              ; openmips:openmips0|div:div0|state.11                                                ;
+;                                             ; due to stuck port data_in ;                                                                                     ;
++---------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 97    ;
+; Number of registers using Synchronous Clear  ; 17    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0|id_inst[0] ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|pc_reg:pc_reg0|pc[29]   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|div:div0|cnt[2]         ;
+; 6:1                ; 64 bits   ; 256 LEs       ; 64 LEs               ; 192 LEs                ; Yes        ; |openmips_min_sopc|openmips:openmips0|div:div0|result_o[13]   ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|div:div0|dividend[5]    ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|div:div0|dividend[64]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftLeft1       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftLeft1       ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|mem:mem0|mem_addr_o[12] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|imm[1]           ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; No         ; |openmips_min_sopc|data_ram:data_ram0|data_o[6]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|imm[7]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0      ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_wreg    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_aluop   ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|mem:mem0|Selector19     ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_aluop   ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_aluop   ;
+; 251:1              ; 26 bits   ; 4342 LEs      ; 26 LEs               ; 4316 LEs               ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Selector19       ;
+; 251:1              ; 6 bits    ; 1002 LEs      ; 24 LEs               ; 978 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Selector39       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|mem:mem0|Selector55     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|div:div0|state          ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|div:div0|state          ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 8 LEs                ; 42 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|reg1_o           ;
+; 38:1               ; 14 bits   ; 350 LEs       ; 42 LEs               ; 308 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|reg1_o           ;
+; 70:1               ; 2 bits    ; 92 LEs        ; 6 LEs                ; 86 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|reg1_o           ;
+; 70:1               ; 6 bits    ; 276 LEs       ; 24 LEs               ; 252 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|reg1_o           ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |openmips_min_sopc|data_ram:data_ram0|data_mem3               ;
+; 262:1              ; 5 bits    ; 870 LEs       ; 25 LEs               ; 845 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|reg1_o           ;
+; 269:1              ; 15 bits   ; 2685 LEs      ; 120 LEs              ; 2565 LEs               ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Mux17            ;
+; 271:1              ; 8 bits    ; 1440 LEs      ; 72 LEs               ; 1368 LEs               ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Mux7             ;
+; 270:1              ; 4 bits    ; 720 LEs       ; 40 LEs               ; 680 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Mux25            ;
+; 271:1              ; 4 bits    ; 720 LEs       ; 40 LEs               ; 680 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|Mux31            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: openmips:openmips0|ex:ex0|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+---------------------------+
+; Parameter Name                                 ; Value        ; Type                      ;
++------------------------------------------------+--------------+---------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE            ;
+; LPM_WIDTHA                                     ; 32           ; Untyped                   ;
+; LPM_WIDTHB                                     ; 8            ; Untyped                   ;
+; LPM_WIDTHP                                     ; 40           ; Untyped                   ;
+; LPM_WIDTHR                                     ; 40           ; Untyped                   ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                   ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                   ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                   ;
+; LATENCY                                        ; 0            ; Untyped                   ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                   ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                   ;
+; USE_EAB                                        ; OFF          ; Untyped                   ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                   ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                   ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                   ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K       ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                   ;
+; CBXI_PARAMETER                                 ; mult_kbt     ; Untyped                   ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                   ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                   ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                   ;
++------------------------------------------------+--------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                   ;
++---------------------------------------+------------------------------------------+
+; Name                                  ; Value                                    ;
++---------------------------------------+------------------------------------------+
+; Number of entity instances            ; 1                                        ;
+; Entity Instance                       ; openmips:openmips0|ex:ex0|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                                       ;
+;     -- LPM_WIDTHB                     ; 8                                        ;
+;     -- LPM_WIDTHP                     ; 40                                       ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                 ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                       ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                       ;
+;     -- USE_EAB                        ; OFF                                      ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                     ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                       ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                       ;
++---------------------------------------+------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "openmips:openmips0|div:div0" ;
++---------+-------+----------+----------------------------+
+; Port    ; Type  ; Severity ; Details                    ;
++---------+-------+----------+----------------------------+
+; annul_i ; Input ; Info     ; Stuck at GND               ;
++---------+-------+----------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 34                          ;
+; cycloneiii_ff         ; 97                          ;
+;     SCLR              ; 17                          ;
+;     plain             ; 80                          ;
+; cycloneiii_lcell_comb ; 218                         ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 16                          ;
+;     normal            ; 202                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 47                          ;
+;         4 data inputs ; 116                         ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.15                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Fri Apr 15 18:33:13 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lb -c lb
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
+    Info (12023): Found entity 1: regfile File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/regfile.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file pc_reg.v
+    Info (12023): Found entity 1: pc_reg File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/pc_reg.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file openmips_min_sopc_tb.v
+    Info (12023): Found entity 1: openmips_min_sopc_tb File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips_min_sopc_tb.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file openmips_min_sopc.v
+    Info (12023): Found entity 1: openmips_min_sopc File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips_min_sopc.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file openmips.v
+    Info (12023): Found entity 1: openmips File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mem_wb.v
+    Info (12023): Found entity 1: mem_wb File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem_wb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mem.v
+    Info (12023): Found entity 1: mem File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file inst_rom.v
+    Info (12023): Found entity 1: inst_rom File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/inst_rom.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file if_id.v
+    Info (12023): Found entity 1: if_id File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/if_id.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file id_ex.v
+    Info (12023): Found entity 1: id_ex File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file id.v
+    Info (12023): Found entity 1: id File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ex_mem.v
+    Info (12023): Found entity 1: ex_mem File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex_mem.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ex.v
+    Info (12023): Found entity 1: ex File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file div.v
+    Info (12023): Found entity 1: div File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/div.v Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file defines.v
+Info (12021): Found 1 design units, including 1 entities, in source file ctrl.v
+    Info (12023): Found entity 1: ctrl File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ctrl.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file data_ram.v
+    Info (12023): Found entity 1: data_ram File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/data_ram.v Line: 3
+Info (12127): Elaborating entity "openmips_min_sopc" for the top level hierarchy
+Info (12128): Elaborating entity "openmips" for hierarchy "openmips:openmips0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips_min_sopc.v Line: 38
+Info (12128): Elaborating entity "pc_reg" for hierarchy "openmips:openmips0|pc_reg:pc_reg0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 112
+Info (12128): Elaborating entity "if_id" for hierarchy "openmips:openmips0|if_id:if_id0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 125
+Info (12128): Elaborating entity "id" for hierarchy "openmips:openmips0|id:id0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 169
+Warning (10036): Verilog HDL or VHDL warning at id.v(53): object "instvalid" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 53
+Warning (10270): Verilog HDL Case Statement warning at id.v(394): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 394
+Warning (10270): Verilog HDL Case Statement warning at id.v(480): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 480
+Warning (10270): Verilog HDL Case Statement warning at id.v(547): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 547
+Warning (10240): Verilog HDL Always Construct warning at id.v(635): inferring latch(es) for variable "reg1_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Warning (10240): Verilog HDL Always Construct warning at id.v(658): inferring latch(es) for variable "reg2_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[0]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[1]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[2]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[3]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[4]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[5]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[6]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[7]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[8]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[9]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[10]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[11]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[12]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[13]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[14]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[15]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[16]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[17]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[18]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[19]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[20]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[21]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[22]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[23]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[24]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[25]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[26]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[27]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[28]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[29]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[30]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg2_o[31]" at id.v(658) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Info (10041): Inferred latch for "reg1_o[0]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[1]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[2]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[3]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[4]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[5]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[6]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[7]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[8]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[9]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[10]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[11]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[12]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[13]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[14]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[15]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[16]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[17]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[18]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[19]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[20]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[21]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[22]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[23]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[24]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[25]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[26]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[27]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[28]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[29]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[30]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (10041): Inferred latch for "reg1_o[31]" at id.v(635) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 635
+Info (12128): Elaborating entity "regfile" for hierarchy "openmips:openmips0|regfile:regfile1" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 184
+Info (12128): Elaborating entity "id_ex" for hierarchy "openmips:openmips0|id_ex:id_ex0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 212
+Info (12128): Elaborating entity "ex" for hierarchy "openmips:openmips0|ex:ex0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 248
+Warning (10036): Verilog HDL or VHDL warning at ex.v(44): object "reg1_i_not" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 44
+Warning (10036): Verilog HDL or VHDL warning at ex.v(46): object "ov_sum" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 46
+Warning (10240): Verilog HDL Always Construct warning at ex.v(89): inferring latch(es) for variable "logicout", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Warning (10240): Verilog HDL Always Construct warning at ex.v(89): inferring latch(es) for variable "arithmeticres", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Warning (10270): Verilog HDL Case Statement warning at ex.v(233): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 233
+Warning (10270): Verilog HDL Case Statement warning at ex.v(243): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 243
+Warning (10240): Verilog HDL Always Construct warning at ex.v(220): inferring latch(es) for variable "wdata_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[0]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[1]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[2]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[3]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[4]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[5]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[6]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[7]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[8]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[9]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[10]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[11]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[12]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[13]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[14]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[15]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[16]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[17]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[18]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[19]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[20]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[21]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[22]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[23]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[24]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[25]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[26]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[27]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[28]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[29]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[30]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "wdata_o[31]" at ex.v(220) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Info (10041): Inferred latch for "arithmeticres[0]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[1]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[2]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[3]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[4]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[5]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[6]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[7]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[8]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[9]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[10]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[11]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[12]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[13]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[14]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[15]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[16]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[17]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[18]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[19]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[20]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[21]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[22]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[23]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[24]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[25]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[26]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[27]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[28]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[29]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[30]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "arithmeticres[31]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[0]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[1]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[2]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[3]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[4]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[5]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[6]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[7]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[8]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[9]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[10]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[11]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[12]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[13]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[14]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[15]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[16]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[17]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[18]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[19]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[20]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[21]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[22]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[23]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[24]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[25]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[26]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[27]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[28]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[29]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[30]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (10041): Inferred latch for "logicout[31]" at ex.v(89) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+Info (12128): Elaborating entity "ex_mem" for hierarchy "openmips:openmips0|ex_mem:ex_mem0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 274
+Info (12128): Elaborating entity "mem" for hierarchy "openmips:openmips0|mem:mem0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 303
+Warning (10036): Verilog HDL or VHDL warning at mem.v(31): object "zero32" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 31
+Warning (10270): Verilog HDL Case Statement warning at mem.v(57): incomplete case statement has no default case item File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 57
+Warning (10240): Verilog HDL Always Construct warning at mem.v(39): inferring latch(es) for variable "mem_data_o", which holds its previous value in one or more paths through the always construct File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[0]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[1]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[2]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[3]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[4]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[5]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[6]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[7]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[8]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[9]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[10]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[11]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[12]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[13]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[14]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[15]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[16]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[17]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[18]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[19]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[20]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[21]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[22]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[23]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[24]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[25]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[26]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[27]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[28]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[29]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[30]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (10041): Inferred latch for "mem_data_o[31]" at mem.v(39) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (12128): Elaborating entity "mem_wb" for hierarchy "openmips:openmips0|mem_wb:mem_wb0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 321
+Info (12128): Elaborating entity "ctrl" for hierarchy "openmips:openmips0|ctrl:ctrl0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 332
+Info (12128): Elaborating entity "div" for hierarchy "openmips:openmips0|div:div0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips.v Line: 346
+Warning (10230): Verilog HDL assignment warning at div.v(73): truncated value with size 32 to match size of target (6) File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/div.v Line: 73
+Info (12128): Elaborating entity "inst_rom" for hierarchy "inst_rom:inst_rom0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips_min_sopc.v Line: 44
+Warning (10850): Verilog HDL warning at inst_rom.v(16): number of words (1) in memory file does not match the number of elements in the address range [0:131070] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/inst_rom.v Line: 16
+Warning (10030): Net "inst_mem.data_a" at inst_rom.v(14) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/inst_rom.v Line: 14
+Warning (10030): Net "inst_mem.waddr_a" at inst_rom.v(14) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/inst_rom.v Line: 14
+Warning (10030): Net "inst_mem.we_a" at inst_rom.v(14) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/inst_rom.v Line: 14
+Info (12128): Elaborating entity "data_ram" for hierarchy "data_ram:data_ram0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/openmips_min_sopc.v Line: 54
+Info (276014): Found 5 instances of uninferred RAM logic
+    Info (276007): RAM logic "data_ram:data_ram0|data_mem3" is uninferred due to asynchronous read logic File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/data_ram.v Line: 18
+    Info (276007): RAM logic "data_ram:data_ram0|data_mem2" is uninferred due to asynchronous read logic File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/data_ram.v Line: 17
+    Info (276007): RAM logic "data_ram:data_ram0|data_mem1" is uninferred due to asynchronous read logic File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/data_ram.v Line: 16
+    Info (276007): RAM logic "data_ram:data_ram0|data_mem0" is uninferred due to asynchronous read logic File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/data_ram.v Line: 15
+    Info (276007): RAM logic "openmips:openmips0|regfile:regfile1|regs" is uninferred due to asynchronous read logic File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/regfile.v Line: 25
+Critical Warning (127005): Memory depth (131072) in the design file differs from memory depth (131071) in the Memory Initialization File "D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/db/lb.ram0_inst_rom_ca4a952.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/db/lb.ram0_inst_rom_ca4a952.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[1]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[2]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[3]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[5]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[6]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[7]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[25]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[26]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[27]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[29]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[30]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Warning (14025): LATCH primitive "openmips:openmips0|mem:mem0|mem_data_o[31]" is permanently disabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/mem.v Line: 39
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "openmips:openmips0|ex:ex0|Mult0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 85
+Info (12130): Elaborated megafunction instantiation "openmips:openmips0|ex:ex0|lpm_mult:Mult0" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 85
+Info (12133): Instantiated megafunction "openmips:openmips0|ex:ex0|lpm_mult:Mult0" with the following parameter: File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 85
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "40"
+    Info (12134): Parameter "LPM_WIDTHR" = "40"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_kbt.tdf
+    Info (12023): Found entity 1: mult_kbt File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/db/mult_kbt.tdf Line: 30
+Info (13014): Ignored 36 buffer(s)
+    Info (13019): Ignored 36 SOFT buffer(s)
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "openmips:openmips0|id:id0|reg2_o[3]" merged with LATCH primitive "openmips:openmips0|id:id0|reg2_o[1]" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+    Info (13026): Duplicate LATCH primitive "openmips:openmips0|id:id0|reg2_o[2]" merged with LATCH primitive "openmips:openmips0|id:id0|reg2_o[1]" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+    Info (13026): Duplicate LATCH primitive "openmips:openmips0|id:id0|reg2_o[5]" merged with LATCH primitive "openmips:openmips0|id:id0|reg2_o[1]" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+    Info (13026): Duplicate LATCH primitive "openmips:openmips0|id:id0|reg2_o[6]" merged with LATCH primitive "openmips:openmips0|id:id0|reg2_o[1]" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+    Info (13026): Duplicate LATCH primitive "openmips:openmips0|id:id0|reg2_o[7]" merged with LATCH primitive "openmips:openmips0|id:id0|reg2_o[1]" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id.v Line: 658
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[0] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[1] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[2] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[3] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[4] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[5] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[6] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[7] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[8] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[9] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[10] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[11] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[12] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[13] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[14] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[15] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[16] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[17] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[18] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[19] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[20] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[21] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[22] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[23] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[24] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[25] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[26] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[27] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[28] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[29] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[30] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[31] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[0] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[0] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[1] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[1] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[2] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[6] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[2] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[3] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[6] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[3] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[4] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[4] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[5] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[6] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[5] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[6] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[6] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[6] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[7] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[6] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[7] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[8] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[8] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[9] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[9] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[10] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[10] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[11] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[11] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[12] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[12] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[13] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[13] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[14] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[14] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[15] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[15] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[16] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[16] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[17] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[17] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[18] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[18] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[19] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[19] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[20] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[20] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[21] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[21] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[22] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[22] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[23] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[23] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[24] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[24] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[25] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[25] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[26] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[26] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[27] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[27] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[28] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[28] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[29] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[29] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[30] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[30] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|logicout[31] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[0] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (13012): Latch openmips:openmips0|ex:ex0|arithmeticres[31] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 89
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_aluop[2] File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/id_ex.v Line: 34
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[0]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[1]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[2]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[3]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[4]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[5]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[6]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[7]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[8]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[9]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[10]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[11]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[12]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[13]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[14]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[15]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[16]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[17]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[18]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[19]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[20]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[21]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[22]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[23]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[24]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[25]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[26]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[27]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[28]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[29]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[30]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14026): LATCH primitive "openmips:openmips0|ex:ex0|wdata_o[31]" is permanently enabled File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/ex.v Line: 220
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following DSP element node(s):
+        Warning (14320): Synthesized away node "openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_kbt:auto_generated|w193w[0]" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/db/mult_kbt.tdf Line: 56
+        Warning (14320): Synthesized away node "openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_kbt:auto_generated|mac_mult1" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/db/mult_kbt.tdf Line: 38
+        Warning (14320): Synthesized away node "openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_kbt:auto_generated|mac_out4" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/db/mult_kbt.tdf Line: 61
+        Warning (14320): Synthesized away node "openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_kbt:auto_generated|mac_mult3" File: D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/db/mult_kbt.tdf Line: 47
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 98 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/output_files/lb.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 264 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 230 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 266 warnings
+    Info: Peak virtual memory: 5367 megabytes
+    Info: Processing ended: Fri Apr 15 18:47:43 2022
+    Info: Elapsed time: 00:14:30
+    Info: Total CPU time (on all processors): 00:14:41
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Github/OpenRSIC-V/rsic/6_lb_lh_lbu_lhu_lw/output_files/lb.map.smsg.
+
+

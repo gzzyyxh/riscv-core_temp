@@ -1,6 +1,38 @@
 |openmips_min_sopc
 clk => clk.IN1
 rst => rst.IN1
+result[0] << openmips:openmips0.result
+result[1] << openmips:openmips0.result
+result[2] << openmips:openmips0.result
+result[3] << openmips:openmips0.result
+result[4] << openmips:openmips0.result
+result[5] << openmips:openmips0.result
+result[6] << openmips:openmips0.result
+result[7] << openmips:openmips0.result
+result[8] << openmips:openmips0.result
+result[9] << openmips:openmips0.result
+result[10] << openmips:openmips0.result
+result[11] << openmips:openmips0.result
+result[12] << openmips:openmips0.result
+result[13] << openmips:openmips0.result
+result[14] << openmips:openmips0.result
+result[15] << openmips:openmips0.result
+result[16] << openmips:openmips0.result
+result[17] << openmips:openmips0.result
+result[18] << openmips:openmips0.result
+result[19] << openmips:openmips0.result
+result[20] << openmips:openmips0.result
+result[21] << openmips:openmips0.result
+result[22] << openmips:openmips0.result
+result[23] << openmips:openmips0.result
+result[24] << openmips:openmips0.result
+result[25] << openmips:openmips0.result
+result[26] << openmips:openmips0.result
+result[27] << openmips:openmips0.result
+result[28] << openmips:openmips0.result
+result[29] << openmips:openmips0.result
+result[30] << openmips:openmips0.result
+result[31] << openmips:openmips0.result
 
 
 |openmips_min_sopc|openmips:openmips0
@@ -71,6 +103,38 @@ rom_addr_o[29] <= pc[29].DB_MAX_OUTPUT_PORT_TYPE
 rom_addr_o[30] <= pc[30].DB_MAX_OUTPUT_PORT_TYPE
 rom_addr_o[31] <= pc[31].DB_MAX_OUTPUT_PORT_TYPE
 rom_ce_o <= pc_reg:pc_reg0.ce
+result[0] <= ex_wdata_o[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= ex_wdata_o[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= ex_wdata_o[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= ex_wdata_o[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= ex_wdata_o[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= ex_wdata_o[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= ex_wdata_o[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= ex_wdata_o[7].DB_MAX_OUTPUT_PORT_TYPE
+result[8] <= ex_wdata_o[8].DB_MAX_OUTPUT_PORT_TYPE
+result[9] <= ex_wdata_o[9].DB_MAX_OUTPUT_PORT_TYPE
+result[10] <= ex_wdata_o[10].DB_MAX_OUTPUT_PORT_TYPE
+result[11] <= ex_wdata_o[11].DB_MAX_OUTPUT_PORT_TYPE
+result[12] <= ex_wdata_o[12].DB_MAX_OUTPUT_PORT_TYPE
+result[13] <= ex_wdata_o[13].DB_MAX_OUTPUT_PORT_TYPE
+result[14] <= ex_wdata_o[14].DB_MAX_OUTPUT_PORT_TYPE
+result[15] <= ex_wdata_o[15].DB_MAX_OUTPUT_PORT_TYPE
+result[16] <= ex_wdata_o[16].DB_MAX_OUTPUT_PORT_TYPE
+result[17] <= ex_wdata_o[17].DB_MAX_OUTPUT_PORT_TYPE
+result[18] <= ex_wdata_o[18].DB_MAX_OUTPUT_PORT_TYPE
+result[19] <= ex_wdata_o[19].DB_MAX_OUTPUT_PORT_TYPE
+result[20] <= ex_wdata_o[20].DB_MAX_OUTPUT_PORT_TYPE
+result[21] <= ex_wdata_o[21].DB_MAX_OUTPUT_PORT_TYPE
+result[22] <= ex_wdata_o[22].DB_MAX_OUTPUT_PORT_TYPE
+result[23] <= ex_wdata_o[23].DB_MAX_OUTPUT_PORT_TYPE
+result[24] <= ex_wdata_o[24].DB_MAX_OUTPUT_PORT_TYPE
+result[25] <= ex_wdata_o[25].DB_MAX_OUTPUT_PORT_TYPE
+result[26] <= ex_wdata_o[26].DB_MAX_OUTPUT_PORT_TYPE
+result[27] <= ex_wdata_o[27].DB_MAX_OUTPUT_PORT_TYPE
+result[28] <= ex_wdata_o[28].DB_MAX_OUTPUT_PORT_TYPE
+result[29] <= ex_wdata_o[29].DB_MAX_OUTPUT_PORT_TYPE
+result[30] <= ex_wdata_o[30].DB_MAX_OUTPUT_PORT_TYPE
+result[31] <= ex_wdata_o[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |openmips_min_sopc|openmips:openmips0|pc_reg:pc_reg0

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Apr 13 17:22:07 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : wishbone
+Top-level Entity Name : openmips_min_sopc
+Family : Cyclone IV E
+Device : EP4CE6F17C8
+Timing Models : Final
+Total logic elements : 1,158 / 6,272 ( 18 % )
+    Total combinational functions : 806 / 6,272 ( 13 % )
+    Dedicated logic registers : 830 / 6,272 ( 13 % )
+Total registers : 830
+Total pins : 95 / 180 ( 53 % )
+Total virtual pins : 0
+Total memory bits : 73,728 / 276,480 ( 27 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

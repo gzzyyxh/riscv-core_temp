@@ -40,7 +40,8 @@
 module openmips_min_sopc(
 
 	input	wire										clk,
-	input wire										rst
+	input wire										rst,
+	output wire[`RegBus]								result
 	
 );
 
@@ -56,7 +57,8 @@ module openmips_min_sopc(
 	
 		.rom_addr_o(inst_addr),
 		.rom_data_i(inst),
-		.rom_ce_o(rom_ce)
+		.rom_ce_o(rom_ce),
+		.result(result)
 	
 	);
 	

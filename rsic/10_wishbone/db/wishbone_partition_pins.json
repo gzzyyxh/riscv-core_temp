@@ -1,0 +1,217 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sdr_clk_o",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_cs_n_o",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_cke_o",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_ras_n_o",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_cas_n_o",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_we_n_o",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dqm_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dqm_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_addr_o[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sdr_dq_io[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[2]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[4]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[5]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[6]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[7]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[8]",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

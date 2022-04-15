@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Apr 13 17:21:56 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : wishbone
+Top-level Entity Name : openmips_min_sopc
+Family : Cyclone IV E
+Total logic elements : 1,182
+    Total combinational functions : 804
+    Dedicated logic registers : 830
+Total registers : 830
+Total pins : 95
+Total virtual pins : 0
+Total memory bits : 73,728
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

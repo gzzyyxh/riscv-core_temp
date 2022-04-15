@@ -1,0 +1,973 @@
+Analysis & Synthesis report for logic_shift_nop
+Fri Apr 15 17:22:03 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Apr 15 17:22:03 2022           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; logic_shift_nop                                 ;
+; Top-level Entity Name              ; openmips_min_sopc                               ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 2,033                                           ;
+;     Total combinational functions  ; 1,553                                           ;
+;     Dedicated logic registers      ; 671                                             ;
+; Total registers                    ; 671                                             ;
+; Total pins                         ; 34                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6F17C8        ;                    ;
+; Top-level entity name                                            ; openmips_min_sopc  ; logic_shift_nop    ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; regfile.v                        ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/regfile.v           ;         ;
+; pc_reg.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/pc_reg.v            ;         ;
+; openmips_min_sopc.v              ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips_min_sopc.v ;         ;
+; openmips.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v          ;         ;
+; mem_wb.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/mem_wb.v            ;         ;
+; mem.v                            ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/mem.v               ;         ;
+; inst_rom.v                       ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/inst_rom.v          ;         ;
+; if_id.v                          ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/if_id.v             ;         ;
+; id_ex.v                          ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/id_ex.v             ;         ;
+; id.v                             ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/id.v                ;         ;
+; ex_mem.v                         ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/ex_mem.v            ;         ;
+; ex.v                             ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/ex.v                ;         ;
+; defines.v                        ; yes             ; User Verilog HDL File        ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/defines.v           ;         ;
+; inst_rom.data                    ; yes             ; Auto-Found Unspecified File  ; D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/inst_rom.data       ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 2,033     ;
+;                                             ;           ;
+; Total combinational functions               ; 1553      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1170      ;
+;     -- 3 input functions                    ; 253       ;
+;     -- <=2 input functions                  ; 130       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1537      ;
+;     -- arithmetic mode                      ; 16        ;
+;                                             ;           ;
+; Total registers                             ; 671       ;
+;     -- Dedicated logic registers            ; 671       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 34        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 671       ;
+; Total fan-out                               ; 7608      ;
+; Average fan-out                             ; 3.32      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+-------------------+--------------+
+; |openmips_min_sopc         ; 1553 (0)            ; 671 (0)                   ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |openmips_min_sopc                                     ; openmips_min_sopc ; work         ;
+;    |inst_rom:inst_rom0|    ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|inst_rom:inst_rom0                  ; inst_rom          ; work         ;
+;    |openmips:openmips0|    ; 1531 (0)            ; 671 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0                  ; openmips          ; work         ;
+;       |ex:ex0|             ; 460 (460)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex:ex0           ; ex                ; work         ;
+;       |ex_mem:ex_mem0|     ; 5 (5)               ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex_mem:ex_mem0   ; ex_mem            ; work         ;
+;       |id:id0|             ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|id:id0           ; id                ; work         ;
+;       |id_ex:id_ex0|       ; 261 (261)           ; 75 (75)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0     ; id_ex             ; work         ;
+;       |if_id:if_id0|       ; 35 (35)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0     ; if_id             ; work         ;
+;       |mem:mem0|           ; 37 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|mem:mem0         ; mem               ; work         ;
+;       |mem_wb:mem_wb0|     ; 0 (0)               ; 37 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|mem_wb:mem_wb0   ; mem_wb            ; work         ;
+;       |pc_reg:pc_reg0|     ; 18 (18)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|pc_reg:pc_reg0   ; pc_reg            ; work         ;
+;       |regfile:regfile1|   ; 672 (672)           ; 480 (480)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|regfile:regfile1 ; regfile           ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                           ;
++----------------------------------------------------+---------------------------------------------------------+
+; Register name                                      ; Reason for Removal                                      ;
++----------------------------------------------------+---------------------------------------------------------+
+; openmips:openmips0|id_ex:id_ex0|ex_alusel[2]       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[7]        ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[4,6]      ; Merged with openmips:openmips0|id_ex:id_ex0|ex_aluop[3] ;
+; openmips:openmips0|id_ex:id_ex0|ex_aluop[5]        ; Merged with openmips:openmips0|id_ex:id_ex0|ex_aluop[2] ;
+; openmips:openmips0|if_id:if_id0|id_inst[3,6,11,19] ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|id_ex:id_ex0|ex_wd[4]           ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wd[4]        ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|mem_wb:mem_wb0|wb_wd[4]         ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|if_id:if_id0|id_inst[1,4]       ; Merged with openmips:openmips0|if_id:if_id0|id_inst[0]  ;
+; openmips:openmips0|if_id:if_id0|id_inst[26,27]     ; Merged with openmips:openmips0|if_id:if_id0|id_inst[25] ;
+; openmips:openmips0|regfile:regfile1|regs~516       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~548       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~580       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~612       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~644       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~676       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~708       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~740       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~772       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~804       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~836       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~868       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~900       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~932       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~964       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~996       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~512       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~544       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~576       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~608       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~640       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~672       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~704       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~736       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~768       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~800       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~832       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~864       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~896       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~928       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~960       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~992       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~513       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~545       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~577       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~609       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~641       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~673       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~705       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~737       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~769       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~801       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~833       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~865       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~897       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~929       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~961       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~993       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~514       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~546       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~578       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~610       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~642       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~674       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~706       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~738       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~770       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~802       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~834       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~866       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~898       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~930       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~962       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~994       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~515       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~547       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~579       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~611       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~643       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~675       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~707       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~739       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~771       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~803       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~835       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~867       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~899       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~931       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~963       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~995       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~517       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~549       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~581       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~613       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~645       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~677       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~709       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~741       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~773       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~805       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~837       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~869       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~901       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~933       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~965       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~997       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~518       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~550       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~582       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~614       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~646       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~678       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~710       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~742       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~774       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~806       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~838       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~870       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~902       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~934       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~966       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~998       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~519       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~551       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~583       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~615       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~647       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~679       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~711       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~743       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~775       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~807       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~839       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~871       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~903       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~935       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~967       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~999       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~520       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~552       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~584       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~616       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~648       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~680       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~712       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~744       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~776       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~808       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~840       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~872       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~904       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~936       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~968       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1000      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~521       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~553       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~585       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~617       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~649       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~681       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~713       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~745       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~777       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~809       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~841       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~873       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~905       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~937       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~969       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1001      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~522       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~554       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~586       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~618       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~650       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~682       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~714       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~746       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~778       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~810       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~842       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~874       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~906       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~938       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~970       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1002      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~523       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~555       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~587       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~619       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~651       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~683       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~715       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~747       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~779       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~811       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~843       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~875       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~907       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~939       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~971       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1003      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~524       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~556       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~588       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~620       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~652       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~684       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~716       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~748       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~780       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~812       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~844       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~876       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~908       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~940       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~972       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1004      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~525       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~557       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~589       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~621       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~653       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~685       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~717       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~749       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~781       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~813       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~845       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~877       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~909       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~941       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~973       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1005      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~526       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~558       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~590       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~622       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~654       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~686       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~718       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~750       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~782       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~814       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~846       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~878       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~910       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~942       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~974       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1006      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~527       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~559       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~591       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~623       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~655       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~687       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~719       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~751       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~783       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~815       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~847       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~879       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~911       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~943       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~975       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1007      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~528       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~560       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~592       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~624       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~656       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~688       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~720       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~752       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~784       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~816       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~848       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~880       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~912       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~944       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~976       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1008      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~529       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~561       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~593       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~625       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~657       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~689       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~721       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~753       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~785       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~817       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~849       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~881       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~913       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~945       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~977       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1009      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~530       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~562       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~594       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~626       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~658       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~690       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~722       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~754       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~786       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~818       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~850       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~882       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~914       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~946       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~978       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1010      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~531       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~563       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~595       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~627       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~659       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~691       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~723       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~755       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~787       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~819       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~851       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~883       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~915       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~947       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~979       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1011      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~532       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~564       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~596       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~628       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~660       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~692       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~724       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~756       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~788       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~820       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~852       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~884       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~916       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~948       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~980       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1012      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~533       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~565       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~597       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~629       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~661       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~693       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~725       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~757       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~789       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~821       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~853       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~885       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~917       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~949       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~981       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1013      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~534       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~566       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~598       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~630       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~662       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~694       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~726       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~758       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~790       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~822       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~854       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~886       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~918       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~950       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~982       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1014      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~535       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~567       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~599       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~631       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~663       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~695       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~727       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~759       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~791       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~823       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~855       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~887       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~919       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~951       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~983       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1015      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~536       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~568       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~600       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~632       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~664       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~696       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~728       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~760       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~792       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~824       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~856       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~888       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~920       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~952       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~984       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1016      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~537       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~569       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~601       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~633       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~665       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~697       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~729       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~761       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~793       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~825       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~857       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~889       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~921       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~953       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~985       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1017      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~538       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~570       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~602       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~634       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~666       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~698       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~730       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~762       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~794       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~826       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~858       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~890       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~922       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~954       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~986       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1018      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~539       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~571       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~603       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~635       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~667       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~699       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~731       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~763       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~795       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~827       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~859       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~891       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~923       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~955       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~987       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1019      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~540       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~572       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~604       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~636       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~668       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~700       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~732       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~764       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~796       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~828       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~860       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~892       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~924       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~956       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~988       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1020      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~541       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~573       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~605       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~637       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~669       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~701       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~733       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~765       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~797       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~829       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~861       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~893       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~925       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~957       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~989       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1021      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~542       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~574       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~606       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~638       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~670       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~702       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~734       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~766       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~798       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~830       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~862       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~894       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~926       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~958       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~990       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1022      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~543       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~575       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~607       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~639       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~671       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~703       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~735       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~767       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~799       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~831       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~863       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~895       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~927       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~959       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~991       ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|regfile:regfile1|regs~1023      ; Stuck at GND due to stuck port data_in                  ;
+; openmips:openmips0|pc_reg:pc_reg0|pc[19..31]       ; Lost fanout                                             ;
+; openmips:openmips0|regfile:regfile1|regs~3         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~2         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~0         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~1         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~4         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~16        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~17        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~18        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~19        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~20        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~21        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~22        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~23        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~24        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~25        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~26        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~27        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~28        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~29        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~30        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~31        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~5         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~6         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~7         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~8         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~9         ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~10        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~11        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~12        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~13        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~14        ; Stuck at GND due to stuck port clock_enable             ;
+; openmips:openmips0|regfile:regfile1|regs~15        ; Stuck at GND due to stuck port clock_enable             ;
+; Total Number of Removed Registers = 573            ;                                                         ;
++----------------------------------------------------+---------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                          ;
++---------------------------------------------+---------------------------+--------------------------------------------+
+; Register name                               ; Reason for Removal        ; Registers Removed due to This Register     ;
++---------------------------------------------+---------------------------+--------------------------------------------+
+; openmips:openmips0|if_id:if_id0|id_inst[11] ; Stuck at GND              ; openmips:openmips0|id_ex:id_ex0|ex_wd[4]   ;
+;                                             ; due to stuck port data_in ;                                            ;
+; openmips:openmips0|ex_mem:ex_mem0|mem_wd[4] ; Stuck at GND              ; openmips:openmips0|mem_wb:mem_wb0|wb_wd[4] ;
+;                                             ; due to stuck port data_in ;                                            ;
++---------------------------------------------+---------------------------+--------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 671   ;
+; Number of registers using Synchronous Clear  ; 23    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 480   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0|id_inst[24] ;
+; 9:1                ; 32 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_reg2[15] ;
+; 9:1                ; 32 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; Yes        ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0|ex_reg1[5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftLeft1        ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftLeft1        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|reg1_addr_o[1]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0|id_inst     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|imm[7]            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0       ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 128 LEs              ; 224 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|logicout[29]      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|ShiftRight0       ;
+; 18:1               ; 16 bits   ; 192 LEs       ; 64 LEs               ; 128 LEs                ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|shiftres[15]      ;
+; 11:1               ; 19 bits   ; 133 LEs       ; 38 LEs               ; 95 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|imm[15]           ;
+; 19:1               ; 8 bits    ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|shiftres[16]      ;
+; 11:1               ; 5 bits    ; 35 LEs        ; 5 LEs                ; 30 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|id:id0|imm[3]            ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 24 LEs               ; 28 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|shiftres[27]      ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 10 LEs               ; 18 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|shiftres[28]      ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 12 LEs               ; 16 LEs                 ; No         ; |openmips_min_sopc|openmips:openmips0|ex:ex0|shiftres[30]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 34                          ;
+; cycloneiii_ff         ; 671                         ;
+;     ENA               ; 480                         ;
+;     SCLR              ; 23                          ;
+;     plain             ; 168                         ;
+; cycloneiii_lcell_comb ; 1553                        ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 16                          ;
+;     normal            ; 1537                        ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 112                         ;
+;         3 data inputs ; 253                         ;
+;         4 data inputs ; 1170                        ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 7.24                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:02:30     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Fri Apr 15 17:19:20 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off logic_shift_nop -c logic_shift_nop
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
+    Info (12023): Found entity 1: regfile File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/regfile.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file pc_reg.v
+    Info (12023): Found entity 1: pc_reg File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/pc_reg.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file openmips_min_sopc_tb.v
+    Info (12023): Found entity 1: openmips_min_sopc_tb File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips_min_sopc_tb.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file openmips_min_sopc.v
+    Info (12023): Found entity 1: openmips_min_sopc File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips_min_sopc.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file openmips.v
+    Info (12023): Found entity 1: openmips File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mem_wb.v
+    Info (12023): Found entity 1: mem_wb File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/mem_wb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mem.v
+    Info (12023): Found entity 1: mem File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/mem.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file inst_rom.v
+    Info (12023): Found entity 1: inst_rom File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/inst_rom.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file if_id.v
+    Info (12023): Found entity 1: if_id File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/if_id.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file id_ex.v
+    Info (12023): Found entity 1: id_ex File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/id_ex.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file id.v
+    Info (12023): Found entity 1: id File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/id.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ex_mem.v
+    Info (12023): Found entity 1: ex_mem File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/ex_mem.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ex.v
+    Info (12023): Found entity 1: ex File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/ex.v Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file defines.v
+Info (12127): Elaborating entity "openmips_min_sopc" for the top level hierarchy
+Info (12128): Elaborating entity "openmips" for hierarchy "openmips:openmips0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips_min_sopc.v Line: 26
+Info (12128): Elaborating entity "pc_reg" for hierarchy "openmips:openmips0|pc_reg:pc_reg0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 71
+Info (12128): Elaborating entity "if_id" for hierarchy "openmips:openmips0|if_id:if_id0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 84
+Info (12128): Elaborating entity "id" for hierarchy "openmips:openmips0|id:id0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 120
+Warning (10036): Verilog HDL or VHDL warning at id.v(42): object "instvalid" assigned a value but never read File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/id.v Line: 42
+Warning (10230): Verilog HDL assignment warning at id.v(106): truncated value with size 6 to match size of target (5) File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/id.v Line: 106
+Warning (10230): Verilog HDL assignment warning at id.v(117): truncated value with size 6 to match size of target (5) File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/id.v Line: 117
+Warning (10230): Verilog HDL assignment warning at id.v(126): truncated value with size 6 to match size of target (5) File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/id.v Line: 126
+Info (12128): Elaborating entity "regfile" for hierarchy "openmips:openmips0|regfile:regfile1" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 135
+Info (12128): Elaborating entity "id_ex" for hierarchy "openmips:openmips0|id_ex:id_ex0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 157
+Info (12128): Elaborating entity "ex" for hierarchy "openmips:openmips0|ex:ex0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 176
+Info (10264): Verilog HDL Case Statement information at ex.v(69): all case item expressions in this case statement are onehot File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/ex.v Line: 69
+Info (12128): Elaborating entity "ex_mem" for hierarchy "openmips:openmips0|ex_mem:ex_mem0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 195
+Info (12128): Elaborating entity "mem" for hierarchy "openmips:openmips0|mem:mem0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 210
+Info (12128): Elaborating entity "mem_wb" for hierarchy "openmips:openmips0|mem_wb:mem_wb0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips.v Line: 227
+Info (12128): Elaborating entity "inst_rom" for hierarchy "inst_rom:inst_rom0" File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/openmips_min_sopc.v Line: 32
+Warning (10850): Verilog HDL warning at inst_rom.v(14): number of words (21) in memory file does not match the number of elements in the address range [0:131070] File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/inst_rom.v Line: 14
+Warning (10030): Net "inst_mem.data_a" at inst_rom.v(12) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/inst_rom.v Line: 12
+Warning (10030): Net "inst_mem.waddr_a" at inst_rom.v(12) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/inst_rom.v Line: 12
+Warning (10030): Net "inst_mem.we_a" at inst_rom.v(12) has no driver or initial value, using a default initial value '0' File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/inst_rom.v Line: 12
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "openmips:openmips0|regfile:regfile1|regs" is uninferred due to asynchronous read logic File: D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/regfile.v Line: 25
+Critical Warning (127005): Memory depth (131072) in the design file differs from memory depth (131071) in the Memory Initialization File "D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/db/logic_shift_nop.ram0_inst_rom_ca4a952.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/Github/OpenRSIC-V/rsic/2_logic_shift_nop/db/logic_shift_nop.ram0_inst_rom_ca4a952.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2135 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 2101 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Fri Apr 15 17:22:03 2022
+    Info: Elapsed time: 00:02:43
+    Info: Total CPU time (on all processors): 00:02:55
+
+

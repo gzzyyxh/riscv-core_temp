@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Apr 15 17:34:25 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : jal
+Top-level Entity Name : openmips_min_sopc
+Family : Cyclone IV E
+Total logic elements : 1,201
+    Total combinational functions : 1,164
+    Dedicated logic registers : 257
+Total registers : 257
+Total pins : 34
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 0
