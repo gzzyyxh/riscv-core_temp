@@ -114,7 +114,6 @@ set_global_assignment -name VERILOG_FILE ex_mem.v
 set_global_assignment -name VERILOG_FILE ex.v
 set_global_assignment -name VERILOG_FILE div.v
 set_global_assignment -name VERILOG_FILE defines.v
-set_global_assignment -name VERILOG_FILE data_ram.v
 set_global_assignment -name VERILOG_FILE ctrl.v
 set_global_assignment -name VERILOG_FILE csr.v
 set_location_assignment PIN_E1 -to clk

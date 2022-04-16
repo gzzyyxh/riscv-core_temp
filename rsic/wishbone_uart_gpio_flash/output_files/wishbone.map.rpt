@@ -1,5 +1,5 @@
 Analysis & Synthesis report for wishbone
-Sat Apr 16 15:17:24 2022
+Sat Apr 16 18:48:52 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -444,13 +444,13 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 16 15:17:24 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 16 18:48:52 2022           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; wishbone                                        ;
 ; Top-level Entity Name              ; openmips_min_sopc                               ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 10,680                                          ;
-;     Total combinational functions  ; 8,610                                           ;
+; Total logic elements               ; 10,667                                          ;
+;     Total combinational functions  ; 8,597                                           ;
 ;     Dedicated logic registers      ; 3,542                                           ;
 ; Total registers                    ; 3542                                            ;
 ; Total pins                         ; 56                                              ;
@@ -560,7 +560,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.3%      ;
 ;     Processor 3            ;   0.3%      ;
 ;     Processor 4            ;   0.3%      ;
 +----------------------------+-------------+
@@ -645,16 +645,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 10,680    ;
+; Estimated Total logic elements              ; 10,667    ;
 ;                                             ;           ;
-; Total combinational functions               ; 8610      ;
+; Total combinational functions               ; 8597      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 6282      ;
-;     -- 3 input functions                    ; 1520      ;
+;     -- 4 input functions                    ; 6272      ;
+;     -- 3 input functions                    ; 1517      ;
 ;     -- <=2 input functions                  ; 808       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 7732      ;
+;     -- normal mode                          ; 7719      ;
 ;     -- arithmetic mode                      ; 878       ;
 ;                                             ;           ;
 ; Total registers                             ; 3542      ;
@@ -668,7 +668,7 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 3558      ;
-; Total fan-out                               ; 42830     ;
+; Total fan-out                               ; 42783     ;
 ; Average fan-out                             ; 3.49      ;
 +---------------------------------------------+-----------+
 
@@ -678,23 +678,23 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                    ; Entity Name         ; Library Name ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |openmips_min_sopc                                    ; 8610 (1)            ; 3542 (0)                  ; 256         ; 8            ; 0       ; 4         ; 56   ; 0            ; |openmips_min_sopc                                                                                                                                                     ; openmips_min_sopc   ; work         ;
+; |openmips_min_sopc                                    ; 8597 (1)            ; 3542 (0)                  ; 256         ; 8            ; 0       ; 4         ; 56   ; 0            ; |openmips_min_sopc                                                                                                                                                     ; openmips_min_sopc   ; work         ;
 ;    |flash_top:flash_top0|                             ; 16 (16)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|flash_top:flash_top0                                                                                                                                ; flash_top           ; work         ;
 ;    |gpio_top:gpio_top0|                               ; 214 (214)           ; 277 (277)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|gpio_top:gpio_top0                                                                                                                                  ; gpio_top            ; work         ;
-;    |openmips:openmips0|                               ; 7120 (0)            ; 2534 (0)                  ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0                                                                                                                                  ; openmips            ; work         ;
-;       |csr:csr0|                                      ; 918 (918)           ; 673 (673)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|csr:csr0                                                                                                                         ; csr                 ; work         ;
+;    |openmips:openmips0|                               ; 7108 (0)            ; 2534 (0)                  ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0                                                                                                                                  ; openmips            ; work         ;
+;       |csr:csr0|                                      ; 915 (915)           ; 673 (673)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|csr:csr0                                                                                                                         ; csr                 ; work         ;
 ;       |ctrl:ctrl0|                                    ; 93 (93)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ctrl:ctrl0                                                                                                                       ; ctrl                ; work         ;
 ;       |div:div0|                                      ; 436 (436)           ; 172 (172)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|div:div0                                                                                                                         ; div                 ; work         ;
-;       |ex:ex0|                                        ; 1585 (1441)         ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex:ex0                                                                                                                           ; ex                  ; work         ;
+;       |ex:ex0|                                        ; 1583 (1439)         ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex:ex0                                                                                                                           ; ex                  ; work         ;
 ;          |lpm_add_sub:Add4|                           ; 65 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex:ex0|lpm_add_sub:Add4                                                                                                          ; lpm_add_sub         ; work         ;
 ;             |add_sub_pvi:auto_generated|              ; 65 (65)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex:ex0|lpm_add_sub:Add4|add_sub_pvi:auto_generated                                                                               ; add_sub_pvi         ; work         ;
 ;          |lpm_mult:Mult0|                             ; 79 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex:ex0|lpm_mult:Mult0                                                                                                            ; lpm_mult            ; work         ;
 ;             |mult_7dt:auto_generated|                 ; 79 (79)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                    ; mult_7dt            ; work         ;
 ;       |ex_mem:ex_mem0|                                ; 173 (173)           ; 173 (173)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|ex_mem:ex_mem0                                                                                                                   ; ex_mem              ; work         ;
-;       |id:id0|                                        ; 708 (708)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|id:id0                                                                                                                           ; id                  ; work         ;
-;       |id_ex:id_ex0|                                  ; 240 (240)           ; 171 (171)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0                                                                                                                     ; id_ex               ; work         ;
+;       |id:id0|                                        ; 701 (701)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|id:id0                                                                                                                           ; id                  ; work         ;
+;       |id_ex:id_ex0|                                  ; 239 (239)           ; 171 (171)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|id_ex:id_ex0                                                                                                                     ; id_ex               ; work         ;
 ;       |if_id:if_id0|                                  ; 67 (67)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|if_id:if_id0                                                                                                                     ; if_id               ; work         ;
-;       |mem:mem0|                                      ; 210 (210)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|mem:mem0                                                                                                                         ; mem                 ; work         ;
+;       |mem:mem0|                                      ; 211 (211)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|mem:mem0                                                                                                                         ; mem                 ; work         ;
 ;       |mem_wb:mem_wb0|                                ; 84 (84)             ; 83 (83)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|mem_wb:mem_wb0                                                                                                                   ; mem_wb              ; work         ;
 ;       |pc_reg:pc_reg0|                                ; 149 (149)           ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|pc_reg:pc_reg0                                                                                                                   ; pc_reg              ; work         ;
 ;       |regfile:regfile1|                              ; 2146 (2146)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|openmips:openmips0|regfile:regfile1                                                                                                                 ; regfile             ; work         ;
@@ -715,11 +715,11 @@ refer to the applicable agreement for further details.
 ;                   |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|uart_top:uart_top0|uart_regs:regs|uart_transmitter:transmitter|uart_tfifo:fifo_tx|raminfr:tfifo|altsyncram:ram_rtl_0                                ; altsyncram          ; work         ;
 ;                      |altsyncram_u9c1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|uart_top:uart_top0|uart_regs:regs|uart_transmitter:transmitter|uart_tfifo:fifo_tx|raminfr:tfifo|altsyncram:ram_rtl_0|altsyncram_u9c1:auto_generated ; altsyncram_u9c1     ; work         ;
 ;       |uart_wb:wb_interface|                          ; 117 (117)           ; 78 (78)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|uart_top:uart_top0|uart_wb:wb_interface                                                                                                             ; uart_wb             ; work         ;
-;    |wb_conmax_top:wb_conmax_top0|                     ; 554 (0)             ; 334 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0                                                                                                                        ; wb_conmax_top       ; work         ;
-;       |wb_conmax_master_if:m0|                        ; 64 (64)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_master_if:m0                                                                                                 ; wb_conmax_master_if ; work         ;
+;    |wb_conmax_top:wb_conmax_top0|                     ; 553 (0)             ; 334 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0                                                                                                                        ; wb_conmax_top       ; work         ;
+;       |wb_conmax_master_if:m0|                        ; 63 (63)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_master_if:m0                                                                                                 ; wb_conmax_master_if ; work         ;
 ;       |wb_conmax_master_if:m1|                        ; 63 (63)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_master_if:m1                                                                                                 ; wb_conmax_master_if ; work         ;
 ;       |wb_conmax_rf:rf|                               ; 208 (208)           ; 274 (274)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_rf:rf                                                                                                        ; wb_conmax_rf        ; work         ;
-;       |wb_conmax_slave_if:s15|                        ; 49 (23)             ; 13 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15                                                                                                 ; wb_conmax_slave_if  ; work         ;
+;       |wb_conmax_slave_if:s15|                        ; 48 (22)             ; 13 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15                                                                                                 ; wb_conmax_slave_if  ; work         ;
 ;          |wb_conmax_msel:msel|                        ; 26 (11)             ; 10 (2)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15|wb_conmax_msel:msel                                                                             ; wb_conmax_msel      ; work         ;
 ;             |wb_conmax_arb:arb0|                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15|wb_conmax_msel:msel|wb_conmax_arb:arb0                                                          ; wb_conmax_arb       ; work         ;
 ;             |wb_conmax_arb:arb1|                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15|wb_conmax_msel:msel|wb_conmax_arb:arb1                                                          ; wb_conmax_arb       ; work         ;
@@ -728,7 +728,7 @@ refer to the applicable agreement for further details.
 ;             |wb_conmax_pri_enc:pri_enc|               ; 7 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15|wb_conmax_msel:msel|wb_conmax_pri_enc:pri_enc                                                   ; wb_conmax_pri_enc   ; work         ;
 ;                |wb_conmax_pri_dec:pd0|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15|wb_conmax_msel:msel|wb_conmax_pri_enc:pri_enc|wb_conmax_pri_dec:pd0                             ; wb_conmax_pri_dec   ; work         ;
 ;                |wb_conmax_pri_dec:pd1|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15|wb_conmax_msel:msel|wb_conmax_pri_enc:pri_enc|wb_conmax_pri_dec:pd1                             ; wb_conmax_pri_dec   ; work         ;
-;       |wb_conmax_slave_if:s1|                         ; 72 (46)             ; 13 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s1                                                                                                  ; wb_conmax_slave_if  ; work         ;
+;       |wb_conmax_slave_if:s1|                         ; 73 (47)             ; 13 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s1                                                                                                  ; wb_conmax_slave_if  ; work         ;
 ;          |wb_conmax_msel:msel|                        ; 26 (11)             ; 10 (2)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s1|wb_conmax_msel:msel                                                                              ; wb_conmax_msel      ; work         ;
 ;             |wb_conmax_arb:arb0|                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s1|wb_conmax_msel:msel|wb_conmax_arb:arb0                                                           ; wb_conmax_arb       ; work         ;
 ;             |wb_conmax_arb:arb1|                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |openmips_min_sopc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s1|wb_conmax_msel:msel|wb_conmax_arb:arb1                                                           ; wb_conmax_arb       ; work         ;
@@ -4286,7 +4286,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 3542  ;
-; Number of registers using Synchronous Clear  ; 318   ;
+; Number of registers using Synchronous Clear  ; 320   ;
 ; Number of registers using Synchronous Load   ; 100   ;
 ; Number of registers using Asynchronous Clear ; 923   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -4326,10 +4326,10 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; uart_top:uart_top0|uart_regs:regs|msi_reset                                       ; 2       ;
 ; uart_top:uart_top0|uart_regs:regs|lsr5_d                                          ; 1       ;
 ; uart_top:uart_top0|uart_regs:regs|lsr6_d                                          ; 1       ;
-; openmips:openmips0|csr:csr0|misa[30]                                              ; 1       ;
-; openmips:openmips0|csr:csr0|misa[12]                                              ; 1       ;
 ; uart_top:uart_top0|uart_regs:regs|uart_sync_flops:i_uart_sync_flops|sync_dat_o[0] ; 1       ;
 ; openmips:openmips0|csr:csr0|misa[8]                                               ; 1       ;
+; openmips:openmips0|csr:csr0|misa[12]                                              ; 1       ;
+; openmips:openmips0|csr:csr0|misa[30]                                              ; 1       ;
 ; uart_top:uart_top0|uart_regs:regs|uart_sync_flops:i_uart_sync_flops|flop_0[0]     ; 1       ;
 ; Total number of inverted registers = 31                                           ;         ;
 +-----------------------------------------------------------------------------------+---------+
@@ -8729,33 +8729,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 3542                        ;
 ;     CLR               ; 312                         ;
 ;     CLR SCLR          ; 4                           ;
-;     ENA               ; 1845                        ;
+;     ENA               ; 1843                        ;
 ;     ENA CLR           ; 562                         ;
 ;     ENA CLR SCLR      ; 10                          ;
 ;     ENA CLR SLD       ; 35                          ;
-;     ENA SCLR          ; 168                         ;
+;     ENA SCLR          ; 170                         ;
 ;     ENA SCLR SLD      ; 32                          ;
 ;     SCLR              ; 72                          ;
 ;     SCLR SLD          ; 32                          ;
 ;     SLD               ; 1                           ;
 ;     plain             ; 469                         ;
-; cycloneiii_lcell_comb ; 8610                        ;
+; cycloneiii_lcell_comb ; 8597                        ;
 ;     arith             ; 878                         ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 347                         ;
 ;         3 data inputs ; 529                         ;
-;     normal            ; 7732                        ;
+;     normal            ; 7719                        ;
 ;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 34                          ;
 ;         2 data inputs ; 422                         ;
-;         3 data inputs ; 991                         ;
-;         4 data inputs ; 6282                        ;
+;         3 data inputs ; 988                         ;
+;         4 data inputs ; 6272                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 7.68                        ;
+; Average LUT depth     ; 7.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -8764,7 +8764,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:25     ;
+; Top            ; 00:00:24     ;
 +----------------+--------------+
 
 
@@ -8774,7 +8774,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sat Apr 16 15:16:41 2022
+    Info: Processing started: Sat Apr 16 18:48:10 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off wishbone -c wishbone
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -8879,8 +8879,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file ex.v
 Info (12021): Found 1 design units, including 1 entities, in source file div.v
     Info (12023): Found entity 1: div File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/div.v Line: 3
 Info (12021): Found 0 design units, including 0 entities, in source file defines.v
-Info (12021): Found 1 design units, including 1 entities, in source file data_ram.v
-    Info (12023): Found entity 1: data_ram File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/data_ram.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file ctrl.v
     Info (12023): Found entity 1: ctrl File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file csr.v
@@ -9650,38 +9648,6 @@ Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[25] has unsafe behav
     Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
 Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[24] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
     Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[23] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[22] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[21] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[20] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[19] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[18] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[17] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[16] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[15] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[14] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[13] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[12] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[11] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[11] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/mem_wb.v Line: 32
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[10] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[9] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
-Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[8] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
 Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[0] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 315
     Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[1] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/id_ex.v Line: 42
 Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[1] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 315
@@ -9746,6 +9712,38 @@ Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[30] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/id_ex.v Line: 42
 Warning (13012): Latch openmips:openmips0|ex:ex0|wdata_o[31] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 315
     Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|id_ex:id_ex0|ex_alusel[0] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/id_ex.v Line: 42
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[23] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[22] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[21] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[20] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[19] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[18] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[17] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[16] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[15] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[14] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[13] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[12] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[11] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|mem_wb:mem_wb0|wb_csr_reg_data[11] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/mem_wb.v Line: 32
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[10] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[9] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
+Warning (13012): Latch openmips:openmips0|ctrl:ctrl0|new_pc[8] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex_mem:ex_mem0|mem_excepttype[12] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex_mem.v Line: 45
 Warning (13012): Latch openmips:openmips0|csr:csr0|data_o[3] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/csr.v Line: 223
     Warning (13013): Ports D and ENA on the latch are fed by the same signal openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0] File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 258
 Warning (13012): Latch openmips:openmips0|csr:csr0|data_o[11] has unsafe behavior File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/csr.v Line: 223
@@ -10011,17 +10009,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "miso" File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 39
-Info (21057): Implemented 10881 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10870 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 10801 logic cells
+    Info (21061): Implemented 10790 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 647 warnings
-    Info: Peak virtual memory: 4921 megabytes
-    Info: Processing ended: Sat Apr 16 15:17:24 2022
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:00:58
+    Info: Peak virtual memory: 4918 megabytes
+    Info: Processing ended: Sat Apr 16 18:48:52 2022
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:55
 
 
 +------------------------------------------+

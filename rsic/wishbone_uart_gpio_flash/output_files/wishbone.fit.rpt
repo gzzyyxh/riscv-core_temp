@@ -1,5 +1,5 @@
 Fitter report for wishbone
-Sat Apr 16 15:17:39 2022
+Sat Apr 16 18:49:07 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -61,15 +61,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Failed - Sat Apr 16 15:17:39 2022               ;
+; Fitter Status                      ; Failed - Sat Apr 16 18:49:07 2022               ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; wishbone                                        ;
 ; Top-level Entity Name              ; openmips_min_sopc                               ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE6F17C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 10,680 / 6,272 ( 170 % )                        ;
-;     Total combinational functions  ; 8,610 / 6,272 ( 137 % )                         ;
+; Total logic elements               ; 10,667 / 6,272 ( 170 % )                        ;
+;     Total combinational functions  ; 8,597 / 6,272 ( 137 % )                         ;
 ;     Dedicated logic registers      ; 3,542 / 6,272 ( 56 % )                          ;
 ; Total registers                    ; 3542                                            ;
 ; Total pins                         ; 56 / 180 ( 31 % )                               ;
@@ -154,9 +154,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.1%      ;
-;     Processor 3            ;   1.5%      ;
-;     Processor 4            ;   1.4%      ;
+;     Processor 2            ;   1.8%      ;
+;     Processor 3            ;   1.4%      ;
+;     Processor 4            ;   1.3%      ;
 +----------------------------+-------------+
 
 
@@ -166,8 +166,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]        ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+----------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                      ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 12298 ) ; 0.00 % ( 0 / 12298 )       ; 0.00 % ( 0 / 12298 )     ;
-;     -- Achieved     ; 0.00 % ( 0 / 12298 ) ; 0.00 % ( 0 / 12298 )       ; 0.00 % ( 0 / 12298 )     ;
+;     -- Requested    ; 0.00 % ( 0 / 12285 ) ; 0.00 % ( 0 / 12285 )       ; 0.00 % ( 0 / 12285 )     ;
+;     -- Achieved     ; 0.00 % ( 0 / 12285 ) ; 0.00 % ( 0 / 12285 )       ; 0.00 % ( 0 / 12285 )     ;
 ;                     ;                      ;                            ;                          ;
 ; Routing (by net)    ;                      ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )     ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -190,7 +190,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 12298 )  ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 12285 )  ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -200,19 +200,19 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Total logic elements                        ; 10,680 / 6,272 ( 170 % ) ;
-;     -- Combinational with no register       ; 7138                     ;
+; Total logic elements                        ; 10,667 / 6,272 ( 170 % ) ;
+;     -- Combinational with no register       ; 7125                     ;
 ;     -- Register only                        ; 2070                     ;
 ;     -- Combinational with a register        ; 1472                     ;
 ;                                             ;                          ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 6282                     ;
-;     -- 3 input functions                    ; 1520                     ;
+;     -- 4 input functions                    ; 6272                     ;
+;     -- 3 input functions                    ; 1517                     ;
 ;     -- <=2 input functions                  ; 808                      ;
 ;     -- Register only                        ; 2070                     ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 7732                     ;
+;     -- normal mode                          ; 7719                     ;
 ;     -- arithmetic mode                      ; 878                      ;
 ;                                             ;                          ;
 ; Total registers*                            ; 3,542 / 7,124 ( 50 % )   ;
@@ -238,8 +238,8 @@ refer to the applicable agreement for further details.
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )            ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )            ;
 ; Maximum fan-out                             ; 3388                     ;
-; Highest non-global fan-out                  ; 1978                     ;
-; Total fan-out                               ; 42840                    ;
+; Highest non-global fan-out                  ; 1975                     ;
+; Total fan-out                               ; 42793                    ;
 ; Average fan-out                             ; 3.48                     ;
 +---------------------------------------------+--------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -269,7 +269,7 @@ refer to the applicable agreement for further details.
 ; gpio_i[8]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; gpio_i[9]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; miso       ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; On           ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; rst        ; Unassigned ; --       ; 1978                  ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; rst        ; Unassigned ; --       ; 1975                  ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; uart_in    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 +------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
@@ -802,12 +802,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; gpio_i[14] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; gpio_i[6]  ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; gpio_i[15] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; gpio_i[7]  ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; gpio_i[11] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; uart_in    ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
-; gpio_i[10] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; gpio_i[9]  ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; uart_in    ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 ; gpio_i[8]  ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; gpio_i[11] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; gpio_i[10] ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
+; gpio_i[7]  ; Input    ; 0             ; --            ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -830,12 +830,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; gpio_i[14]          ;                   ;         ;
 ; gpio_i[6]           ;                   ;         ;
 ; gpio_i[15]          ;                   ;         ;
-; gpio_i[7]           ;                   ;         ;
-; gpio_i[11]          ;                   ;         ;
-; uart_in             ;                   ;         ;
-; gpio_i[10]          ;                   ;         ;
 ; gpio_i[9]           ;                   ;         ;
+; uart_in             ;                   ;         ;
 ; gpio_i[8]           ;                   ;         ;
+; gpio_i[11]          ;                   ;         ;
+; gpio_i[10]          ;                   ;         ;
+; gpio_i[7]           ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
@@ -844,9 +844,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------+------------+---------+-------------------------------------------------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                   ; Location   ; Fan-Out ; Usage                                                             ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------------------------------------+------------+---------+-------------------------------------------------------------------+--------+----------------------+------------------+---------------------------+
-; clk                                                                                                    ; Unassigned ; 171     ; Clock                                                             ; no     ; --                   ; --               ; --                        ;
 ; clk                                                                                                    ; Unassigned ; 3388    ; Clock                                                             ; yes    ; Global Clock         ; Not Available    ; --                        ;
-; gpio_top:gpio_top0|always11~0                                                                          ; Unassigned ; 40      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
+; clk                                                                                                    ; Unassigned ; 171     ; Clock                                                             ; no     ; --                   ; --               ; --                        ;
+; gpio_top:gpio_top0|always11~0                                                                          ; Unassigned ; 38      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; gpio_top:gpio_top0|rgpio_ctrl[0]                                                                       ; Unassigned ; 20      ; Sync. clear                                                       ; no     ; --                   ; --               ; --                        ;
 ; gpio_top:gpio_top0|rgpio_inte[0]~0                                                                     ; Unassigned ; 8       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; gpio_top:gpio_top0|rgpio_inte[14]~2                                                                    ; Unassigned ; 8       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
@@ -868,7 +868,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; openmips:openmips0|csr:csr0|fcsr[3]~0                                                                  ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|fflags[3]~0                                                                ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|frm[3]~4                                                                   ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
-; openmips:openmips0|csr:csr0|marchid[17]~1                                                              ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
+; openmips:openmips0|csr:csr0|marchid[17]~2                                                              ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|mcause[3]~8                                                                ; Unassigned ; 2       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|mcycle[23]~60                                                              ; Unassigned ; 32      ; Sync. clear                                                       ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|mcycleh[10]~57                                                             ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
@@ -883,12 +883,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; openmips:openmips0|csr:csr0|mip[0]~2                                                                   ; Unassigned ; 31      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|misa[3]~1                                                                  ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|mscratch[0]~0                                                              ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
-; openmips:openmips0|csr:csr0|mstatus[12]~6                                                              ; Unassigned ; 2       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
-; openmips:openmips0|csr:csr0|mstatus[23]~4                                                              ; Unassigned ; 28      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
+; openmips:openmips0|csr:csr0|mstatus[12]~4                                                              ; Unassigned ; 2       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
+; openmips:openmips0|csr:csr0|mstatus[23]~2                                                              ; Unassigned ; 28      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|mtime[2]~0                                                                 ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|mtval[24]~1                                                                ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|csr:csr0|mvendorid[3]~1                                                             ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
-; openmips:openmips0|ctrl:ctrl0|new_pc[31]~4                                                             ; Unassigned ; 32      ; Latch enable                                                      ; yes    ; Global Clock         ; Not Available    ; --                        ;
+; openmips:openmips0|ctrl:ctrl0|new_pc[31]~5                                                             ; Unassigned ; 32      ; Latch enable                                                      ; yes    ; Global Clock         ; Not Available    ; --                        ;
 ; openmips:openmips0|ctrl:ctrl0|stall[3]~0                                                               ; Unassigned ; 137     ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|div:div0|cnt[0]~9                                                                   ; Unassigned ; 6       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|div:div0|cnt[2]~8                                                                   ; Unassigned ; 7       ; Sync. clear                                                       ; no     ; --                   ; --               ; --                        ;
@@ -896,8 +896,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; openmips:openmips0|div:div0|dividend[59]~6                                                             ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|div:div0|divisor[31]~2                                                              ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|div:div0|result_o[59]~1                                                             ; Unassigned ; 64      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
-; openmips:openmips0|div:div0|state.01                                                                   ; Unassigned ; 35      ; Sync. clear                                                       ; no     ; --                   ; --               ; --                        ;
-; openmips:openmips0|div:div0|state.10                                                                   ; Unassigned ; 75      ; Sync. clear                                                       ; no     ; --                   ; --               ; --                        ;
+; openmips:openmips0|div:div0|state.01                                                                   ; Unassigned ; 36      ; Sync. clear                                                       ; no     ; --                   ; --               ; --                        ;
+; openmips:openmips0|div:div0|state.10                                                                   ; Unassigned ; 76      ; Sync. clear                                                       ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|ex:ex0|Mux32~7                                                                      ; Unassigned ; 32      ; Latch enable                                                      ; yes    ; Global Clock         ; Not Available    ; --                        ;
 ; openmips:openmips0|ex:ex0|WideOr13~1                                                                   ; Unassigned ; 32      ; Latch enable                                                      ; yes    ; Global Clock         ; Not Available    ; --                        ;
 ; openmips:openmips0|ex:ex0|WideOr1~1                                                                    ; Unassigned ; 32      ; Latch enable                                                      ; yes    ; Global Clock         ; Not Available    ; --                        ;
@@ -907,8 +907,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; openmips:openmips0|id:id0|always2~0                                                                    ; Unassigned ; 32      ; Latch enable                                                      ; yes    ; Global Clock         ; Not Available    ; --                        ;
 ; openmips:openmips0|if_id:if_id0|id_inst~67                                                             ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|mem:mem0|WideOr2~1                                                                  ; Unassigned ; 32      ; Latch enable                                                      ; yes    ; Global Clock         ; Not Available    ; --                        ;
-; openmips:openmips0|pc_reg:pc_reg0|pc[16]~19                                                            ; Unassigned ; 30      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
-; openmips:openmips0|pc_reg:pc_reg0|pc~48                                                                ; Unassigned ; 2       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
+; openmips:openmips0|pc_reg:pc_reg0|ce                                                                   ; Unassigned ; 14      ; Sync. clear                                                       ; no     ; --                   ; --               ; --                        ;
+; openmips:openmips0|pc_reg:pc_reg0|pc[16]~27                                                            ; Unassigned ; 30      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
+; openmips:openmips0|pc_reg:pc_reg0|pc~53                                                                ; Unassigned ; 2       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|regfile:regfile1|regs~3025                                                          ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|regfile:regfile1|regs~3026                                                          ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|regfile:regfile1|regs~3027                                                          ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
@@ -945,9 +946,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; openmips:openmips0|wishbone_bus_if:dwishbone_bus_if|rd_buf[26]~3                                       ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|wishbone_bus_if:dwishbone_bus_if|wishbone_addr_o[27]~3                              ; Unassigned ; 53      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|wishbone_bus_if:iwishbone_bus_if|Selector139~1                                      ; Unassigned ; 32      ; Latch enable                                                      ; no     ; --                   ; --               ; --                        ;
-; openmips:openmips0|wishbone_bus_if:iwishbone_bus_if|rd_buf[9]~2                                        ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
+; openmips:openmips0|wishbone_bus_if:iwishbone_bus_if|rd_buf[9]~3                                        ; Unassigned ; 32      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; openmips:openmips0|wishbone_bus_if:iwishbone_bus_if|wishbone_cyc_o~3                                   ; Unassigned ; 17      ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
-; rst                                                                                                    ; Unassigned ; 1978    ; Async. clear, Clock enable, Latch enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; rst                                                                                                    ; Unassigned ; 1975    ; Async. clear, Clock enable, Latch enable, Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
 ; uart_top:uart_top0|uart_regs:regs|always31~0                                                           ; Unassigned ; 9       ; Sync. load                                                        ; no     ; --                   ; --               ; --                        ;
 ; uart_top:uart_top0|uart_regs:regs|always4~1                                                            ; Unassigned ; 8       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; uart_top:uart_top0|uart_regs:regs|always6~2                                                            ; Unassigned ; 2       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
@@ -968,7 +969,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart_top:uart_top0|uart_regs:regs|uart_receiver:receiver|rbit_counter[0]~2                             ; Unassigned ; 2       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; uart_top:uart_top0|uart_regs:regs|uart_receiver:receiver|rcounter16[3]~4                               ; Unassigned ; 4       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; uart_top:uart_top0|uart_regs:regs|uart_receiver:receiver|rf_data_in[3]~1                               ; Unassigned ; 9       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
-; uart_top:uart_top0|uart_regs:regs|uart_receiver:receiver|rf_push_pulse                                 ; Unassigned ; 50      ; Write enable                                                      ; no     ; --                   ; --               ; --                        ;
+; uart_top:uart_top0|uart_regs:regs|uart_receiver:receiver|rf_push_pulse                                 ; Unassigned ; 48      ; Write enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; uart_top:uart_top0|uart_regs:regs|uart_receiver:receiver|rshift[0]~1                                   ; Unassigned ; 6       ; Clock enable                                                      ; no     ; --                   ; --               ; --                        ;
 ; uart_top:uart_top0|uart_regs:regs|uart_receiver:receiver|rstate[0]                                     ; Unassigned ; 25      ; Sync. load                                                        ; no     ; --                   ; --               ; --                        ;
 ; uart_top:uart_top0|uart_regs:regs|uart_receiver:receiver|rstate[2]                                     ; Unassigned ; 31      ; Sync. clear                                                       ; no     ; --                   ; --               ; --                        ;
@@ -1029,7 +1030,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------+------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; clk                                        ; Unassigned ; 3388    ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
 ; openmips:openmips0|csr:csr0|always1~22     ; Unassigned ; 32      ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
-; openmips:openmips0|ctrl:ctrl0|new_pc[31]~4 ; Unassigned ; 32      ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
+; openmips:openmips0|ctrl:ctrl0|new_pc[31]~5 ; Unassigned ; 32      ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
 ; openmips:openmips0|ex:ex0|Mux32~7          ; Unassigned ; 32      ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
 ; openmips:openmips0|ex:ex0|WideOr13~1       ; Unassigned ; 32      ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
 ; openmips:openmips0|ex:ex0|WideOr1~1        ; Unassigned ; 32      ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
@@ -1045,7 +1046,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+---------------------+
 ; Name      ; Fan-Out             ;
 +-----------+---------------------+
-; rst~input ; 1978                ;
+; rst~input ; 1975                ;
 +-----------+---------------------+
 
 
@@ -1083,14 +1084,14 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +-------------------------------------------------------------------------------+----------------------------+------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 ; Name                                                                          ; Mode                       ; Location   ; Sign Representation ; Has Input Shift Register Chain ; Data A Input Register ; Data B Input Register ; Pipeline Register ; Output Register ;
 +-------------------------------------------------------------------------------+----------------------------+------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
-; openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8     ; Simple Multiplier (18-bit) ; Unassigned ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7 ;                            ; Unassigned ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
-; openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out6     ; Simple Multiplier (18-bit) ; Unassigned ;                     ; No                             ;                       ;                       ;                   ; no              ;
-;    openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult5 ;                            ; Unassigned ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
 ; openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out4     ; Simple Multiplier (18-bit) ; Unassigned ;                     ; No                             ;                       ;                       ;                   ; no              ;
 ;    openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult3 ;                            ; Unassigned ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
+; openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out6     ; Simple Multiplier (18-bit) ; Unassigned ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult5 ;                            ; Unassigned ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
 ; openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|w513w[0]     ; Simple Multiplier (18-bit) ; Unassigned ;                     ; No                             ;                       ;                       ;                   ; no              ;
 ;    openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult1 ;                            ; Unassigned ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
+; openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8     ; Simple Multiplier (18-bit) ; Unassigned ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    openmips:openmips0|ex:ex0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7 ;                            ; Unassigned ; Unsigned            ;                                ; no                    ; no                    ; no                ;                 ;
 +-------------------------------------------------------------------------------+----------------------------+------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 
 
@@ -1204,12 +1205,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; gpio_i[14]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; gpio_i[6]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; gpio_i[15]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; gpio_i[7]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; gpio_i[11]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; uart_in            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; gpio_i[10]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; gpio_i[9]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; uart_in            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; gpio_i[8]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; gpio_i[11]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; gpio_i[10]         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; gpio_i[7]          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -1295,34 +1296,34 @@ Info (176353): Automatically promoted node openmips:openmips0|ex:ex0|WideOr9~2  
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node openmips:openmips0|csr:csr0|always1~22 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node openmips:openmips0|ctrl:ctrl0|new_pc[31]~4  File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+Info (176353): Automatically promoted node openmips:openmips0|ctrl:ctrl0|new_pc[31]~5  File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node openmips:openmips0|ex:ex0|Mux32~7  File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node openmips:openmips0|ex:ex0|WideOr13~1  File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 319
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux31~2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
-        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux30~8 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
-        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux29~24 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
-        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux28~12 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
-        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux23~2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
-        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux22~2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
-        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux21~0 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
-        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux20~0 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
+        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux17~2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
+        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux16~2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
         Info (176357): Destination node openmips:openmips0|ex:ex0|Mux19~2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
         Info (176357): Destination node openmips:openmips0|ex:ex0|Mux18~0 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
+        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux21~0 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
+        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux20~0 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
+        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux23~2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
+        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux22~2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
+        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux29~24 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
+        Info (176357): Destination node openmips:openmips0|ex:ex0|Mux28~12 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 317
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176353): Automatically promoted node openmips:openmips0|ex:ex0|WideOr1~1  File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ex.v Line: 131
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node openmips:openmips0|id:id0|always1~3 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node openmips:openmips0|ctrl:ctrl0|new_pc[31]~4 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+        Info (176357): Destination node openmips:openmips0|ctrl:ctrl0|new_pc[31]~5 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
 Info (176353): Automatically promoted node openmips:openmips0|id:id0|always2~0 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node openmips:openmips0|ctrl:ctrl0|new_pc[31]~3 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
+        Info (176357): Destination node openmips:openmips0|ctrl:ctrl0|new_pc[31]~4 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/ctrl.v Line: 28
 Info (176353): Automatically promoted node openmips:openmips0|mem:mem0|WideOr2~1  File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/mem.v Line: 97
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
@@ -1331,12 +1332,12 @@ Info (176353): Automatically promoted node openmips:openmips0|mem:mem0|WideOr2~1
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:05
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
-Error (170011): Design contains 8610 blocks of type combinational node.  However, the device contains only 6272 blocks.
+Error (170011): Design contains 8597 blocks of type combinational node.  However, the device contains only 6272 blocks.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.33 seconds.
 Error (171000): Can't fit design in device
 Warning (169180): Following 1 pins must use external clamping diodes.
     Info (169178): Pin miso uses I/O standard 3.3-V LVTTL at H2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 39
@@ -1354,19 +1355,19 @@ Warning (169177): 19 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin gpio_i[14] uses I/O standard 3.3-V LVTTL at R5 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
     Info (169178): Pin gpio_i[6] uses I/O standard 3.3-V LVTTL at N2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
     Info (169178): Pin gpio_i[15] uses I/O standard 3.3-V LVTTL at R6 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
-    Info (169178): Pin gpio_i[7] uses I/O standard 3.3-V LVTTL at P2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
-    Info (169178): Pin gpio_i[11] uses I/O standard 3.3-V LVTTL at P3 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
-    Info (169178): Pin uart_in uses I/O standard 3.3-V LVTTL at M2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 9
-    Info (169178): Pin gpio_i[10] uses I/O standard 3.3-V LVTTL at M9 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
     Info (169178): Pin gpio_i[9] uses I/O standard 3.3-V LVTTL at L9 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
+    Info (169178): Pin uart_in uses I/O standard 3.3-V LVTTL at M2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 9
     Info (169178): Pin gpio_i[8] uses I/O standard 3.3-V LVTTL at P8 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
+    Info (169178): Pin gpio_i[11] uses I/O standard 3.3-V LVTTL at P3 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
+    Info (169178): Pin gpio_i[10] uses I/O standard 3.3-V LVTTL at M9 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
+    Info (169178): Pin gpio_i[7] uses I/O standard 3.3-V LVTTL at P2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 13
 Warning (169203): PCI-clamp diode is not supported in this mode. The following 1 pins must meet the Intel FPGA requirements for 3.3V, 3.0V, and 2.5V interfaces if they are connected to devices other than the supported configuration devices. In these cases, Intel recommends termination method as specified in the Application Note 447.
     Info (169178): Pin miso uses I/O standard 3.3-V LVTTL at H2 File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/openmips_min_sopc.v Line: 39
 Info (144001): Generated suppressed messages file D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/output_files/wishbone.fit.smsg
 Error: Quartus Prime Fitter was unsuccessful. 2 errors, 7 warnings
-    Error: Peak virtual memory: 5409 megabytes
-    Error: Processing ended: Sat Apr 16 15:17:39 2022
-    Error: Elapsed time: 00:00:14
+    Error: Peak virtual memory: 5410 megabytes
+    Error: Processing ended: Sat Apr 16 18:49:08 2022
+    Error: Elapsed time: 00:00:15
     Error: Total CPU time (on all processors): 00:00:15
 
 
