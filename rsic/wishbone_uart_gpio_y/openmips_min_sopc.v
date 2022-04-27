@@ -54,23 +54,23 @@ module openmips_min_sopc(
 	wire       m0_stb_i;
 	wire       m0_ack_o;  
 	
-	wire[31:0] m1_data_i;
-	wire[31:0] m1_data_o;
-	wire[31:0] m1_addr_i;
-	wire[3:0]  m1_sel_i;
-	wire       m1_we_i;
-	wire       m1_cyc_i; 
-	wire       m1_stb_i;
-	wire       m1_ack_o;  	
+//	wire[31:0] m1_data_i;
+//	wire[31:0] m1_data_o;
+//	wire[31:0] m1_addr_i;
+//	wire[3:0]  m1_sel_i;
+//	wire       m1_we_i;
+//	wire       m1_cyc_i; 
+//	wire       m1_stb_i;
+//	wire       m1_ack_o;  	
 
-	wire[31:0] s0_data_i;
-	wire[31:0] s0_data_o;
-	wire[31:0] s0_addr_o;
-	wire[3:0]  s0_sel_o;
-	wire       s0_we_o; 
-	wire       s0_cyc_o; 
-	wire       s0_stb_o;
-	wire       s0_ack_i;
+//	wire[31:0] s0_data_i;
+//	wire[31:0] s0_data_o;
+//	wire[31:0] s0_addr_o;
+//	wire[3:0]  s0_sel_o;
+//	wire       s0_we_o; 
+//	wire       s0_cyc_o; 
+//	wire       s0_stb_o;
+//	wire       s0_ack_i;
 
 	wire[31:0] s1_data_i;
 	wire[31:0] s1_data_o;
@@ -122,18 +122,18 @@ module openmips_min_sopc(
 		.clk(clk),
 		.rst(~rst),
 		
-//		.rom_addr_o(inst_addr),
-//		.rom_data_i(inst),
-//		.rom_ce_o(rom_ce),
+		.rom_addr_o(inst_addr),
+		.rom_data_i(inst),
+		.rom_ce_o(rom_ce),
 	
-		.iwishbone_data_i(m1_data_o),
-		.iwishbone_ack_i(m1_ack_o),
-		.iwishbone_addr_o(m1_addr_i),
-		.iwishbone_data_o(m1_data_i),
-		.iwishbone_we_o(m1_we_i),
-		.iwishbone_sel_o(m1_sel_i),
-		.iwishbone_stb_o(m1_stb_i),
-		.iwishbone_cyc_o(m1_cyc_i), 
+//		.iwishbone_data_i(m1_data_o),
+//		.iwishbone_ack_i(m1_ack_o),
+//		.iwishbone_addr_o(m1_addr_i),
+//		.iwishbone_data_o(m1_data_i),
+//		.iwishbone_we_o(m1_we_i),
+//		.iwishbone_sel_o(m1_sel_i),
+//		.iwishbone_stb_o(m1_stb_i),
+//		.iwishbone_cyc_o(m1_cyc_i), 
 		
 		.int_i(int),
 
@@ -150,23 +150,10 @@ module openmips_min_sopc(
 	
 	);
 	
-//	inst_rom inst_rom0(
-//		.addr(inst_addr),
-//		.inst(inst),
-//		.ce(rom_ce)	
-//	);
-
-	inst_rom_ inst_rom_0(
-		.wb_clk_i(clk),
-		.wb_rst_i(~rst),
-		.wb_adr_i(s0_addr_o),
-		.wb_dat_o(s0_data_i),
-		.wb_dat_i(s0_data_o),
-		.wb_sel_i(s0_sel_o),
-		.wb_we_i(s0_we_o),
-		.wb_stb_i(s0_stb_o),
-		.wb_cyc_i(s0_cyc_o),
-		.wb_ack_o(s0_ack_i)
+	inst_rom inst_rom0(
+		.addr(inst_addr),
+		.inst(inst),
+		.ce(rom_ce)	
 	);
 	
 	gpio_top gpio_top0(
@@ -293,28 +280,26 @@ module openmips_min_sopc(
 		 .m0_err_o(), 
 	    .m0_rty_o(),
 
-//	    .m1_data_i(`ZeroWord),
-//	    .m1_data_o(),
-//	    .m1_addr_i(`ZeroWord),
-//	    .m1_sel_i(4'b0000),
-//	    .m1_we_i(1'b0), 
-//	    .m1_cyc_i(1'b0), 
-//	    .m1_stb_i(1'b0),
-//	    .m1_ack_o(), 
-//	    .m1_err_o(), 
-//	    .m1_rty_o(),
-
-	    // Master 1 Interface
-	    .m1_data_i(m1_data_i),
-	    .m1_data_o(m1_data_o),
-	    .m1_addr_i(m1_addr_i),
-	    .m1_sel_i(m1_sel_i),
-	    .m1_we_i(m1_we_i), 
-	    .m1_cyc_i(m1_cyc_i), 
-	    .m1_stb_i(m1_stb_i),
-	    .m1_ack_o(m1_ack_o),
-		 .m1_err_o(), 
+	    .m1_data_i(`ZeroWord),
+	    .m1_data_o(),
+	    .m1_addr_i(`ZeroWord),
+	    .m1_sel_i(4'b0000),
+	    .m1_we_i(1'b0), 
+	    .m1_cyc_i(1'b0), 
+	    .m1_stb_i(1'b0),
+	    .m1_ack_o(), 
+	    .m1_err_o(), 
 	    .m1_rty_o(),
+
+//	    // Master 1 Interface
+//	    .m1_data_i(m1_data_i),
+//	    .m1_data_o(m1_data_o),
+//	    .m1_addr_i(m1_addr_i),
+//	    .m1_sel_i(m1_sel_i),
+//	    .m1_we_i(m1_we_i), 
+//	    .m1_cyc_i(m1_cyc_i), 
+//	    .m1_stb_i(m1_stb_i),
+//	    .m1_ack_o(m1_ack_o), 
 
 	    // Master 2 Interface
 	    .m2_data_i(`ZeroWord),
@@ -388,28 +373,28 @@ module openmips_min_sopc(
 	    .m7_err_o(), 
 	    .m7_rty_o(),
 
-	    // Slave 0 Interface
-	    .s0_data_i(s0_data_i),
-	    .s0_data_o(s0_data_o),
-	    .s0_addr_o(s0_addr_o),
-	    .s0_sel_o(s0_sel_o),
-	    .s0_we_o(s0_we_o), 
-	    .s0_cyc_o(s0_cyc_o), 
-	    .s0_stb_o(s0_stb_o),
-	    .s0_ack_i(s0_ack_i), 
-	    .s0_err_i(1'b0), 
-	    .s0_rty_i(1'b0),
-
-//	    .s0_data_i(),
-//	    .s0_data_o(),
-//	    .s0_addr_o(),
-//	    .s0_sel_o(),
-//	    .s0_we_o(), 
-//	    .s0_cyc_o(), 
-//	    .s0_stb_o(),
-//	    .s0_ack_i(1'b0), 
+//	    // Slave 0 Interface
+//	    .s0_data_i(s0_data_i),
+//	    .s0_data_o(s0_data_o),
+//	    .s0_addr_o(s0_addr_o),
+//	    .s0_sel_o(s0_sel_o),
+//	    .s0_we_o(s0_we_o), 
+//	    .s0_cyc_o(s0_cyc_o), 
+//	    .s0_stb_o(s0_stb_o),
+//	    .s0_ack_i(s0_ack_i), 
 //	    .s0_err_i(1'b0), 
 //	    .s0_rty_i(1'b0),
+
+	    .s0_data_i(),
+	    .s0_data_o(),
+	    .s0_addr_o(),
+	    .s0_sel_o(),
+	    .s0_we_o(), 
+	    .s0_cyc_o(), 
+	    .s0_stb_o(),
+	    .s0_ack_i(1'b0), 
+	    .s0_err_i(1'b0), 
+	    .s0_rty_i(1'b0),
 
 	    // Slave 1 Interface
 	    .s1_data_i(s1_data_i),

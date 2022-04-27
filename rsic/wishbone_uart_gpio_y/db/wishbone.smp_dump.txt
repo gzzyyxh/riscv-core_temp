@@ -886,12 +886,6 @@ wbstate.01 0 0 1 1
 wbstate.10 0 1 0 1 
 wbstate.11 1 0 0 1 
 
-State Machine - |openmips_min_sopc|openmips:openmips0|wishbone_bus_if:iwishbone_bus_if|wishbone_state
-Name wishbone_state.01 wishbone_state.11 wishbone_state.00 
-wishbone_state.00 0 0 0 
-wishbone_state.01 1 0 1 
-wishbone_state.11 0 1 1 
-
 State Machine - |openmips_min_sopc|openmips:openmips0|wishbone_bus_if:dwishbone_bus_if|wishbone_state
 Name wishbone_state.01 wishbone_state.11 wishbone_state.00 
 wishbone_state.00 0 0 0 
