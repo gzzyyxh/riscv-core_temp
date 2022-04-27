@@ -26,6 +26,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	id
 
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wishbone_bus_if.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wishbone_bus_if.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module wishbone_bus_if
+
+Top level modules:
+	wishbone_bus_if
+
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_slave_if.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_slave_if.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module wb_conmax_slave_if
@@ -57,6 +64,20 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	openmips_min_sopc_tb
 
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/csr.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/csr.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module csr
+
+Top level modules:
+	csr
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_receiver.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_receiver.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module uart_receiver
+
+Top level modules:
+	uart_receiver
+
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_top.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_top.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module wb_conmax_top
@@ -71,19 +92,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	uart_transmitter
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_receiver.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_receiver.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/id_ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/id_ex.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module uart_receiver
+-- Compiling module id_ex
 
 Top level modules:
-	uart_receiver
-
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/csr.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/csr.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module csr
-
-Top level modules:
-	csr
+	id_ex
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/data_ram.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/data_ram.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -92,12 +106,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	data_ram
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/id_ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/id_ex.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/openmips_min_sopc.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/openmips_min_sopc.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module id_ex
+-- Compiling module openmips_min_sopc
 
 Top level modules:
-	id_ex
+	openmips_min_sopc
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/inst_rom_.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/inst_rom_.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -106,19 +120,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	inst_rom_
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/openmips_min_sopc.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/openmips_min_sopc.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/if_id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/if_id.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module openmips_min_sopc
+-- Compiling module if_id
 
 Top level modules:
-	openmips_min_sopc
-
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_sync_flops.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_sync_flops.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module uart_sync_flops
-
-Top level modules:
-	uart_sync_flops
+	if_id
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/inst_rom.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/inst_rom.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -127,12 +134,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	inst_rom
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/if_id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/if_id.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_sync_flops.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_sync_flops.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module if_id
+-- Compiling module uart_sync_flops
 
 Top level modules:
-	if_id
+	uart_sync_flops
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/gpio_defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/gpio_defines.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_wb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_wb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -141,9 +151,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	uart_wb
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/gpio_defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/gpio_defines.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/ctrl.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/ctrl.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module ctrl
@@ -151,12 +158,8 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	ctrl
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_msel.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_msel.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/defines.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module wb_conmax_msel
-
-Top level modules:
-	wb_conmax_msel
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/regfile.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/regfile.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -165,15 +168,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	regfile
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/defines.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_msel.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_msel.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/mem_wb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/mem_wb.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module mem_wb
+-- Compiling module wb_conmax_msel
 
 Top level modules:
-	mem_wb
+	wb_conmax_msel
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -182,12 +182,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	mem
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_debug_if.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_debug_if.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/mem_wb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/mem_wb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module uart_debug_if
+-- Compiling module mem_wb
 
 Top level modules:
-	uart_debug_if
+	mem_wb
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/pc_reg.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/pc_reg.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -196,15 +196,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	pc_reg
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_rfifo.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_rfifo.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_debug_if.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_debug_if.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module uart_rfifo
+-- Compiling module uart_debug_if
 
 Top level modules:
-	uart_rfifo
-
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_defines.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+	uart_debug_if
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/gpio_top.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/gpio_top.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -213,6 +210,16 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	gpio_top
 
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_defines.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_rfifo.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_rfifo.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module uart_rfifo
+
+Top level modules:
+	uart_rfifo
+
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_arb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_arb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module wb_conmax_arb
@@ -220,29 +227,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	wb_conmax_arb
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_pri_dec.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_pri_dec.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/ex_mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/ex_mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module wb_conmax_pri_dec
+-- Compiling module ex_mem
 
 Top level modules:
-	wb_conmax_pri_dec
-
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_defines.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_tfifo.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_tfifo.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module uart_tfifo
-
-Top level modules:
-	uart_tfifo
-
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/openmips.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/openmips.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module openmips
-
-Top level modules:
-	openmips
+	ex_mem
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/div.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/div.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -251,12 +241,29 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	div
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/ex_mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/ex_mem.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/openmips.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/openmips.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module ex_mem
+-- Compiling module openmips
 
 Top level modules:
-	ex_mem
+	openmips
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_tfifo.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_tfifo.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module uart_tfifo
+
+Top level modules:
+	uart_tfifo
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_defines.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_pri_dec.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/wb_conmax_pri_dec.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module wb_conmax_pri_dec
+
+Top level modules:
+	wb_conmax_pri_dec
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_regs.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y/sim_gpio_wishbone/uart_regs.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
