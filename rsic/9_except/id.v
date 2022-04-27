@@ -262,7 +262,7 @@ module id(
 								wd_o <= inst_i[11:7];
 		  						instvalid <= `InstValid;
 							end
-							if(op3 == 7'b0000001) begin		//REMU
+							if(op3 == 7'b0000001) begin		//REM
 								wreg_o <= `WriteEnable;
 								aluop_o <= `EXE_REM_OP;
 								alusel_o <= `EXE_RES_DIV;

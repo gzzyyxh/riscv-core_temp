@@ -3,7 +3,8 @@
 module openmips_min_sopc(
 
 	input	wire										clk,
-	input wire										rst
+	input wire										rst,
+	output wire[`RegBus]							result
 	
 );
 
@@ -21,6 +22,7 @@ module openmips_min_sopc(
   wire timer_int;
  
  assign int = timer_int;
+// assign result = mem_data_o;
 
  openmips openmips0(
 		.clk(clk),
@@ -39,7 +41,8 @@ module openmips_min_sopc(
 		.ram_data_i(mem_data_o),
 		.ram_ce_o(mem_ce_i),
 		
-		.timer_int_o(timer_int)
+		.timer_int_o(timer_int),
+		.result(result)
 	
 	);
 	
@@ -49,15 +52,15 @@ module openmips_min_sopc(
 		.ce(rom_ce)	
 	);
 	
-	data_ram data_ram0(
-		.clk(clk),
-		.we(mem_we_i),
-		.addr(mem_addr_i),
-		.sel(mem_sel_i),
-		.data_i(mem_data_i),
-		.data_o(mem_data_o),
-		.ce(mem_ce_i)		
-	);
+//	data_ram data_ram0(
+//		.clk(clk),
+//		.we(mem_we_i),
+//		.addr(mem_addr_i),
+//		.sel(mem_sel_i),
+//		.data_i(mem_data_i),
+//		.data_o(mem_data_o),
+//		.ce(mem_ce_i)		
+//	);
 
 
 endmodule

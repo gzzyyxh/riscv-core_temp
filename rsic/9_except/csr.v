@@ -52,7 +52,7 @@ module csr(
 	reg[`RegBus]				mvendorid;	//机器模式供应商编号寄存器					//
 	reg[`RegBus]				marchid;	//机器模式架构编号寄存器					//
 	reg[`RegBus]				mimpid;	//机器模式硬件实现编号寄存器					//
-	reg[`RegBus]				mhartid;	//Hart编号寄存器*
+	reg[`RegBus]				mhartid;	//Hart编号寄存器
 	reg[`RegBus]				mtime;		//机器模式计时器寄存器					//
 	reg[`RegBus]				mtimecmp;	//机器模式计时器比较寄存器					//
 	reg[`RegBus]				msip;		//机器模式软件中断等待寄存器					//	
@@ -64,6 +64,7 @@ module csr(
 		mvendorid <= 32'h00000000;
 		marchid <= 32'h00000000;
 		mimpid <= 32'h00000000;
+		mhartid <= 32'h00000000;
 	end
 	
 	assign mstatus_o = mstatus;
@@ -91,6 +92,7 @@ module csr(
 			mtime <= `ZeroWord;
 			mtimecmp <= `ZeroWord;
 			msip <= `ZeroWord;
+			mhartid <= `ZeroWord;
 			timer_int_o <= `InterruptNotAssert;
 		end else begin
 			if(mcycle == 32'hffffffff) begin
@@ -181,41 +183,45 @@ module csr(
 				endcase  //case addr_i	
 			end    //if
 			
-			case (excepttype_i)
-				32'h00000001:		begin				//external interrupt
-					if(int_i == 1'b1) begin
-						mcause <= 32'h8000000b;
-						mepc <= current_inst_addr_i + 4;
-						mstatus[7] <= mstatus[3];			//MPIE <= MIE
-						mstatus[3] <= 1'b0;			//关中断
-						mstatus[12:11] <= 2'b11;
-						mtvec <= 32'h00000020;
-						mip[11] <= 1'b1;
+			if(excepttype_i[31] == 1'b1) begin						// Interrupt
+				case (excepttype_i[3:0])
+					4'd11:		begin										//external interrupt
+							mcause <= excepttype_i;
+							mepc <= current_inst_addr_i + 4;
+							mstatus[7] <= mstatus[3];			//MPIE <= MIE
+							mstatus[3] <= 1'b0;					//关中断
+							mstatus[12:11] <= 2'b11;			//Machine-mode
+//							mtvec <= 32'h00000020;
+//							mip[11] <= 1'b1;
 					end
-				end
-				32'h00000008:		begin				//ecall
-					mcause <= 32'h0000000b;
-					mepc <= current_inst_addr_i + 4;
-					mstatus[7] <= mstatus[3];			//MPIE <= MIE
-					mstatus[3] <= 1'b0;			//关中断
-					mstatus[12:11] <= 2'b11;
-					mtvec <= 32'h00000040;
-				end
-				32'h0000000a:		begin				//inst invalid
-					mcause <= 32'h00000002;
-					mepc <= current_inst_addr_i;
-					mstatus[7] <= mstatus[3];			//MPIE <= MIE
-					mstatus[3] <= 1'b0;			//关中断
-					mstatus[12:11] <= 2'b11;
-					mtvec <= 32'h00000040;
-				end
-				32'h0000000e:		begin				//mret
-					mcause <= 32'h00000002;
-//					mepc <= current_inst_addr_i + 4;
-					mstatus[3] <= mstatus[1];			//MIE <= MPIE
-					mstatus[7] <= 1'b1;
-				end
-			endcase
+				endcase
+			end else if(excepttype_i[31] == 1'b0) begin			// Not Interrupt
+				case (excepttype_i[30:0])		
+					{3'b0, 28'h000000b}:		begin				//ecall
+						mcause <= {3'b0, 28'h000000b};
+						mepc <= current_inst_addr_i + 4'h4;
+						mstatus[7] <= mstatus[3];			//MPIE <= MIE
+						mstatus[3] <= 1'b0;					//关中断
+						mstatus[12:11] <= 2'b11;			//Machine-mode
+//						mtvec <= 32'h00000040;
+					end
+					{3'b0, 28'h0000002}:		begin				//inst invalid
+						mcause <= {3'b0, 28'h0000002};
+						mepc <= current_inst_addr_i;
+						mstatus[7] <= mstatus[3];			//MPIE <= MIE
+						mstatus[3] <= 1'b0;					//关中断
+						mstatus[12:11] <= 2'b11;			//Machine-mode
+//						mtvec <= 32'h00000040;
+						mtval <= current_inst_addr_i;
+					end
+					{3'b0, 28'h000000a}:		begin				//mret
+						mcause <= {3'b0, 28'h000000a};
+//						mepc <= current_inst_addr_i;
+						mstatus[3] <= mstatus[7];			//MIE <= MPIE
+						mstatus[7] <= 1'b1;					//开中断
+					end
+				endcase
+			end
 		end    //if
 	end      //always
 			

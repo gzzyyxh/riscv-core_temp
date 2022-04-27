@@ -1,0 +1,37 @@
+reg signed	 [15:0]  mem16_s3s7[2047:0] ;	//所需ram  
+reg [14:0]  cnt_s3s7;						//地址
+wire[3:0] pulse1_out;
+
+always@(posedge clk50M)
+	if(state1==S3 || state1==S7)
+		cnt_s3s7 <= cnt_s3s7 +1'b1;
+	else
+		cnt_s3s7 <= 15'd0;
+		
+always@(posedge clk50M)
+	if((state1==S3 || state1==S7) && cnt_s3s7 <= 2047 ) begin
+	
+		if(mem16_s3s7[cnt_s3s7[10:0]] >= 16'd50 )
+			pulse1_out[0] <= 1'b1;
+		else
+			pulse1_out[0] <= 1'b0;
+			
+		if(mem16_s3s7[cnt_s3s7[10:0]] >= 16'd100 )
+			pulse1_out[1] <= 1'b1;
+		else
+			pulse1_out[1] <= 1'b0;		
+			
+		if(mem16_s3s7[cnt_s3s7[10:0]] >= 16'd150 )
+			pulse1_out[2] <= 1'b1;
+		else
+			pulse1_out[2] <= 1'b0;	
+//			
+//		if(mem16_s3s7[cnt_s3s7[10:0]] >= 16'd150 )
+//			pulse1_out[3] <= 1'b1;
+//		else
+//			pulse1_out[3] <= 1'b0;				
+//			
+	end	
+	else
+			//do nothing,let pulse keep the last state to reduce edge loss
+		;

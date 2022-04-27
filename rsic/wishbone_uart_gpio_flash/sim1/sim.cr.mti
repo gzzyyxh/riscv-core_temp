@@ -1,7 +1,7 @@
-D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/defines.v
+D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/spi_flash_defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/spi_flash_defines.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/spi_flash_defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/spi_flash_defines.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/defines.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/mem_wb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/mem_wb.v
@@ -28,19 +28,19 @@ Top level modules:
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/wb_conmax_defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/wb_conmax_defines.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/spi_flash_cmd.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/spi_flash_cmd.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module spi_flash_cmd
-
-Top level modules:
-	spi_flash_cmd
-
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/uart_regs.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/uart_regs.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module uart_regs
 
 Top level modules:
 	uart_regs
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/spi_flash_cmd.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/spi_flash_cmd.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module spi_flash_cmd
+
+Top level modules:
+	spi_flash_cmd
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/ex.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -49,12 +49,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	ex
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/openmips_min_sopc_tb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/openmips_min_sopc_tb.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/wb_conmax_master_if.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/wb_conmax_master_if.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module openmips_min_sopc_tb
+-- Compiling module wb_conmax_master_if
 
 Top level modules:
-	openmips_min_sopc_tb
+	wb_conmax_master_if
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/raminfr.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/raminfr.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -63,12 +63,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	raminfr
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/wb_conmax_master_if.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/wb_conmax_master_if.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/openmips_min_sopc_tb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/openmips_min_sopc_tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module wb_conmax_master_if
+-- Compiling module openmips_min_sopc_tb
 
 Top level modules:
-	wb_conmax_master_if
+	openmips_min_sopc_tb
 
 } {} {}} D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/csr.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_flash/sim1/csr.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018

@@ -181,41 +181,44 @@ module csr(
 				endcase  //case addr_i	
 			end    //if
 			
-			case (excepttype_i)
-				32'h00000001:		begin				//external interrupt
-					if(int_i == 1'b1) begin
-						mcause <= 32'h8000000b;
-						mepc <= current_inst_addr_i + 4;
-						mstatus[7] <= mstatus[3];			//MPIE <= MIE
-						mstatus[3] <= 1'b0;			//关中断
-						mstatus[12:11] <= 2'b11;
-						mtvec <= 32'h00000020;
-						mip[11] <= 1'b1;
+			if(excepttype_i[31] == 1'b1) begin						// Interrupt
+				case (excepttype_i[3:0])
+					4'd11:		begin										//external interrupt
+							mcause <= excepttype_i;
+							mepc <= current_inst_addr_i + 4;
+							mstatus[7] <= mstatus[3];			//MPIE <= MIE
+							mstatus[3] <= 1'b0;					//关中断
+							mstatus[12:11] <= 2'b11;			//Machine-mode
+//							mtvec <= 32'h00000020;
+//							mip[11] <= 1'b1;
 					end
-				end
-				32'h00000008:		begin				//ecall
-					mcause <= 32'h0000000b;
-					mepc <= current_inst_addr_i + 4;
-					mstatus[7] <= mstatus[3];			//MPIE <= MIE
-					mstatus[3] <= 1'b0;			//关中断
-					mstatus[12:11] <= 2'b11;
-					mtvec <= 32'h00000040;
-				end
-				32'h0000000a:		begin				//inst invalid
-					mcause <= 32'h00000002;
-					mepc <= current_inst_addr_i;
-					mstatus[7] <= mstatus[3];			//MPIE <= MIE
-					mstatus[3] <= 1'b0;			//关中断
-					mstatus[12:11] <= 2'b11;
-					mtvec <= 32'h00000040;
-				end
-				32'h0000000e:		begin				//mret
-					mcause <= 32'h00000002;
-//					mepc <= current_inst_addr_i + 4;
-					mstatus[3] <= mstatus[1];			//MIE <= MPIE
-					mstatus[7] <= 1'b1;
-				end
-			endcase
+				endcase
+			end else if(excepttype_i[31] == 1'b0) begin			// Not Interrupt
+				case (excepttype_i[30:0])		
+					{3'b0, 28'h000000b}:		begin				//ecall
+						mcause <= {3'b0, 28'h000000b};
+						mepc <= current_inst_addr_i + 4'h4;
+						mstatus[7] <= mstatus[3];			//MPIE <= MIE
+						mstatus[3] <= 1'b0;					//关中断
+						mstatus[12:11] <= 2'b11;			//Machine-mode
+//						mtvec <= 32'h00000040;
+					end
+					{3'b0, 28'h0000002}:		begin				//inst invalid
+						mcause <= {3'b0, 28'h0000002};
+						mepc <= current_inst_addr_i;
+						mstatus[7] <= mstatus[3];			//MPIE <= MIE
+						mstatus[3] <= 1'b0;					//关中断
+						mstatus[12:11] <= 2'b11;			//Machine-mode
+//						mtvec <= 32'h00000040;
+					end
+					{3'b0, 28'h000000a}:		begin				//mret
+						mcause <= {3'b0, 28'h000000a};
+//						mepc <= current_inst_addr_i;
+						mstatus[3] <= mstatus[1];			//MIE <= MPIE
+						mstatus[7] <= 1'b1;					//开中断
+					end
+				endcase
+			end
 		end    //if
 	end      //always
 			

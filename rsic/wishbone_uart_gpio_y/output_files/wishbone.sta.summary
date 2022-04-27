@@ -1,0 +1,341 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -21.696
+TNS   : -3204.088
+
+Type  : Slow 1200mV 85C Model Setup 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -17.940
+TNS   : -429.857
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -14.951
+TNS   : -30122.820
+
+Type  : Slow 1200mV 85C Model Setup 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -8.218
+TNS   : -565.844
+
+Type  : Slow 1200mV 85C Model Setup 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -7.503
+TNS   : -274.837
+
+Type  : Slow 1200mV 85C Model Setup 'rst'
+Slack : -2.104
+TNS   : -19.221
+
+Type  : Slow 1200mV 85C Model Hold 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -6.909
+TNS   : -146.374
+
+Type  : Slow 1200mV 85C Model Hold 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -3.961
+TNS   : -162.023
+
+Type  : Slow 1200mV 85C Model Hold 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -3.178
+TNS   : -35.718
+
+Type  : Slow 1200mV 85C Model Hold 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -1.945
+TNS   : -18.887
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.430
+TNS   : -6.172
+
+Type  : Slow 1200mV 85C Model Hold 'rst'
+Slack : 0.863
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -3.013
+TNS   : -119.109
+
+Type  : Slow 1200mV 85C Model Recovery 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -1.978
+TNS   : -70.554
+
+Type  : Slow 1200mV 85C Model Recovery 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -1.528
+TNS   : -1.627
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -1.309
+TNS   : -986.742
+
+Type  : Slow 1200mV 85C Model Recovery 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -1.211
+TNS   : -12.230
+
+Type  : Slow 1200mV 85C Model Removal 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -7.118
+TNS   : -205.865
+
+Type  : Slow 1200mV 85C Model Removal 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -6.062
+TNS   : -419.288
+
+Type  : Slow 1200mV 85C Model Removal 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -4.518
+TNS   : -126.257
+
+Type  : Slow 1200mV 85C Model Removal 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -4.105
+TNS   : -139.851
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 0.227
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -3.830
+TNS   : -896.049
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -5369.912
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -0.560
+TNS   : -38.425
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -0.499
+TNS   : -41.015
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : 0.196
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -20.082
+TNS   : -3036.193
+
+Type  : Slow 1200mV 0C Model Setup 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -17.062
+TNS   : -406.624
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -14.060
+TNS   : -28254.029
+
+Type  : Slow 1200mV 0C Model Setup 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -7.849
+TNS   : -543.452
+
+Type  : Slow 1200mV 0C Model Setup 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -7.089
+TNS   : -265.912
+
+Type  : Slow 1200mV 0C Model Setup 'rst'
+Slack : -2.015
+TNS   : -18.530
+
+Type  : Slow 1200mV 0C Model Hold 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -6.362
+TNS   : -136.199
+
+Type  : Slow 1200mV 0C Model Hold 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -3.697
+TNS   : -149.413
+
+Type  : Slow 1200mV 0C Model Hold 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -2.819
+TNS   : -32.521
+
+Type  : Slow 1200mV 0C Model Hold 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -1.654
+TNS   : -15.019
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.418
+TNS   : -4.731
+
+Type  : Slow 1200mV 0C Model Hold 'rst'
+Slack : 0.859
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -2.730
+TNS   : -124.187
+
+Type  : Slow 1200mV 0C Model Recovery 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -2.145
+TNS   : -78.495
+
+Type  : Slow 1200mV 0C Model Recovery 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -1.718
+TNS   : -2.495
+
+Type  : Slow 1200mV 0C Model Recovery 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -1.466
+TNS   : -15.357
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -1.136
+TNS   : -818.007
+
+Type  : Slow 1200mV 0C Model Removal 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -6.495
+TNS   : -188.141
+
+Type  : Slow 1200mV 0C Model Removal 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -5.459
+TNS   : -377.000
+
+Type  : Slow 1200mV 0C Model Removal 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -4.042
+TNS   : -111.947
+
+Type  : Slow 1200mV 0C Model Removal 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -3.585
+TNS   : -119.508
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -3.719
+TNS   : -814.469
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -5370.022
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -0.781
+TNS   : -50.937
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -0.582
+TNS   : -49.376
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : 0.076
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -9.103
+TNS   : -1337.278
+
+Type  : Fast 1200mV 0C Model Setup 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -8.426
+TNS   : -190.575
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -6.577
+TNS   : -11616.746
+
+Type  : Fast 1200mV 0C Model Setup 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -3.238
+TNS   : -207.540
+
+Type  : Fast 1200mV 0C Model Setup 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -2.681
+TNS   : -87.934
+
+Type  : Fast 1200mV 0C Model Setup 'rst'
+Slack : -0.094
+TNS   : -0.094
+
+Type  : Fast 1200mV 0C Model Hold 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -2.999
+TNS   : -62.065
+
+Type  : Fast 1200mV 0C Model Hold 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -1.927
+TNS   : -93.501
+
+Type  : Fast 1200mV 0C Model Hold 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -1.565
+TNS   : -22.520
+
+Type  : Fast 1200mV 0C Model Hold 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -0.839
+TNS   : -7.457
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.297
+TNS   : -5.360
+
+Type  : Fast 1200mV 0C Model Hold 'rst'
+Slack : -0.062
+TNS   : -0.073
+
+Type  : Fast 1200mV 0C Model Recovery 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -1.917
+TNS   : -51.580
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -1.036
+TNS   : -750.288
+
+Type  : Fast 1200mV 0C Model Recovery 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -0.699
+TNS   : -0.699
+
+Type  : Fast 1200mV 0C Model Recovery 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -0.546
+TNS   : -11.590
+
+Type  : Fast 1200mV 0C Model Recovery 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -0.140
+TNS   : -0.545
+
+Type  : Fast 1200mV 0C Model Removal 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -3.107
+TNS   : -89.305
+
+Type  : Fast 1200mV 0C Model Removal 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -2.846
+TNS   : -180.048
+
+Type  : Fast 1200mV 0C Model Removal 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -2.022
+TNS   : -64.398
+
+Type  : Fast 1200mV 0C Model Removal 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -1.758
+TNS   : -44.301
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : -0.017
+TNS   : -0.226
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -4710.948
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -7.889
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -1.418
+TNS   : -287.449
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gpio_top:gpio_top0|wb_ack_o'
+Slack : -0.085
+TNS   : -3.194
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|id_ex:id_ex0|ex_aluop[1]'
+Slack : 0.026
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'openmips:openmips0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : 0.268
+TNS   : 0.000
+
+------------------------------------------------------------

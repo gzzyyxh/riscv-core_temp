@@ -136,6 +136,7 @@ module openmips(
 	wire[`RegBus]	csr_mtvec;
 
    wire[`RegBus] latest_mepc;
+	wire[`RegBus]	latest_mtvec;
   assign result = ex_wdata_o;
   //pc_reg例化
 	pc_reg pc_reg0(
@@ -388,6 +389,7 @@ module openmips(
 		.csr_mie_i(csr_mie),
 		.csr_mip_i(csr_mip),
 		.csr_mepc_i(csr_mepc),
+		.csr_mtvec_i(csr_mtvec),
 		
 		//回写阶段的指令是否要写CP0，用来检测数据相关
 		.wb_csr_reg_we(wb_csr_reg_we_i),
@@ -413,6 +415,7 @@ module openmips(
 		
 		.excepttype_o(mem_excepttype_o),
 		.csr_mepc_o(latest_mepc),
+		.csr_mtvec_o(latest_mtvec),
 		.current_inst_address_o(mem_current_inst_address_o)
 	);
 
@@ -448,7 +451,7 @@ module openmips(
 		
 	  .excepttype_i(mem_excepttype_o),
 	  .csr_mepc_i(latest_mepc),
-	  .csr_mtvec_i(csr_mtvec),
+	  .csr_mtvec_i(latest_mtvec),
 	
 	  .stallreq_from_id(stallreq_from_id),
 	

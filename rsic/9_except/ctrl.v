@@ -29,19 +29,13 @@ module ctrl(
 		end else if(excepttype_i != `ZeroWord) begin
 			flush <= 1'b1;
 			stall <= 6'b000000;
-			case(excepttype_i)
-				32'h00000001:		begin
-//					new_pc <= {csr_mtvec_i[31:2], 2'b00};		//??????????????
-					new_pc <= 32'h00000020;
-				end
-				32'h00000008, 32'h0000000a:		begin
-//					new_pc <= {csr_mtvec_i[31:2], 2'b00};		//??????????????
-					new_pc <= 32'h00000040;
-				end
-				32'h0000000e:		begin
-					new_pc <= csr_mepc_i;
-				end
-			endcase
+			
+			if(excepttype_i == 32'h0000000a) begin						//Mret
+				new_pc <= csr_mepc_i;
+			end else begin
+				new_pc <= csr_mtvec_i;
+			end
+
 		end else if(stallreq_from_ex == `Stop) begin
 			stall <= 6'b001111;
 			flush <= 1'b0;

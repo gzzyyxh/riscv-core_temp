@@ -1,119 +1,119 @@
-D:/Github/OpenRSIC-V/rsic/except/sim/data_ram.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/data_ram.v
+D:/Github/OpenRSIC-V/rsic/9_except/sim/data_ram.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/data_ram.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module data_ram
 
 Top level modules:
 	data_ram
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/div.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/div.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/div.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/div.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module div
 
 Top level modules:
 	div
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/inst_rom.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/inst_rom.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/inst_rom.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/inst_rom.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module inst_rom
 
 Top level modules:
 	inst_rom
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/ctrl.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/ctrl.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/ctrl.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/ctrl.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module ctrl
 
 Top level modules:
 	ctrl
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/mem_wb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/mem_wb.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/mem_wb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/mem_wb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module mem_wb
 
 Top level modules:
 	mem_wb
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/csr.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/csr.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/csr.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/csr.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module csr
 
 Top level modules:
 	csr
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/pc_reg.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/pc_reg.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/pc_reg.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/pc_reg.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module pc_reg
 
 Top level modules:
 	pc_reg
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/id_ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/id_ex.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/id_ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/id_ex.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module id_ex
 
 Top level modules:
 	id_ex
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/openmips_min_sopc.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/openmips_min_sopc.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module openmips_min_sopc
 
 Top level modules:
 	openmips_min_sopc
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/openmips.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/openmips.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/openmips.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/openmips.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module openmips
 
 Top level modules:
 	openmips
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/ex_mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/ex_mem.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/ex_mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/ex_mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module ex_mem
 
 Top level modules:
 	ex_mem
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/if_id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/if_id.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/if_id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/if_id.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module if_id
 
 Top level modules:
 	if_id
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/id.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/id.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/id.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module id
 
 Top level modules:
 	id
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/ex.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/ex.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/ex.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module ex
 
 Top level modules:
 	ex
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/regfile.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/regfile.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/defines.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/regfile.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/regfile.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module regfile
 
 Top level modules:
 	regfile
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/defines.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/defines.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
-
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc_tb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/openmips_min_sopc_tb.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/openmips_min_sopc_tb.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/openmips_min_sopc_tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module openmips_min_sopc_tb
 
 Top level modules:
 	openmips_min_sopc_tb
 
-} {} {}} D:/Github/OpenRSIC-V/rsic/except/sim/mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/except/sim/mem.v
+} {} {}} D:/Github/OpenRSIC-V/rsic/9_except/sim/mem.v {1 {vlog -work work -stats=none D:/Github/OpenRSIC-V/rsic/9_except/sim/mem.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module mem
 

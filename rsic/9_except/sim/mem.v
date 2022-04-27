@@ -23,10 +23,10 @@ module mem(
 	input wire[`RegBus]          				current_inst_address_i,
 	
 	input wire[`RegBus]          				csr_mstatus_i,
-//	input wire[`RegBus]          				csr_mcause_i,
 	input wire[`RegBus]          				csr_mepc_i,
 	input wire[`RegBus]							csr_mie_i,
 	input wire[`RegBus]							csr_mip_i,
+	input wire[`RegBus]							csr_mtvec_i,
 	
 	input wire                    			wb_csr_reg_we,
 	input wire[11:0]               			wb_csr_reg_write_addr,
@@ -47,8 +47,9 @@ module mem(
 	output reg[11:0]								csr_reg_write_addr_o,
 	output reg[`RegBus]							csr_reg_data_o,
 	
-	output reg[31:0]             				excepttype_o,
+	output wire[31:0]             				excepttype_o,
 	output wire[`RegBus]          			csr_mepc_o,
+	output wire[`RegBus]							csr_mtvec_o,
 	
 	output wire[`RegBus]        	 			current_inst_address_o	
 );
@@ -59,7 +60,10 @@ module mem(
 	reg[`RegBus]  csr_mepc;
 	reg[`RegBus]  csr_mie;
 	reg[`RegBus]  csr_mip;
+	reg[`RegBus]	csr_mtvec;
 	reg			mem_we;
+	reg Interrupt;
+	reg[30:0] Exception_code;
 
 //	assign mem_we_o = mem_we;  //外部数据存储器的读写信号
 	assign mem_we_o = mem_we & (~(|excepttype_o));
@@ -67,6 +71,9 @@ module mem(
 	
 	assign current_inst_address_o = current_inst_address_i;
 	assign csr_mepc_o = csr_mepc;
+	assign csr_mtvec_o = csr_mtvec;
+	
+	assign excepttype_o = {Interrupt, Exception_code};
 	
 	always @ (*) begin
 		if(rst == `RstEnable) begin
@@ -259,6 +266,9 @@ module mem(
 	always @ (*) begin
 		if(rst == `RstEnable) begin
 			csr_mstatus <= `ZeroWord;
+		end else if((csr_reg_we_o == `WriteEnable) &&
+								(csr_reg_write_addr_o == `CSR_REG_MSTATUS)) begin
+			csr_mstatus <= csr_reg_data_o;
 		end else if((wb_csr_reg_we == `WriteEnable) && 
 								(wb_csr_reg_write_addr == `CSR_REG_MSTATUS ))begin
 			csr_mstatus <= wb_csr_reg_data;
@@ -270,6 +280,9 @@ module mem(
 	always @ (*) begin
 		if(rst == `RstEnable) begin
 			csr_mepc <= `ZeroWord;
+		end else if((csr_reg_we_o == `WriteEnable) &&
+								(csr_reg_write_addr_o == `CSR_REG_MEPC)) begin
+			csr_mepc <= csr_reg_data_o;
 		end else if((wb_csr_reg_we == `WriteEnable) && 
 								(wb_csr_reg_write_addr == `CSR_REG_MEPC ))begin
 			csr_mepc <= wb_csr_reg_data;
@@ -278,20 +291,12 @@ module mem(
 		end
 	end
 	
-//  always @ (*) begin
-//		if(rst == `RstEnable) begin
-//			csr_mcause <= `ZeroWord;
-//		end else if((wb_csr_reg_we == `WriteEnable) && 
-//								(wb_csr_reg_write_addr == `CSR_REG_MCAUSE ))begin
-//			csr_mcause <= wb_csr_reg_data;
-//		end else begin
-//		  csr_mcause <= csr_mcause_i;
-//		end
-//	end
-	
   always @ (*) begin
 		if(rst == `RstEnable) begin
 			csr_mip <= `ZeroWord;
+		end else if((csr_reg_we_o == `WriteEnable) &&
+								(csr_reg_write_addr_o == `CSR_REG_MIP)) begin
+			csr_mip <= csr_reg_data_o;
 		end else if((wb_csr_reg_we == `WriteEnable) && 
 								(wb_csr_reg_write_addr == `CSR_REG_MIP ))begin
 			csr_mip <= wb_csr_reg_data;
@@ -302,7 +307,25 @@ module mem(
 	
   always @ (*) begin
 		if(rst == `RstEnable) begin
+			csr_mtvec <= `ZeroWord;
+		end else if((csr_reg_we_o == `WriteEnable) &&
+								(csr_reg_write_addr_o == `CSR_REG_MTVEC)) begin
+			csr_mtvec <= csr_reg_data_o;
+		end else if((wb_csr_reg_we == `WriteEnable) && 
+								(wb_csr_reg_write_addr == `CSR_REG_MTVEC ))begin
+			csr_mtvec <= wb_csr_reg_data;
+		end else begin
+		  csr_mtvec <= csr_mtvec_i;
+		end
+	end
+	
+	
+  always @ (*) begin
+		if(rst == `RstEnable) begin
 			csr_mie <= `ZeroWord;
+		end else if((csr_reg_we_o == `WriteEnable) &&
+								(csr_reg_write_addr_o == `CSR_REG_MIE)) begin
+			csr_mie <= csr_reg_data_o;
 		end else if((wb_csr_reg_we == `WriteEnable) && 
 								(wb_csr_reg_write_addr == `CSR_REG_MIE ))begin
 			csr_mie <= wb_csr_reg_data;
@@ -313,21 +336,23 @@ module mem(
 
 	always @ (*) begin
 		if(rst == `RstEnable) begin
-			excepttype_o <= `ZeroWord;
+//			excepttype_o <= `ZeroWord;
+			Interrupt <= 1'b0;
+			Exception_code <= 31'b0;
 		end else begin
-			excepttype_o <= `ZeroWord;
+//			excepttype_o <= `ZeroWord;
+			Interrupt <= 1'b0;
+			Exception_code <= 31'b0;
 			
 			if(current_inst_address_i != `ZeroWord) begin
-				if((csr_mstatus[3] == 1'b1) && (csr_mie[11] == 1'b1)) begin					//全局中断MIE打开，未屏蔽MEIE
-					excepttype_o <= 32'h00000001;        //interrupt
-				end else if(excepttype_i[8] == 1'b1) begin
-			  	excepttype_o <= 32'h00000008;        //ecall
-				end else if(excepttype_i[9] == 1'b1) begin
-					excepttype_o <= 32'h0000000a;        //inst_invalid
-				end else if(excepttype_i[10] ==1'b1) begin
-					excepttype_o <= 32'h0000000d;        //trap
-				end else if(excepttype_i[12] == 1'b1) begin  //返回指令
-					excepttype_o <= 32'h0000000e;
+				if(excepttype_i[8] == 1'b1) begin					// environment call from M-mode
+					Exception_code <= {3'b0, 28'h000000b};
+				end else if(excepttype_i[9] == 1'b1) begin		// inst invalid
+					Exception_code <= {3'b0, 28'h0000002};
+				end else if(excepttype_i[12] == 1'b1) begin  	// mret
+					Exception_code <= {3'b0, 28'h000000a};
+				end else begin
+					Exception_code <= 31'h0;
 				end
 			end
 				
