@@ -7,6 +7,7 @@ module if_id(
 	input wire[5:0]								stall,
 	
 	input wire										flush,
+	input wire										branch_flush,
 	
 
 	input wire[`InstAddrBus]					if_pc,
@@ -20,7 +21,7 @@ module if_id(
 		if (rst == `RstEnable) begin
 			id_pc <= `ZeroWord;
 			id_inst <= `ZeroWord;
-		end else if(flush == 1'b1) begin
+		end else if((flush == 1'b1) || (branch_flush == 1'b1)) begin
 			id_pc <= `ZeroWord;
 			id_inst <= `ZeroWord;
 		end else if(stall[1] == `Stop && stall[2] == `NoStop) begin

@@ -13,13 +13,16 @@ module pc_reg(
 	input wire[`RegBus]							new_pc,
 	
 	output reg[`InstAddrBus]					pc,
-	output reg                    			ce
+	output reg                    			ce,
+	output wire										branch_flush
 	
 );
 
 	reg[`RegBus] hold_branch_target_address;
 	reg get_branch_target_address;
 	reg need_branch;
+	
+	assign branch_flush = need_branch;
 
 	always @ (*) begin
 		if(rst == `RstEnable) begin
@@ -47,7 +50,7 @@ module pc_reg(
 			if(need_branch == 1'b1) begin
 				pc <= hold_branch_target_address;
 				get_branch_target_address <= 1'b1;
-			end else begin
+			end else if(branch_flag_i != `Branch) begin
 				pc <= pc + 4'h4;
 				get_branch_target_address <= 1'b0;
 		end

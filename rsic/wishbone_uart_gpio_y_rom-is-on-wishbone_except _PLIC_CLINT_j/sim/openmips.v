@@ -48,6 +48,7 @@ module openmips(
 	wire[`InstAddrBus] id_pc_i;
 	wire[`InstBus] id_inst_i;
 	wire[`InstBus] inst_i;
+	wire				branch_flush;
 	
 	//连接译码阶段ID模块的输出与ID/EX模块的输入
 	wire[`AluOpBus] id_aluop_o;
@@ -181,7 +182,8 @@ module openmips(
 		.branch_flag_i(id_branch_flag_o),
 		.branch_target_address_i(branch_target_address),
 		.pc(pc),
-		.ce(rom_ce)	
+		.ce(rom_ce),
+		.branch_flush(branch_flush)
 			
 	);
 	
@@ -196,7 +198,8 @@ module openmips(
 		.if_pc(pc),
 		.if_inst(inst_i),
 		.id_pc(id_pc_i),
-		.id_inst(id_inst_i)      	
+		.id_inst(id_inst_i),
+		.branch_flush(branch_flush)
 	);
 	
 	//译码阶段ID模块
