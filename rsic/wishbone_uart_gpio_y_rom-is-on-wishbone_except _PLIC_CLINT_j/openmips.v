@@ -4,8 +4,6 @@ module openmips(
 
 	input	wire										clk,
 	input wire										rst,
-	
-   input wire		                int_i,
  
 //	input wire[`RegBus]           rom_data_i,
 //	output wire[`RegBus]           rom_addr_o,
@@ -30,8 +28,6 @@ module openmips(
 	output wire[3:0]               dwishbone_sel_o,
 	output wire                    dwishbone_stb_o,
 	output wire                    dwishbone_cyc_o,
-	
-	output wire                    timer_int_o,
 	
 	//to plic & clint
 	output wire[`RegBus]				latest_mie,
@@ -535,13 +531,9 @@ module openmips(
 		.data_i(wb_csr_reg_data_i),
 		
 		.excepttype_i(mem_excepttype_o),
-		.int_i(int_i),
 		.current_inst_addr_i(mem_current_inst_address_o),
 		
 		.data_o(csr_data_o),
-		
-		
-		.timer_int_o(timer_int_o),
 
 		.mstatus_o(csr_mstatus),
 		.mepc_o(csr_mepc),		

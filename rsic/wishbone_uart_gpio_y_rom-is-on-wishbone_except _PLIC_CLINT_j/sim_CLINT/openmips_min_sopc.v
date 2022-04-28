@@ -39,8 +39,6 @@ module openmips_min_sopc(
 );
 
 
-  wire int;
-  wire timer_int;
   wire gpio_int;
   wire uart_int;
   wire[31:0] gpio_i_temp;
@@ -112,7 +110,6 @@ module openmips_min_sopc(
 	
   wire       sdram_init_done;
   
-//  assign int = {3'b000, gpio_int, uart_int, timer_int};
   assign gpio_i_temp = {15'h0000, sdram_init_done, gpio_i};
 //  assign sdr_clk_o = clk;
 
@@ -130,8 +127,6 @@ module openmips_min_sopc(
   wire interrupt_clint;
   wire[30:0] exception_code_plic;
   wire[30:0] exception_code_clint;
- 
- assign int = timer_int;
 
  openmips openmips0(
 		.clk(clk),
@@ -149,8 +144,6 @@ module openmips_min_sopc(
 		.iwishbone_sel_o(m1_sel_i),
 		.iwishbone_stb_o(m1_stb_i),
 		.iwishbone_cyc_o(m1_cyc_i), 
-		
-		.int_i(int),
 
 		.dwishbone_data_i(m0_data_o),
 		.dwishbone_ack_i(m0_ack_o),
@@ -160,8 +153,6 @@ module openmips_min_sopc(
 		.dwishbone_sel_o(m0_sel_i),
 		.dwishbone_stb_o(m0_stb_i),
 		.dwishbone_cyc_o(m0_cyc_i),
-		
-		.timer_int_o(timer_int),
 		
 		.latest_mie(latest_mie),
 		.latest_mstatus(latest_mstatus),

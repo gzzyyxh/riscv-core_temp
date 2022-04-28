@@ -12,7 +12,6 @@ module csr(
 	input wire[`RegBus]           data_i,
 	
 	input wire[31:0]              excepttype_i,
-	input wire		               int_i,
 	input wire[`RegBus]           current_inst_addr_i,
 	
 	output reg[`RegBus]           data_o,
@@ -23,8 +22,6 @@ module csr(
 //	output reg[`RegBus]           epc_o,
 //	output reg[`RegBus]           config_o,
 //	output reg[`RegBus]           prid_o,
-	
-	output reg                   timer_int_o,
 	
 	output wire[`RegBus]				mstatus_o,
 	output wire[`RegBus]				mepc_o,
@@ -53,8 +50,6 @@ module csr(
 	reg[`RegBus]				marchid;	//机器模式架构编号寄存器					//
 	reg[`RegBus]				mimpid;	//机器模式硬件实现编号寄存器					//
 	reg[`RegBus]				mhartid;	//Hart编号寄存器
-	reg[`RegBus]				mtime;		//机器模式计时器寄存器					//
-	reg[`RegBus]				mtimecmp;	//机器模式计时器比较寄存器					//
 	reg[`RegBus]				msip;		//机器模式软件中断等待寄存器					//	
 	
 	
@@ -89,20 +84,14 @@ module csr(
 			minstret <= `ZeroWord;
 			minstreth <= `ZeroWord;
 			marchid <= `ZeroWord;
-			mtime <= `ZeroWord;
-			mtimecmp <= `ZeroWord;
 			msip <= `ZeroWord;
 			mhartid <= `ZeroWord;
-			timer_int_o <= `InterruptNotAssert;
 		end else begin
 			if(mcycle == 32'hffffffff) begin
 				mcycle <= 32'h00000000;
 				mcycleh <= mcycleh + 1;
 			end else if(mcycle != 32'hffffffff) begin
 				mcycle <= mcycle + 1;
-			end
-			if((mtimecmp < mtime) | (mtimecmp == mtime)) begin
-				timer_int_o <= `InterruptAssert;
 			end
 			if(we_i == `WriteEnable) begin
 				case (waddr_i) 
@@ -165,15 +154,6 @@ module csr(
 					end
 					`CSR_REG_MHARTID:	begin
 						mhartid <= data_i ;
-					end
-					`CSR_REG_MTINME:	begin
-						mtime <= data_i ;
-					end
-					`CSR_REG_MTIMECMP:	begin
-						mtimecmp <= data_i ;
-						if(mtimecmp > mtime) begin
-							timer_int_o <= `InterruptNotAssert;
-						end
 					end
 					`CSR_REG_MSIP:	begin
 						msip <= data_i ;
@@ -295,12 +275,6 @@ module csr(
 					end
 					`CSR_REG_MHARTID:	begin
 						data_o <= mhartid ;
-					end
-					`CSR_REG_MTINME:	begin
-						data_o <= mtime ;
-					end
-					`CSR_REG_MTIMECMP:	begin
-						data_o <= mtimecmp ;
 					end
 					`CSR_REG_MSIP:	begin
 						data_o <= msip ;

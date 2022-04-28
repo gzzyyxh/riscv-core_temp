@@ -22,19 +22,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	openmips
 
-} {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/div.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/div.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module div
-
-Top level modules:
-	div
-
 } {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/ex_mem.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/ex_mem.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module ex_mem
 
 Top level modules:
 	ex_mem
+
+} {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/div.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/div.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module div
+
+Top level modules:
+	div
 
 } {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/uart_regs.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/uart_regs.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -57,6 +57,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	wb_conmax_pri_enc
 
+} {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/id.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/id.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module id
+
+Top level modules:
+	id
+
 } {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/ex.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/ex.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module ex
@@ -64,12 +71,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	ex
 
-} {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/id.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/id.v}
+} {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/wishbone_bus_if.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/wishbone_bus_if.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module id
+-- Compiling module wishbone_bus_if
 
 Top level modules:
-	id
+	wishbone_bus_if
 
 } {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/wb_conmax_slave_if.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/wb_conmax_slave_if.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
@@ -137,19 +144,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 2
 Top level modules:
 	csr
 
-} {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/data_ram.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/data_ram.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
--- Compiling module data_ram
-
-Top level modules:
-	data_ram
-
 } {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/id_ex.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/id_ex.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
 -- Compiling module id_ex
 
 Top level modules:
 	id_ex
+
+} {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/data_ram.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/data_ram.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module data_ram
+
+Top level modules:
+	data_ram
 
 } {} {}} {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/openmips_min_sopc.v} {1 {vlog -work work -stats=none {D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim_CLINT/openmips_min_sopc.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.6d Compiler 2018.02 Feb 24 2018
