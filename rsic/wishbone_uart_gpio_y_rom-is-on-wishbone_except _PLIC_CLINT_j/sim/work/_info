@@ -1,0 +1,850 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_pro/18.1
+vclint
+Z0 !s110 1651157794
+!i10b 1
+!s100 FMeON5Dh8kg75ckW`LV<X3
+Il>3>47c7CX`ngN1POE]Zh3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim
+w1651125814
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/clint.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/clint.v
+L0 3
+Z3 OV;L;10.6d;65
+r1
+!s85 0
+31
+Z4 !s108 1651157794.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/clint.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/clint.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vcsr
+R0
+!i10b 1
+!s100 ZQ]L0zA<KQOUiRIW36jS40
+IkG8MFEoFGYljffmTzPcSH2
+R1
+R2
+w1651115666
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/csr.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/csr.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/csr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/csr.v|
+!i113 1
+R5
+R6
+vctrl
+R0
+!i10b 1
+!s100 OJCWfXm:NR0AfcCR9f0623
+In2P8eRoGBFkM_jDBXN][L0
+R1
+R2
+w1651071826
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ctrl.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ctrl.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ctrl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ctrl.v|
+!i113 1
+R5
+R6
+vdata_ram
+Z7 !s110 1651157795
+!i10b 1
+!s100 kcWd7@99bVGzTHGl@WI_]3
+IHGXVIU>I1>EJfh]EUi]zF0
+R1
+R2
+w1649215257
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/data_ram.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/data_ram.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/data_ram.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/data_ram.v|
+!i113 1
+R5
+R6
+vdiv
+R7
+!i10b 1
+!s100 ;Y?f=K4oDTmX<D<m]PZz52
+Io_=8jBzea68E5=eG`6ebL3
+R1
+R2
+w1650039291
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/div.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/div.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z8 !s108 1651157795.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/div.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/div.v|
+!i113 1
+R5
+R6
+vex
+R7
+!i10b 1
+!s100 =H<cFI2J0A4Yf6N7j3CCb3
+IOUDi7M6=k4Q?Og5h@NXY11
+R1
+R2
+w1650039433
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ex.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ex.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ex.v|
+!i113 1
+R5
+R6
+vex_mem
+R7
+!i10b 1
+!s100 cX;hnL_40XWF;`DjXkFm12
+IT7HigP[LDSRb]n>Kf[nRh2
+R1
+R2
+w1649939745
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ex_mem.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ex_mem.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ex_mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/ex_mem.v|
+!i113 1
+R5
+R6
+vgpio_top
+R7
+!i10b 1
+!s100 j^O16X`dBZ5OVGfj=F0n40
+IWk0PdXe`oINjD[nZ6B1km1
+R1
+R2
+w1089968226
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/gpio_top.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/gpio_top.v
+L0 115
+R3
+r1
+!s85 0
+31
+R8
+!s107 gpio_defines.v|timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/gpio_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/gpio_top.v|
+!i113 1
+R5
+R6
+vid
+R7
+!i10b 1
+!s100 F0FnlHDdlQYO8=R5bVY`>2
+IT8OX4HdTeE`8M_nY2CD9<3
+R1
+R2
+w1650039497
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/id.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/id.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/id.v|
+!i113 1
+R5
+R6
+vid_ex
+R7
+!i10b 1
+!s100 cSNO9PgIH0Umom?[>L=e<3
+IH2AUb;5;Ezj[R7mDFN?Z82
+R1
+R2
+w1649583268
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/id_ex.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/id_ex.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/id_ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/id_ex.v|
+!i113 1
+R5
+R6
+vif_id
+Z9 !s110 1651157799
+!i10b 1
+!s100 0DO4dZ1TI7og@L4HiIbh42
+IPHRHA]G:6o_>[>_<:RI2?2
+R1
+R2
+w1651157753
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/if_id.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/if_id.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z10 !s108 1651157799.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/if_id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/if_id.v|
+!i113 1
+R5
+R6
+vinst_rom
+Z11 !s110 1651157796
+!i10b 1
+!s100 Je]GXS_L<IocDi:i_;IQ_0
+I=VN6K6KeWKDO1e;=]2J2E1
+R1
+R2
+w1650274728
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/inst_rom.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/inst_rom.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/inst_rom.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/inst_rom.v|
+!i113 1
+R5
+R6
+vinst_rom_
+R9
+!i10b 1
+!s100 ;jFU=mGAIF2FNeh9c^0BX1
+Ih<o7bGl`W[e;?i9C__leV0
+R1
+R2
+w1651157502
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/inst_rom_.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/inst_rom_.v
+L0 3
+R3
+r1
+!s85 0
+31
+R10
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/inst_rom_.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/inst_rom_.v|
+!i113 1
+R5
+R6
+vmem
+R11
+!i10b 1
+!s100 GfL3OEZ759<V_GD>;[b[H2
+I10f4Re6RgMf:XcFEDi@;30
+R1
+R2
+w1651116139
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/mem.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/mem.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z12 !s108 1651157796.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/mem.v|
+!i113 1
+R5
+R6
+vmem_wb
+R11
+!i10b 1
+!s100 zh]S6amMok7_el6O?fLnN2
+IafD>nFhWgPzRbB85fhin21
+R1
+R2
+w1649591022
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/mem_wb.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/mem_wb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R12
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/mem_wb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/mem_wb.v|
+!i113 1
+R5
+R6
+vopenmips
+R11
+!i10b 1
+!s100 heo1^CRFeXT[JIOgLO6[33
+I37?YB43D7EcbUFTR2o8IK3
+R1
+R2
+w1651116112
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips.v
+L0 3
+R3
+r1
+!s85 0
+31
+R12
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips.v|
+!i113 1
+R5
+R6
+vopenmips_min_sopc
+R11
+!i10b 1
+!s100 65W7eAL88b6h9[5fm_U0`2
+Imm4Gh2l<f3G;aEm9oQ^Uc1
+R1
+R2
+w1651123022
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips_min_sopc.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips_min_sopc.v
+L0 3
+R3
+r1
+!s85 0
+31
+R12
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips_min_sopc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips_min_sopc.v|
+!i113 1
+R5
+R6
+vopenmips_min_sopc_tb
+R11
+!i10b 1
+!s100 olJRfCDJ52<gDVH_G5J<K0
+Ibl4C7WOc<hdCFJdZ_87SD0
+R1
+R2
+w1650046269
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips_min_sopc_tb.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips_min_sopc_tb.v
+L0 4
+R3
+r1
+!s85 0
+31
+R12
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips_min_sopc_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/openmips_min_sopc_tb.v|
+!i113 1
+R5
+R6
+vpc_reg
+R9
+!i10b 1
+!s100 Z_QG8^cMzU7H1`DFMfdil3
+I_UQfYif?nnBTl>39DI?mR2
+R1
+R2
+w1651153873
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/pc_reg.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/pc_reg.v
+L0 3
+R3
+r1
+!s85 0
+31
+R10
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/pc_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/pc_reg.v|
+!i113 1
+R5
+R6
+vplic
+R11
+!i10b 1
+!s100 bcL3bSW^1c3@GMT:dMlLO1
+IzYmKP07ANlIQ@Ti?=i87d1
+R1
+R2
+w1651125798
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/plic.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/plic.v
+L0 3
+R3
+r1
+!s85 0
+31
+R12
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/plic.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/plic.v|
+!i113 1
+R5
+R6
+vraminfr
+R11
+!i10b 1
+!s100 @:Sm6cFVJmI[ADAXYl_<T3
+I[5gcP43KFM_GK5QMPGUZ]3
+R1
+R2
+Z13 w1352887609
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/raminfr.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/raminfr.v
+L0 83
+R3
+r1
+!s85 0
+31
+R12
+!s107 D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/raminfr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/raminfr.v|
+!i113 1
+R5
+R6
+vregfile
+Z14 !s110 1651157797
+!i10b 1
+!s100 Fm963[JO:4>7703MiZ^I_2
+I=FPQ81;D@58PhSzLl=dkJ1
+R1
+R2
+w1648988500
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/regfile.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/regfile.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z15 !s108 1651157797.000000
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/regfile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/regfile.v|
+!i113 1
+R5
+R6
+vuart_debug_if
+R14
+!i10b 1
+!s100 @G4L5jVUJSPm`JI1DcU=Y1
+IW`Il69E3l9:0P?;fd^eYX1
+R1
+R2
+R13
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_debug_if.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_debug_if.v
+L0 89
+R3
+r1
+!s85 0
+31
+R15
+!s107 uart_defines.v|timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_debug_if.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_debug_if.v|
+!i113 1
+R5
+R6
+vuart_receiver
+R14
+!i10b 1
+!s100 hO]22]ILfJ9_UBi4ca?eP0
+IK9Mk8h:BOI5<d:IBTO?@S3
+R1
+R2
+R13
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_receiver.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_receiver.v
+L0 198
+R3
+r1
+!s85 0
+31
+R15
+!s107 uart_defines.v|timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_receiver.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_receiver.v|
+!i113 1
+R5
+R6
+vuart_regs
+R14
+!i10b 1
+!s100 5h^ETOF[Z2mO8?=J3l`mP3
+I9WgL_jP4dPYk;;WC_2U?H0
+R1
+R2
+R13
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_regs.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_regs.v
+L0 231
+R3
+r1
+!s85 0
+31
+R15
+!s107 uart_defines.v|timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_regs.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_regs.v|
+!i113 1
+R5
+R6
+vuart_rfifo
+R14
+!i10b 1
+!s100 H[>8M[k:U=nJ1?294_CRk3
+IQ1C[f]M`hlFLi0om7Zh:U1
+R1
+R2
+R13
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_rfifo.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_rfifo.v
+L0 150
+R3
+r1
+!s85 0
+31
+R15
+!s107 uart_defines.v|timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_rfifo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_rfifo.v|
+!i113 1
+R5
+R6
+vuart_sync_flops
+R14
+!i10b 1
+!s100 Z:G2W7ERD=h7gjaQ87A<c2
+Io2[dnN>V4W[S7W8zKTc`43
+R1
+R2
+R13
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_sync_flops.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_sync_flops.v
+L0 71
+R3
+r1
+!s85 0
+31
+R15
+!s107 timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_sync_flops.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_sync_flops.v|
+!i113 1
+R5
+R6
+vuart_tfifo
+R14
+!i10b 1
+!s100 <:2B^H8co:m<2oL=X6DTj0
+I]``0?EMVAH4Wb]8jjDYSL3
+R1
+R2
+R13
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_tfifo.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_tfifo.v
+L0 144
+R3
+r1
+!s85 0
+31
+R15
+!s107 uart_defines.v|timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_tfifo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_tfifo.v|
+!i113 1
+R5
+R6
+vuart_top
+R14
+!i10b 1
+!s100 9bTXT:AlgXWIkO79dGS7A0
+INNKGGRN4;HG>Ho6dXoKFQ1
+R1
+R2
+R13
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_top.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_top.v
+L0 140
+R3
+r1
+!s85 0
+31
+R15
+!s107 uart_defines.v|timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_top.v|
+!i113 1
+R5
+R6
+vuart_transmitter
+Z16 !s110 1651157798
+!i10b 1
+!s100 @49c3V8oG7W^B5Pz6`<fU2
+ISeoW8>mC2C@K71gzU615K2
+R1
+R2
+R13
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_transmitter.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_transmitter.v
+L0 154
+R3
+r1
+!s85 0
+31
+R15
+!s107 uart_defines.v|timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_transmitter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_transmitter.v|
+!i113 1
+R5
+R6
+vuart_wb
+R16
+!i10b 1
+!s100 zk2dO<mMEk;3a;eZ:_2_80
+II;Pbcd^Sf;ZXaNIzS4:QG2
+R1
+R2
+R13
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_wb.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_wb.v
+L0 142
+R3
+r1
+!s85 0
+31
+Z17 !s108 1651157798.000000
+!s107 uart_defines.v|timescale.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_wb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/uart_wb.v|
+!i113 1
+R5
+R6
+vwb_conmax_arb
+R16
+!i10b 1
+!s100 5d05nm?=Z694YAf3L_kDm1
+I1kFThFab8Ha7fTY3Ue9DH2
+R1
+R2
+Z18 w1033623610
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_arb.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_arb.v
+L0 63
+R3
+r1
+!s85 0
+31
+R17
+!s107 wb_conmax_defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_arb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_arb.v|
+!i113 1
+R5
+R6
+vwb_conmax_master_if
+R16
+!i10b 1
+!s100 S_=R^=_KS[bo2nUmXCd=j3
+IZWDEzo>R]^0C2lUn7g=SW2
+R1
+R2
+R18
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_master_if.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_master_if.v
+Z19 L0 61
+R3
+r1
+!s85 0
+31
+R17
+!s107 wb_conmax_defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_master_if.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_master_if.v|
+!i113 1
+R5
+R6
+vwb_conmax_msel
+R16
+!i10b 1
+!s100 C`k2jJ:C:RE^IM;`8jlUl0
+I=l21hSc@S?_DBVN_6O1^a2
+R1
+R2
+R18
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_msel.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_msel.v
+R19
+R3
+r1
+!s85 0
+31
+R17
+!s107 wb_conmax_defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_msel.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_msel.v|
+!i113 1
+R5
+R6
+vwb_conmax_pri_dec
+R16
+!i10b 1
+!s100 6?^ciVeJ9oA>R;_g]IL=92
+I0PLjT>A7giEDBFOTP;ge[1
+R1
+R2
+R18
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_pri_dec.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_pri_dec.v
+R19
+R3
+r1
+!s85 0
+31
+R17
+!s107 wb_conmax_defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_pri_dec.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_pri_dec.v|
+!i113 1
+R5
+R6
+vwb_conmax_pri_enc
+R16
+!i10b 1
+!s100 YW;WzEPT<]c4i46EKJK[>3
+I>R1f1RJQO<U4g`V>OVVh73
+R1
+R2
+R18
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_pri_enc.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_pri_enc.v
+R19
+R3
+r1
+!s85 0
+31
+R17
+!s107 wb_conmax_defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_pri_enc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_pri_enc.v|
+!i113 1
+R5
+R6
+vwb_conmax_rf
+R16
+!i10b 1
+!s100 hCP2Jf9TYD6dJ7<cT<]WG3
+I]Aj=<RJb2=ThkOD]5WBLI3
+R1
+R2
+R18
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_rf.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_rf.v
+R19
+R3
+r1
+!s85 0
+31
+R17
+!s107 wb_conmax_defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_rf.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_rf.v|
+!i113 1
+R5
+R6
+vwb_conmax_slave_if
+R16
+!i10b 1
+!s100 7h2[XKcFn3Z4LRhHKmRK_3
+ITP3WESKVAMGC3FZ=L_lQY0
+R1
+R2
+R18
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_slave_if.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_slave_if.v
+R19
+R3
+r1
+!s85 0
+31
+R17
+!s107 wb_conmax_defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_slave_if.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_slave_if.v|
+!i113 1
+R5
+R6
+vwb_conmax_top
+R9
+!i10b 1
+!s100 ;W:MJRAR1[Y<Ni>U58Y4O1
+Ihb^aIB20Cl>]OOWm3:1nA1
+R1
+R2
+R18
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_top.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_top.v
+R19
+R3
+r1
+!s85 0
+31
+R17
+!s107 wb_conmax_defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wb_conmax_top.v|
+!i113 1
+R5
+R6
+vwishbone_bus_if
+R9
+!i10b 1
+!s100 7WkMgb]1M7ggFdhGa<FOX0
+IdBWhK=H=QVmCcLWV<;eF>2
+R1
+R2
+w1651155722
+8D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wishbone_bus_if.v
+FD:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wishbone_bus_if.v
+L0 3
+R3
+r1
+!s85 0
+31
+R10
+!s107 defines.v|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wishbone_bus_if.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_rom-is-on-wishbone_except _PLIC_CLINT_j/sim/wishbone_bus_if.v|
+!i113 1
+R5
+R6
