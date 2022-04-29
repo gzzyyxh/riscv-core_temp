@@ -1,0 +1,24 @@
+`include "defines.v"
+
+module clint(
+	input  wire 	wb_clk_i,
+	input  wire   	wb_rst_i,
+	input  wire   	[aw-1:0] wb_adr_i,
+	output reg 		[dw-1:0] wb_dat_o,
+	input  wire   	[dw-1:0] wb_dat_i,
+	input  wire   	[3:0] wb_sel_i,
+	input  wire   	wb_we_i,
+	input  wire   	wb_stb_i,
+	input  wire   	wb_cyc_i,
+	output reg 		wb_ack_o,
+
+	input wire uart_int,			// 1
+	input wire gpio_int,			// 2
+
+	output reg Interrupt,
+	output reg [30:0] Exception_code,
+	
+	// from mem
+	input wire[`RegBus]	csr_mie,
+	input wire[`RegBus]	csr_mstatus
+);
