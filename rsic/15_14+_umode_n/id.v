@@ -643,7 +643,7 @@ module id(
 					 alusel_o <= `EXE_RES_JUMP_BRANCH;
 					 reg1_read_o <= 1'b0;
 					 reg2_read_o <= 1'b0;
-					 wd_o <= 5'b00001;			//defalut: x1
+					 wd_o <= 5'b00001;			//defalut: x1	JAL x1, label
 					 link_addr_o <= pc_i + 4;
 //					 offset <= {{11{inst_i[31]}},{inst_i[31], inst_i[19:12], inst_i[20], inst_i[30:21]} << 1};
 					 branch_target_address_o <= {{11{inst_i[31]}},{inst_i[31], inst_i[19:12], inst_i[20], inst_i[30:21]} << 1} + pc_i;
@@ -656,7 +656,7 @@ module id(
 					alusel_o <= `EXE_RES_JUMP_BRANCH;
 					reg1_read_o <= 1'b1;
 					reg2_read_o <= 1'b0;
-					wd_o <= 5'b00001;			//defalut: x1
+					wd_o <= 5'b00000;			//defalut: x0   JALR x0, 0(x1)
 					link_addr_o <= pc_i + 4;
 //					offset <= {{20{inst_i[31]}},inst_i[31:20]};
 //					test <= offset & (~1) + 8;

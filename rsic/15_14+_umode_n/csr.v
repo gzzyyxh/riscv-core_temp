@@ -59,7 +59,7 @@ module csr(
 		mvendorid <= 32'h00000000;
 		marchid <= 32'h00000000;
 		mimpid <= 32'h00000000;
-		mhartid <= 32'h00000000;
+		mhartid <= 32'h00000000;			// 对于单核cpu，只有hart 0
 	end
 	
 	assign mstatus_o = mstatus;

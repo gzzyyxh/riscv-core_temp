@@ -56,7 +56,7 @@ module plic(
 						enable <= wb_dat_i;
 					end else if(wb_adr_i == `PLIC_BASE + 32'h200000) begin
 						threshold <= wb_dat_i;
-					end else if(wb_adr_i == `PLIC_BASE + 32'h200004 + 32'h1000) begin
+					end else if(wb_adr_i == `PLIC_BASE + 32'h200004) begin
 						complete <= 1'b1;
 					end
 				end else if(wb_rd == 1'b1) begin
@@ -66,7 +66,7 @@ module plic(
 						wb_dat_o <= enable;
 					end else if(wb_adr_i == `PLIC_BASE + 32'h200000) begin
 						wb_dat_o <= threshold;
-					end else if(wb_adr_i == `PLIC_BASE + 32'h200004 + 32'h1000) begin
+					end else if(wb_adr_i == `PLIC_BASE + 32'h200004) begin
 						wb_dat_o <= irq;
 					end
 				end
@@ -78,12 +78,14 @@ module plic(
 		if(wb_rst_i == 1'b1) begin
 			Interrupt <= 1'b0;
 			Exception_code <= {3'b0, 28'h0000000};
+			irq <= `ZeroWrod;
 		end else begin
 			if((uart_int == 1'b1) && (priority[1] > threshold) && (enable[1] == 1'b1) &&
 							(csr_mstatus[3] == 1'b1) &&			// global interrupts - mstatus.MIE
 								(csr_mie[11] == 1'b1))begin				// externtal interrupts - mie.MEIE
 				Interrupt <= 1'b1;
 				Exception_code <= {3'b0, 28'h000000b};
+				irq <= 32'h00000001;					// uart interrupt
 			end else begin
 				Interrupt <= 1'b0;
 				Exception_code <= {3'b0, 28'h0000000};
