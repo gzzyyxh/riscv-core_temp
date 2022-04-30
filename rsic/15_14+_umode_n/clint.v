@@ -28,14 +28,14 @@ module clint(
     wire wb_wr  = wb_acc & wb_we_i;       // WISHBONE write access
     wire wb_rd  = wb_acc & !wb_we_i;      // WISHBONE read access
 
-	reg[`RegBus]				mtime;		//机器模式计时器寄存器
-	reg[`RegBus]				mtimecmp;	//机器模式计时器比较寄存器
+	reg[`DoubleRegBus]				mtime;		//机器模式计时器寄存器
+	reg[`DoubleRegBus]				mtimecmp;	//机器模式计时器比较寄存器
 	
     always @(posedge wb_clk_i) begin
         if( wb_rst_i == 1'b1 ) begin
             wb_ack_o <= 1'b0;
 				wb_dat_o <= `ZeroWord;
-				mtime <= `ZeroWord;
+				mtime <= 64'h0000000000000000;
 //				mtimecmp <= `ZeroWord;					// 上电复位时，系统不负责设置 mtimecmp 的初值
         end else if(wb_acc == 1'b0) begin
 				mtime <= mtime + 1'h1;
@@ -45,13 +45,13 @@ module clint(
 				mtime <= mtime + 1'h1;
 				if(wb_wr == 1'b1) begin
 					if(wb_adr_i == `CLINT_BASE + 32'h4000) begin
-						mtimecmp <= wb_dat_i;
+						mtimecmp[31:0] <= wb_dat_i;
 					end
 				end else if(wb_rd == 1'b1) begin
 					if(wb_adr_i == `CLINT_BASE + 32'h4000) begin
-						wb_dat_o <= mtimecmp;
+						wb_dat_o <= mtimecmp[31:0];
 					end else if(wb_adr_i == `CLINT_BASE + 32'hbff8) begin
-						wb_dat_o <= mtime;
+						wb_dat_o <= mtime[31:0];
 					end
 				end
 				 wb_ack_o <= 1'b1;

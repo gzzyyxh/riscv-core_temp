@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at div.v(28): always construct contains both blocking and non-blocking assignments File: D:/Github/OpenRSIC-V/rsic/16_15+_soft-interrupt_n/div.v Line: 28
