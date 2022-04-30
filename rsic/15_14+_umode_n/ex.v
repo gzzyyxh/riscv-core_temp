@@ -79,7 +79,7 @@ module ex(
 
 	reg stallreq_for_div;
 	
-	assign excepttype_o = {excepttype_i[31:11], trapassert, excepttype_i[9:8], 8'h00};
+	assign excepttype_o = {excepttype_i[31:11], trapassert, excepttype_i[9:0]};
 	
 	assign current_inst_address_o = current_inst_address_i;
 	
@@ -263,16 +263,17 @@ module ex(
 	end else begin
 		csr_reg_read_addr_o <= inst_i[31:20];
 		csr_reg_write_addr_o <= inst_i[31:20];
-		csr_reg_we_o <= `WriteEnable;
+		//csr_reg_we_o <= `WriteEnable;					//	不能在此处拉高（当aluop还没有确定时），若拉高则会导致逻辑操作的立即数被当作csr写操作的地址
 		case(aluop_i)
 			`EXE_CSRRC_OP:		begin
+				csr_reg_we_o <= `WriteEnable;
 				if(mem_csr_reg_we == `WriteEnable &&
 					mem_csr_reg_write_addr == inst_i[31:20]) begin
-						csr_reg_data_o <= (~reg1_i) & mem_csr_reg_data;
+						csr_reg_data_o <= reg1_i & mem_csr_reg_data;
 						moveres <= mem_csr_reg_data;	
 				end else if(wb_csr_reg_we == `WriteEnable &&
 								wb_csr_reg_write_addr == inst_i[31:20]) begin
-						csr_reg_data_o <= (~reg1_i) & wb_csr_reg_data;
+						csr_reg_data_o <= reg1_i & wb_csr_reg_data;
 						moveres <= wb_csr_reg_data;	
 				end else begin
 					csr_reg_data_o <= (~reg1_i) & csr_reg_data_i;
@@ -280,6 +281,7 @@ module ex(
 				end
 			end
 			`EXE_CSRRS_OP:		begin
+				csr_reg_we_o <= `WriteEnable;
 				if(mem_csr_reg_we == `WriteEnable &&
 					mem_csr_reg_write_addr == inst_i[31:20]) begin
 						csr_reg_data_o <= reg1_i | mem_csr_reg_data;
@@ -294,6 +296,7 @@ module ex(
 				end
 			end
 			`EXE_CSRRW_OP:		begin
+				csr_reg_we_o <= `WriteEnable;
 				csr_reg_data_o <= reg1_i;
 				if(mem_csr_reg_we == `WriteEnable &&
 					mem_csr_reg_write_addr == inst_i[31:20]) begin
@@ -306,6 +309,7 @@ module ex(
 				end
 			end
 			default:		begin
+				csr_reg_we_o <= `WriteDisable;
 			end
 		endcase
 	end

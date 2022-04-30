@@ -148,6 +148,30 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpio_i[5]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[6]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[14]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[13]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[12]",
+					"strict" : false
+				},
+				{
+					"name" : "gpio_i[4]",
+					"strict" : false
+				},
+				{
 					"name" : "gpio_i[0]",
 					"strict" : false
 				},
@@ -161,30 +185,6 @@
 				},
 				{
 					"name" : "gpio_i[3]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[4]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[5]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[13]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[12]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[14]",
-					"strict" : false
-				},
-				{
-					"name" : "gpio_i[6]",
 					"strict" : false
 				},
 				{
