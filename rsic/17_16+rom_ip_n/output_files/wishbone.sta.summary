@@ -1,0 +1,401 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -24.007
+TNS   : -3041.862
+
+Type  : Slow 1200mV 85C Model Setup 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -15.896
+TNS   : -509.616
+
+Type  : Slow 1200mV 85C Model Setup 'clint:clint0|msip[0]'
+Slack : -15.889
+TNS   : -1168.224
+
+Type  : Slow 1200mV 85C Model Setup 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -14.683
+TNS   : -435.581
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -13.823
+TNS   : -32470.080
+
+Type  : Slow 1200mV 85C Model Setup 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -13.473
+TNS   : -363.857
+
+Type  : Slow 1200mV 85C Model Setup 'rst'
+Slack : -2.473
+TNS   : -21.914
+
+Type  : Slow 1200mV 85C Model Hold 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -6.336
+TNS   : -123.989
+
+Type  : Slow 1200mV 85C Model Hold 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -5.540
+TNS   : -133.977
+
+Type  : Slow 1200mV 85C Model Hold 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -5.490
+TNS   : -120.172
+
+Type  : Slow 1200mV 85C Model Hold 'clint:clint0|msip[0]'
+Slack : -5.017
+TNS   : -112.606
+
+Type  : Slow 1200mV 85C Model Hold 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -3.802
+TNS   : -38.704
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -1.554
+TNS   : -98.709
+
+Type  : Slow 1200mV 85C Model Hold 'rst'
+Slack : 1.116
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -6.925
+TNS   : -20.423
+
+Type  : Slow 1200mV 85C Model Recovery 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -4.329
+TNS   : -96.379
+
+Type  : Slow 1200mV 85C Model Recovery 'clint:clint0|msip[0]'
+Slack : -3.333
+TNS   : -13.275
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -0.625
+TNS   : -8.333
+
+Type  : Slow 1200mV 85C Model Recovery 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : 1.988
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : 4.467
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -9.385
+TNS   : -279.993
+
+Type  : Slow 1200mV 85C Model Removal 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -7.479
+TNS   : -196.069
+
+Type  : Slow 1200mV 85C Model Removal 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -6.619
+TNS   : -676.555
+
+Type  : Slow 1200mV 85C Model Removal 'clint:clint0|msip[0]'
+Slack : -6.389
+TNS   : -497.543
+
+Type  : Slow 1200mV 85C Model Removal 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -5.154
+TNS   : -249.690
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : -0.538
+TNS   : -132.434
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -3.648
+TNS   : -668.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -6431.163
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -2.316
+TNS   : -275.149
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clint:clint0|msip[0]'
+Slack : -0.332
+TNS   : -53.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -0.219
+TNS   : -20.038
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -22.277
+TNS   : -2875.014
+
+Type  : Slow 1200mV 0C Model Setup 'clint:clint0|msip[0]'
+Slack : -15.326
+TNS   : -1116.961
+
+Type  : Slow 1200mV 0C Model Setup 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -15.127
+TNS   : -488.775
+
+Type  : Slow 1200mV 0C Model Setup 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -14.364
+TNS   : -421.514
+
+Type  : Slow 1200mV 0C Model Setup 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -13.116
+TNS   : -354.921
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -12.866
+TNS   : -30463.205
+
+Type  : Slow 1200mV 0C Model Setup 'rst'
+Slack : -2.311
+TNS   : -18.539
+
+Type  : Slow 1200mV 0C Model Hold 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -5.837
+TNS   : -116.445
+
+Type  : Slow 1200mV 0C Model Hold 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -5.110
+TNS   : -107.849
+
+Type  : Slow 1200mV 0C Model Hold 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -4.932
+TNS   : -118.039
+
+Type  : Slow 1200mV 0C Model Hold 'clint:clint0|msip[0]'
+Slack : -4.349
+TNS   : -97.615
+
+Type  : Slow 1200mV 0C Model Hold 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -3.361
+TNS   : -35.014
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -1.408
+TNS   : -86.490
+
+Type  : Slow 1200mV 0C Model Hold 'rst'
+Slack : 0.949
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -6.895
+TNS   : -20.331
+
+Type  : Slow 1200mV 0C Model Recovery 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -4.397
+TNS   : -96.322
+
+Type  : Slow 1200mV 0C Model Recovery 'clint:clint0|msip[0]'
+Slack : -3.574
+TNS   : -14.236
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -0.475
+TNS   : -3.461
+
+Type  : Slow 1200mV 0C Model Recovery 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : 1.727
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : 3.926
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -8.371
+TNS   : -249.815
+
+Type  : Slow 1200mV 0C Model Removal 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -6.881
+TNS   : -180.849
+
+Type  : Slow 1200mV 0C Model Removal 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -6.004
+TNS   : -606.518
+
+Type  : Slow 1200mV 0C Model Removal 'clint:clint0|msip[0]'
+Slack : -5.699
+TNS   : -444.558
+
+Type  : Slow 1200mV 0C Model Removal 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -4.691
+TNS   : -220.253
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : -0.505
+TNS   : -126.501
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -3.631
+TNS   : -627.610
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.201
+TNS   : -6432.566
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -2.394
+TNS   : -227.517
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clint:clint0|msip[0]'
+Slack : -0.543
+TNS   : -104.223
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -0.483
+TNS   : -45.035
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -0.077
+TNS   : -2.704
+
+Type  : Fast 1200mV 0C Model Setup 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -10.120
+TNS   : -1265.467
+
+Type  : Fast 1200mV 0C Model Setup 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -6.477
+TNS   : -166.744
+
+Type  : Fast 1200mV 0C Model Setup 'clint:clint0|msip[0]'
+Slack : -6.397
+TNS   : -474.939
+
+Type  : Fast 1200mV 0C Model Setup 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -6.293
+TNS   : -194.729
+
+Type  : Fast 1200mV 0C Model Setup 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -6.000
+TNS   : -176.127
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -5.522
+TNS   : -12127.362
+
+Type  : Fast 1200mV 0C Model Setup 'rst'
+Slack : -0.371
+TNS   : -1.638
+
+Type  : Fast 1200mV 0C Model Hold 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -3.202
+TNS   : -68.094
+
+Type  : Fast 1200mV 0C Model Hold 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -2.685
+TNS   : -68.200
+
+Type  : Fast 1200mV 0C Model Hold 'clint:clint0|msip[0]'
+Slack : -2.537
+TNS   : -72.496
+
+Type  : Fast 1200mV 0C Model Hold 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -2.463
+TNS   : -72.885
+
+Type  : Fast 1200mV 0C Model Hold 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -1.876
+TNS   : -21.539
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.724
+TNS   : -43.202
+
+Type  : Fast 1200mV 0C Model Hold 'rst'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -2.844
+TNS   : -8.378
+
+Type  : Fast 1200mV 0C Model Recovery 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -1.713
+TNS   : -38.426
+
+Type  : Fast 1200mV 0C Model Recovery 'clint:clint0|msip[0]'
+Slack : -1.245
+TNS   : -4.951
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -0.564
+TNS   : -223.796
+
+Type  : Fast 1200mV 0C Model Recovery 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : 0.951
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : 2.376
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -4.346
+TNS   : -129.633
+
+Type  : Fast 1200mV 0C Model Removal 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -3.681
+TNS   : -96.076
+
+Type  : Fast 1200mV 0C Model Removal 'clint:clint0|msip[0]'
+Slack : -3.041
+TNS   : -233.381
+
+Type  : Fast 1200mV 0C Model Removal 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : -2.744
+TNS   : -260.761
+
+Type  : Fast 1200mV 0C Model Removal 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : -2.360
+TNS   : -108.064
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : -0.322
+TNS   : -97.605
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -5432.129
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rst'
+Slack : -3.000
+TNS   : -3.268
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'openriscv:openriscv0|ex:ex0|csr_reg_read_addr_o[0]'
+Slack : -1.397
+TNS   : -216.592
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'openriscv:openriscv0|id:id0|reg1_o[0]'
+Slack : -0.960
+TNS   : -86.182
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'openriscv:openriscv0|id_ex:id_ex0|ex_aluop[1]'
+Slack : 0.008
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clint:clint0|msip[0]'
+Slack : 0.115
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'openriscv:openriscv0|ex_mem:ex_mem0|mem_aluop[0]'
+Slack : 0.248
+TNS   : 0.000
+
+------------------------------------------------------------

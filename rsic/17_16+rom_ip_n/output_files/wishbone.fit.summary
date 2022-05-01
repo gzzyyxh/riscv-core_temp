@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun May 01 14:48:34 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : wishbone
+Top-level Entity Name : openriscv_min_sopc
+Family : Cyclone IV E
+Device : EP4CE15F17C8
+Timing Models : Final
+Total logic elements : 10,877 / 15,408 ( 71 % )
+    Total combinational functions : 9,873 / 15,408 ( 64 % )
+    Dedicated logic registers : 4,155 / 15,408 ( 27 % )
+Total registers : 4155
+Total pins : 52 / 166 ( 31 % )
+Total virtual pins : 0
+Total memory bits : 1,280 / 516,096 ( < 1 % )
+Embedded Multiplier 9-bit elements : 8 / 112 ( 7 % )
+Total PLLs : 0 / 4 ( 0 % )

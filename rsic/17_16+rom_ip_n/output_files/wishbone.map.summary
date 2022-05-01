@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun May 01 14:40:29 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : wishbone
+Top-level Entity Name : openriscv_min_sopc
+Family : Cyclone IV E
+Total logic elements : 12,138
+    Total combinational functions : 9,870
+    Dedicated logic registers : 4,155
+Total registers : 4155
+Total pins : 52
+Total virtual pins : 0
+Total memory bits : 1,280
+Embedded Multiplier 9-bit elements : 8
+Total PLLs : 0
