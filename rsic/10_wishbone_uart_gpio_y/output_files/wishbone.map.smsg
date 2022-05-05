@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at div.v(28): always construct contains both blocking and non-blocking assignments File: D:/Github/OpenRSIC-V/rsic/wishbone_uart_gpio_y_old/div.v Line: 28
+Warning (10268): Verilog HDL information at div.v(28): always construct contains both blocking and non-blocking assignments File: D:/Github/OpenRSIC-V/rsic/10_wishbone_uart_gpio_y/div.v Line: 28
